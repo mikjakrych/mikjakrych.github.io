@@ -57,6 +57,10 @@ h1{
   background-color:#404040;
   height: 80px;
   color:white;
+  color:#007F7F;
+  font-size:22px;
+  position:sticky;
+  top:0px;
 }
 .block{
   padding-top:100px;
@@ -64,20 +68,37 @@ h1{
 }
 .middle{
   margin:30px;
-  margin-right:130px
+  margin-right:130px;
+  padding-top:100px;
+  margin-top:-80px;
 }
 .shortcut{
   color:#C0C0C0;
 }
 .shortcut:hover{
-  color:#C0C0C0;
-  font-weight:bold;
+  color:#404040;
   text-decoration: none;
 }
 .sidebar{
   color:black;
   width:100px;
   float:right;
-  padding-top:110;
+  position: sticky;
   top:110px;
+}
+.button1{
+border:1px solid transparent;
+border-color:#007F7F;
+color:#007F7F;
+background-color:white;
+border-radius: 100px;
+padding:10px;
+position:fixed;
+bottom:20px;
+}
+.button1:hover{
+background-color:#007F7F;
+color:white;
+transition: color .3s ease-in-out, background-color .3s ease-in-out;
+text-decoration: none;
 }
