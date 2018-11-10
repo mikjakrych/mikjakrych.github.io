@@ -1,7 +1,7 @@
 h1{
   text-align:center;
   padding-top: 20px;
-  color:#6B1C4F;
+  color:#404040;
 }
 
 .brown-box,
@@ -49,4 +49,35 @@ h1{
   border-radius:0px;
   margin-top:5px;
   border:0px;
+}
+.topthing{
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:10px;
+  background-color:#404040;
+  height: 80px;
+  color:white;
+}
+.block{
+  padding-top:100px;
+  margin-top:-80px;
+}
+.middle{
+  margin:30px;
+  margin-right:130px
+}
+.shortcut{
+  color:#C0C0C0;
+}
+.shortcut:hover{
+  color:#C0C0C0;
+  font-weight:bold;
+  text-decoration: none;
+}
+.sidebar{
+  color:black;
+  width:100px;
+  float:right;
+  padding-top:110;
+  top:110px;
 }
