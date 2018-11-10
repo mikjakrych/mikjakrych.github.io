@@ -1,0 +1,28 @@
+.nav{
+  background-color:#C2CECE;
+  color:white;
+}
+.body{
+ padding-top:50px;
+ padding-left:30px;
+ padding-right:30px;
+ max-width:75%;
+}
+.tab{
+  color:#006744;
+}
+.tab:hover{
+  color:black;
+}
+.tab-active{
+  color:black;
+}
+.title-text{
+  color:#006744;
+  font-size:36px;
+}
+.body-text{
+  font-weight:lighter;
+  font-size:18px;
+  color:black;
+}
