@@ -1,6 +1,8 @@
 .nav{
-  background-color:#C2CECE;
+  background-color:#006744;
   color:white;
+  position:sticky;
+  top:0px;
 }
 .body{
  padding-top:50px;
@@ -9,20 +11,31 @@
  max-width:75%;
 }
 .tab{
-  color:#006744;
+  color:#E2E2E2;
 }
 .tab:hover{
-  color:black;
+  color:white;
+  background-color:transparent;
 }
 .tab-active{
-  color:black;
+  color:white;
+}
+.tab-active:hover{
+  color:white;
 }
 .title-text{
   color:#006744;
-  font-size:36px;
+  font-size:40px;
 }
-.body-text{
-  font-weight:lighter;
-  font-size:18px;
-  color:black;
+.footer{
+  text-align:center;
+  color:#E2E2E2;
+  padding:30px;
+}
+.footerstuff{
+  color:#E2E2E2;
+}
+.footerstuff:hover{
+  color:white;
+  text-decoration: none;
 }
