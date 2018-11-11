@@ -66,6 +66,12 @@ text-decoration: none;
   text-align:center;
   font-size:12px;
 }
-.notherpic{
-  max-height:100px;
+.link{
+  color:#007bff;
+  text-decoration:none;
+  cursor:pointer;
+}
+.link:hover{
+  color:#0068D8;
+  text-decoration:underline;
 }
