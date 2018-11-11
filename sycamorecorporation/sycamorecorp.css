@@ -15,15 +15,15 @@
 }
 .tab:hover{
   color:white;
-  background-color:transparent;
+  background-color:#006744;
 }
 .tab-active{
   color:white;
-  background-color:transparent;
+  background-color:#006744;
 }
 .tab-active:hover{
   color:white;
-  background-color:transparent;
+  background-color:#006744;
 }
 .title-text{
   color:#006744;
