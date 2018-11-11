@@ -3,12 +3,12 @@
   color:white;
   position:sticky;
   top:0px;
+  z-index: 1020;
 }
 .body{
  padding-top:50px;
- padding-left:30px;
- padding-right:30px;
- max-width:75%;
+ padding-left:12.5%;
+ padding-right:12.5%;
 }
 .tab{
   color:#E2E2E2;
@@ -19,9 +19,11 @@
 }
 .tab-active{
   color:white;
+  background-color:transparent;
 }
 .tab-active:hover{
   color:white;
+  background-color:transparent;
 }
 .title-text{
   color:#006744;
@@ -38,4 +40,32 @@
 .footerstuff:hover{
   color:white;
   text-decoration: none;
+}
+.submit{
+border:1px solid transparent;
+border-color:#006744;
+color:#006744;
+background-color:white;
+border-radius: .25rem;
+padding:10px;
+}
+.submit:hover{
+background-color:#006744;
+color:white;
+transition: color .15s ease-in-out, background-color .15s ease-in-out;
+text-decoration: none;
+}
+.pics{
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.caption{
+  text-align:center;
+  font-size:12px;
+}
+.notherpic{
+  max-height:100px;
 }
