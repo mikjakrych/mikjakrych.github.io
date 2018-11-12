@@ -41,7 +41,7 @@
   color:white;
   text-decoration: none;
 }
-.submit{
+/* .submit{
 border:1px solid transparent;
 border-color:#006744;
 color:#006744;
@@ -54,13 +54,14 @@ background-color:#006744;
 color:white;
 transition: color .15s ease-in-out, background-color .15s ease-in-out;
 text-decoration: none;
-}
+} */
 .pics{
-  width:50%;
+  /* width:50%;
   margin-left:25%;
   margin-right:25%;
   margin-top:10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
+  max-height:300px;
 }
 .caption{
   text-align:center;
@@ -74,4 +75,11 @@ text-decoration: none;
 .link:hover{
   color:#0068D8;
   text-decoration:underline;
+}
+h4{
+  margin-top:-76px;
+  padding-top:76px;
+}
+p{
+  text-align:justify;
 }
