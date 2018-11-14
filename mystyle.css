@@ -80,25 +80,51 @@ h1{
   text-decoration: none;
 }
 .sidebar{
-  color:black;
+  color:gray;
   width:100px;
   float:right;
   position: sticky;
   top:110px;
 }
 .button1{
-border:1px solid transparent;
-border-color:#007F7F;
-color:#007F7F;
-background-color:white;
-border-radius: 100px;
-padding:10px;
-position:fixed;
-bottom:20px;
+  padding:5px;
+  font-size: 22px;
+  color:black;
 }
 .button1:hover{
-background-color:#007F7F;
-color:white;
-transition: color .3s ease-in-out, background-color .3s ease-in-out;
-text-decoration: none;
+  color:gray;
+  transition: color .12s ease-in-out;
+  text-decoration: none;
+}
+.button2{
+  padding:5px;
+  font-size: 22px;
+  color:black;
+  border: 1px transparent solid;
+  border-color: black;
+
+}
+.button2:hover{
+  color:white;
+  background-color:gray;
+  transition: color .12s ease-in-out, background-color .12s ease-in-out;
+  text-decoration: none;
+}
+.pics{
+  width:130%;
+  overflow:hidden;
+}
+
+}
+.cnav{
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.align-right{
+  float:right;
+}
+.name{
+  color:black;
+  font-size:30px;
+  font-family: fantasy;
 }
