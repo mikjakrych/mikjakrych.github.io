@@ -1,3 +1,4 @@
+/* this is what you do for normal width. */
 
 .pictureframe{
   left:-4032px;
@@ -6,7 +7,6 @@
   position:absolute;
   top:0px;
 }
-
 .picture{
   height:720px;
   display:block;
@@ -18,27 +18,23 @@
   top:300px;
   width:100%;
   text-align: center;
-  font-family: monospace;
   text-transform: uppercase;
+  padding:30px;
 }
-
 .title{
-  font-size: 60px;
+  font-size: 70px;
   font-family:sans-serif;
   font-weight:550;
   line-height: 45px;
   color:white;
 }
-
 .subtitle{
   margin:30px;
   color:white;
   font-size: 25px;
   font-family: monospace;
   font-weight:lighter;
-  line-height: 30px;
 }
-
 .nav{
   text-transform: uppercase;
   font-size: 24px;
@@ -80,9 +76,9 @@
 
 .caption{
   width:100%;
-  font-size:18px;
+  font-size:16px;
   font-family:sans-serif;
-  color:#C0C0C0;
+  color:white;
   position:absolute;
   text-align:center;
   top:670px;
@@ -95,4 +91,17 @@
   border-left: 2px solid;
   border-left-color: #006744;
   padding:8px;
+}
+
+
+/* this is what you do when the screen is small. */
+@media (max-width: 768px) {
+  .title{
+    font-size: 50px;
+    line-height: 28px;
+  }
+  .subtitle{
+    font-size: 22px;
+    line-height: 20px;
+  }
 }
