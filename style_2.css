@@ -18,7 +18,6 @@
   width:100%;
   text-align: center;
   text-transform: uppercase;
-  padding:30px;
 }
 .title-light{
   font-size: 70px;
@@ -32,7 +31,7 @@
   margin:30px;
   color:white;
   font-size: 25px;
-  font-family: monospace;
+  font-family: sans-serif;
   font-weight:lighter;
 }
 .title-dark{
@@ -48,7 +47,7 @@
   margin:30px;
   color:#404040;
   font-size: 25px;
-  font-family: monospace;
+  font-family: sans-serif;
   font-weight:lighter;
   text-align: left;
 }
@@ -155,14 +154,14 @@
   background-color:#006744;
 }
 .body{
-  width:800px;
+  max-width:800px;
   margin-left: auto;
   margin-right: auto;
 }
 .quote{
   height:440px;
   color:#404040;
-  font-family:monospace;
+  font-family:sans-serif;
   font-weight:lighter;
   font-size: 25px;
   text-align: left;
@@ -198,12 +197,11 @@
 /* this is what you do when the screen is small. */
 @media (max-width: 810px) {
   .body{
-    width:80%;
-    margin-left: 10%;
-    margin-right:10%;
+    padding-left: 10%;
+    padding-right:10%;
   }
   .title-light{
-    font-size: 50px;
+    font-size: 40px;
     line-height: 40px;
   }
   .subtitle-light{
@@ -222,16 +220,22 @@
     padding-bottom:20px;
   }
   .title-dark{
-    font-size: 50px;
+    font-size: 40px;
     line-height: 40px;
   }
   .text{
     font-size: 22px;
+    text-align:center;
   }
   .quote{
-    font-size: 22px;
+    font-size: 18px;
   }
   .source{
     font-size: 14px;
+  }
+  .button-dark,
+  .button-light
+  {
+    font-size:16px;
   }
 }
