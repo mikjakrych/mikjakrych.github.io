@@ -1,5 +1,5 @@
 /* this is what you do for normal width. */
-
+/*
 .pictureframe{
   left:-4032px;
   right:-4032px;
@@ -11,6 +11,13 @@
   display:block;
   margin-left:auto;
   margin-right:auto;
+} */
+.picture{
+  background-image:url(triplex.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:720px;
 }
 .titleblock{
   position:absolute;

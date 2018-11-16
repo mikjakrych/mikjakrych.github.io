@@ -17,6 +17,13 @@
   font-family:serif;
   font-size: 22px;
 }
+.pic{
+  background-image:url(triplex.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:640px;
+}
 /* .box-white:hover,
 .box-brown:hover{
 margin:50px;
