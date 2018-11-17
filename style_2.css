@@ -12,12 +12,7 @@
   margin-left:auto;
   margin-right:auto;
 } */
-.t{
-  display:none;
-}
-.u{
-  display:block;
-}
+
 .test1{
   height:300px;
   width:300px;
@@ -36,7 +31,7 @@
   text-decoration: none;
 }
 .picture{
-  background-image:url(triplex_color.png);
+  background-image:url(triplex_small.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,19 +67,18 @@
   text-align:center;
   color:#006744;
 }
-.text{
-  color:#404040;
-  font-size: 25px;
-  font-family: sans-serif;
-  font-weight:lighter;
-  text-align: left;
-}
+.text,
 .text-bold{
   color:#404040;
   font-size: 25px;
   font-family: sans-serif;
-  font-weight:bolder;
   text-align: left;
+}
+.text{
+  font-weight: 300;
+}
+.text-bold{
+  font-weight:bolder;
 }
 .nav{
   text-transform: uppercase;
@@ -143,21 +137,32 @@
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
   text-decoration: none;
 }
+
+
+
+
 .building{
   width:260px;
   margin:10px;
   box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.15);
+  border-radius: 6px;
+}
+.building:hover{
+  text-decoration: none;
+  box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.3);
+  transition: box-shadow .2s ease-in-out;
 }
 .building-body{
   padding:30px;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
 }
 .building-image{
   width:100%;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
+
+
+
 .caption{
   width:100%;
   font-size:16px;
@@ -273,7 +278,7 @@
   .text,
   .text-bold{
     font-size: 22px;
-    /* text-align:center; */
+    text-align:center;
   }
   .quote-block{
     height:300px;
@@ -296,11 +301,5 @@
   }
   .quote-carousel{
     max-width:300px;
-  }
-  .t{
-    display:block;
-  }
-  .u{
-    display:none;
   }
 }
