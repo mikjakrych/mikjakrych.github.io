@@ -89,7 +89,8 @@ text-decoration: none;
   text-align:center;
   color:#006744;
   text-transform: uppercase;
-  padding:30px;
+  padding-top:30px;
+  padding-bottom: 30px;
 }
 .text,
 .text-bold,
@@ -309,7 +310,7 @@ margin:0px;
   }
   .subtitle-dark{
     font-size: 40px;
-    line-height: 40px;
+    line-height: 30px;
   }
   .text,
   .text-bold{
