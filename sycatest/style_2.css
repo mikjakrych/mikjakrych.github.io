@@ -31,7 +31,6 @@ color:#006744;
 text-decoration: none;
 } */
 .titleblock{
-  background-image:url(triplex.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,7 +98,7 @@ text-decoration: none;
   color:#404040;
   font-size: 25px;
   font-family: sans-serif;
-  text-align: left;
+  text-align: justify;
 }
 .text,
 .text-n{
@@ -249,6 +248,11 @@ text-decoration: none;
   margin-left: auto;
   margin-right: auto;
 }
+.picture{
+  width:100%;
+  padding-top:30px;
+  padding-bottom: 30px;
+}
 /* .quote-carousel{
 max-width:320px;
 margin-left: auto;
@@ -320,6 +324,7 @@ margin:0px;
   .text-n,
   .text-n-bold{
     font-size:22px;
+    text-align:left;
   }
     /* .quote-block{
     height:360px;
