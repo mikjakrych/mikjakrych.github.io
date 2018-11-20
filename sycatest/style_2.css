@@ -312,6 +312,7 @@ margin:0px;
   .subtitle-dark{
     font-size: 40px;
     /* line-height: 30px; */
+    margin:0px;
   }
   .text,
   .text-bold{
@@ -349,5 +350,53 @@ margin:0px;
   .csource{
     font-size: 18px;
     /* line-height: 18px; */
+  }
+}
+@media (max-width:320px){
+  .body{
+    padding-left: 5%;
+    padding-right:5%;
+  }
+  .titleblock{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+  .caption{
+    font-size:12px;
+  }
+  .text-block{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .business{
+    height:48px;
+    margin:6px;
+  }
+  .subtitle-dark{
+    font-size: 40px;
+    margin:0px;
+  }
+  .text,
+  .text-bold{
+    font-size:22px;
+    text-align:center;
+  }
+  .text-n,
+  .text-n-bold{
+    font-size:22px;
+    text-align:left;
+  }
+  .button-dark,
+  .button-light{
+    font-size:18px;
+  }
+  .nav{
+    font-size:18px;
+  }
+  .nav-special{
+    font-size:18px;
+  }
+  .cquote{
+    height:300px;
   }
 }
