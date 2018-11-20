@@ -87,7 +87,7 @@ text-decoration: none;
   font-weight:500;
   /* line-height: 52px; */
   text-align:center;
-  color:#27A243;
+  color:#6EA028;
   text-transform: uppercase;
   padding-top:30px;
   padding-bottom: 30px;
@@ -109,23 +109,7 @@ text-decoration: none;
 .text-n-bold{
   font-weight:bolder;
 }
-.warning{
-  text-align:center;
-  padding:30px;
-  font-size:36px;
-  color:white;
-  font-family:sans-serif;
-  font-weight:300;
-}
-.cone{
-  width:180px;
-  padding:30px;
-  margin-left:auto;
-  margin-right:auto;
-  background-color:#dddddd;
-  border-radius:6px;
-  box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.15);
-}
+
 .nav{
   text-transform: uppercase;
   font-size: 24px;
@@ -133,6 +117,7 @@ text-decoration: none;
 }
 .nav:hover{
   color:white;
+  transition: color .12s ease-in-out;
 }
 .nav-special{
   border:1px solid transparent;
@@ -144,7 +129,7 @@ text-decoration: none;
 }
 .nav-special:hover{
   background-color: white;
-  color:#27A243;
+  color:#6EA028;
   transition: color .12s ease-in-out, background-color .12s ease-in-out;
 }
 
@@ -162,25 +147,25 @@ text-decoration: none;
 }
 .button-light:hover{
   background-color:white;
-  color:#27A243;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  color:#6EA028;
+  transition: color .12s ease-in-out, background-color .12s ease-in-out;
   text-decoration: none;
 }
 .button-dark{
   padding:10px;
   border:1px solid;
-  border-color:#E5968B;
+  border-color:#9E9448;
   text-transform: uppercase;
   font-size: 24px;
-  color:#E5968B;
+  color:#9E9448;
   border-radius: 6px;
   background-color: transparent;
   text-decoration: none;
 }
 .button-dark:hover{
-  background-color:#E5968B;
+  background-color:#9E9448;
   color:white;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  transition: color .12s ease-in-out, background-color .12s ease-in-out;
   text-decoration: none;
 }
 .footerstuff{
@@ -189,12 +174,13 @@ text-decoration: none;
 .footerstuff:hover{
   color:white;
   text-decoration: none;
+  transition: color .12s ease-in-out;
 }
 .footer{
   text-align:center;
   color:#E2E2E2;
   padding:30px;
-  background-color:#27A243;
+  background-color:#6EA028;
   margin-top:80px;
   width:100%;
 }
@@ -202,7 +188,7 @@ text-decoration: none;
   text-align:center;
   color:#E2E2E2;
   padding:30px;
-  background-color:#27A243;
+  background-color:#6EA028;
   width:100%;
 }
 
@@ -215,7 +201,7 @@ text-decoration: none;
 .building:hover{
   text-decoration: none;
   box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.25);
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .12s ease-in-out;
 }
 .building-body{
   padding:30px;
@@ -230,7 +216,7 @@ text-decoration: none;
   margin:10px;
   color:black;
   border-left: 2px solid;
-  border-left-color: #E5968B;
+  border-left-color: #9E9448;
   padding:8px;
   box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.15);
   border-bottom-right-radius: 6px;
@@ -240,23 +226,13 @@ text-decoration: none;
 .ads:hover{
   text-decoration: none;
   box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.25);
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .12s ease-in-out;
 }
 
 .business{
   margin:12px;
   color:white;
-}
-.logo{
-  height:60px;
-  margin-top:18px;
-  margin-left:9px;
-  margin-right:9px;
-}
-.businesses{
-  background-color:#27A243;
-  padding-top:12px;
-  padding-bottom:30px;
+  height:72px;
 }
 .text-block{
   padding-top:80px;
@@ -266,7 +242,7 @@ text-decoration: none;
 }
 .separator{
   height:1px;
-  background-color:#27A243;
+  background-color:#6EA028;
 }
 .body{
   max-width:1200px;
@@ -312,6 +288,7 @@ margin:0px;
 .footerstuff:hover{
   color:white;
   text-decoration: none;
+  transition: color .12s ease-in-out;
 }
 /* this is what you do when the screen is small. */
 @media (max-width: 720px) {
@@ -328,16 +305,9 @@ margin:0px;
     font-size: 22px;
     /* line-height: 20px; */
   }
-  .logo{
-    height:30px;
-    margin-top:10px;
-    margin-left:5px;
-    margin-right:5px;
-  }
-  .businesses{
-    background-color:#27A243;
-    padding-top:10px;
-    padding-bottom:20px;
+  .business{
+    height:48px;
+    margin:6px;
   }
   .subtitle-dark{
     font-size: 40px;
@@ -353,18 +323,6 @@ margin:0px;
     font-size:22px;
     text-align:left;
   }
-
-
-
-  .warning{
-    font-size: 22px;
-  }
-  .cone{
-    width:120px;
-    padding:10px;
-  }
-
-
 
     /* .quote-block{
     height:360px;

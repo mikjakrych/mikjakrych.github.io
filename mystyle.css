@@ -4,18 +4,35 @@ h1{
   color:#404040;
 }
 
+
+.warning{
+  text-align:center;
+  padding:30px;
+  font-size:36px;
+  color:white;
+  font-family:sans-serif;
+  font-weight:300;
+}
+.cone{
+  width:180px;
+  padding:30px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#dddddd;
+  border-radius:6px;
+  box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.15);
+}
 .brown-box,
 .blue-box,
 .green-box,
 .gray-box,
 .clear-box {
-  height: 120px;
+  min-height: 120px;
   color:white;
-  margin:3px;
+  margin:18px;
   text-align:left;
-  padding:5px;
-  border:0px;
-  box-shadow: 3px 3px 5px #A0A0A0 !important;
+  padding:10px;
+  box-shadow: 3px 3px 5px #A0A0A0;
 }
 .brown-box{
   background-color: #895837;
@@ -34,9 +51,10 @@ h1{
   background-color: gray;
   height: 50px;
   color:white;
-  margin:3px;
+  margin:18px;
   text-align:left;
   padding:5px;
+  font-size:30px;
 }
 .large-container{
   padding-left: 30px;
