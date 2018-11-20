@@ -352,7 +352,7 @@ margin:0px;
     /* line-height: 18px; */
   }
 }
-@media (max-width:320px){
+@media (max-width:460px){
   .body{
     padding-left: 5%;
     padding-right:5%;
