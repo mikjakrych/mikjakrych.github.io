@@ -1,10 +1,3 @@
-h1{
-  text-align:center;
-  padding-top: 20px;
-  color:#404040;
-}
-
-
 .warning{
   text-align:center;
   padding:30px;
@@ -22,127 +15,25 @@ h1{
   border-radius:6px;
   box-shadow: .25rem 1rem 2.25rem rgba(0,0,0,.15);
 }
-.brown-box,
-.blue-box,
-.green-box,
-.gray-box,
-.clear-box {
-  min-height: 120px;
-  color:white;
-  margin:18px;
-  text-align:left;
+.test{
+  max-width:180px;
+  background-color:#59B3FF;
+  position:fixed;
+  bottom:60px;
+  border-top-right-radius:6px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 0px;
   padding:10px;
-  box-shadow: 3px 3px 5px #A0A0A0;
-}
-.brown-box{
-  background-color: #895837;
-}
-.blue-box{
-  background-color: #525C96;
-}
-.green-box{
-  background-color: #689167;
-}
-.clear-box{
-  background-color:gray;
-}
-
-.gray-box{
-  background-color: gray;
-  height: 50px;
-  color:white;
-  margin:18px;
-  text-align:left;
-  padding:5px;
-  font-size:30px;
-}
-.large-container{
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
-  margin:0px;
-}
-.mybutton{
-  float:right;
-  border-radius:0px;
-  margin-top:5px;
   border:0px;
+  box-shadow: 5px 5px 8px rgba(0,0,0,.3);
 }
-.topthing{
-  padding-left:30px;
-  padding-right:30px;
-  padding-top:10px;
-  background-color:#404040;
-  height: 80px;
-  color:white;
-  color:#007F7F;
-  font-size:22px;
-  position:sticky;
-  top:0px;
-}
-.block{
-  padding-top:100px;
-  margin-top:-80px;
-}
-.middle{
+p{
+  font-size: 24px;
   margin:30px;
-  margin-right:130px;
-  padding-top:100px;
-  margin-top:-80px;
 }
-.shortcut{
-  color:#C0C0C0;
-}
-.shortcut:hover{
-  color:#404040;
-  text-decoration: none;
-}
-.sidebar{
-  color:gray;
-  width:100px;
+.byebye{
   float:right;
-  position: sticky;
-  top:110px;
-}
-.button1{
-  padding:5px;
-  font-size: 22px;
-  color:black;
-}
-.button1:hover{
-  color:gray;
-  transition: color .12s ease-in-out;
-  text-decoration: none;
-}
-.button2{
-  padding:5px;
-  font-size: 22px;
-  color:black;
-  border: 1px transparent solid;
-  border-color: black;
-
-}
-.button2:hover{
-  color:white;
-  background-color:gray;
-  transition: color .12s ease-in-out, background-color .12s ease-in-out;
-  text-decoration: none;
-}
-.pics{
-  width:130%;
-  overflow:hidden;
-}
-
-}
-.cnav{
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-.align-right{
-  float:right;
-}
-.name{
-  color:black;
-  font-size:30px;
-  font-family: fantasy;
+  height:100%;
+  width:48px;
 }
