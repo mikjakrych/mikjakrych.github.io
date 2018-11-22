@@ -46,7 +46,7 @@ text-decoration: none;
   font-size: 70px;
   font-family:sans-serif;
   font-weight:500;
-  /* line-height: 52px; */
+  line-height: 64px;
   color:white;
   margin-bottom:60px;
 }
@@ -85,7 +85,7 @@ text-decoration: none;
   font-size: 60px;
   font-family:sans-serif;
   font-weight:500;
-  /* line-height: 52px; */
+  line-height: 64px;
   text-align:center;
   color:#6EA028;
   text-transform: uppercase;
@@ -298,12 +298,12 @@ margin:0px;
   }
   .title{
     font-size: 40px;
-    /* line-height: 30px; */
+    line-height: 40px;
     margin-bottom: 30px;
   }
   .subtitle{
     font-size: 22px;
-    /* line-height: 20px; */
+    line-height: 22px;
   }
   .business{
     height:48px;
@@ -311,7 +311,7 @@ margin:0px;
   }
   .subtitle-dark{
     font-size: 40px;
-    /* line-height: 30px; */
+    line-height: 40px;
     margin:0px;
   }
   .text,
