@@ -252,7 +252,11 @@ text-decoration: none;
   margin-right: auto;
 }
 .picture{
-  width:100%;
+  max-width: 100%;
+  max-height:360px;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
   padding-top:30px;
   padding-bottom: 30px;
 }
