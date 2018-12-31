@@ -233,6 +233,7 @@ text-decoration: none;
   margin:12px;
   color:white;
   height:72px;
+  filter: grayscale(100%);
 }
 .text-block{
   padding-top:80px;
@@ -293,6 +294,10 @@ margin:0px;
   color:white;
   text-decoration: none;
   transition: color .12s ease-in-out;
+}
+.business:hover{
+  filter: grayscale(0%);
+  transition: all .12s ease-in-out;
 }
 /* this is what you do when the screen is small. */
 @media (max-width: 720px) {
