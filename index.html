@@ -12,7 +12,7 @@
 <body>
 
 
-
+  <!-- navbar setup -->
   <div id = "navbar" class = "navdefault">
     <a class = "navitemdefault" href = "#home">Home</a>
     <a class = "navitemdefault" href = "#about">About</a>
@@ -20,13 +20,16 @@
     <a class = "navitemdefault" href = "#sister">Sister Sites</a>
   </div>
 
-  <svg id = "navtoggle" class = "navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen')">
-    <polygon points="14,0 21,0 21,14 35,14 35,21 21,21 21,35 14,35 14,21 0,21 0,14 14,14"/>
-    Sorry, your browser does not support inline SVG.
+  <!-- navbar toggle that appears when window width < 600 -->
+  <svg id = "navtoggle" class = "navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
   </svg>
 
+  <!-- escaper that appears so that you can close the navbar by clicking anyting on the window -->
+  <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')"> 
+  </div>
+
   <!--splash-->
-  <div class = "bigpic" id = "home" style = "height:100%; background-image: linear-gradient(#00001055, #00001055), url('volocofire roadster.png')">
+  <div class = "bigpic" id = "home" style = "height:100%; background-image: url('volocofire roadster.png')">
     <div class = "title">
       MK | Online
     </div>
@@ -35,16 +38,20 @@
       The official website for all mk projects
     </div>
   </div>
+
   <!--short description-->
-  <div class = "bodyblock" id = "about">
-    <div class = "text">
-      MK Online contains all my newest programming and art projects. Programming
-      projects include dynamic HTML-CSS-JS pages (final sites can be found
-      <a href="#sister">here</a>) and C++ applications (coming soon).
-      Art projects include photorealistic renderings and hand drawings.<br>
-      New projects are always coming, so stay posted!
+  <div class = "bodycontainer" id = "about">
+    <div class = "bodyblock">
+      <div class = "text">
+        MK Online contains all my newest programming and art projects. Programming
+        projects include dynamic HTML-CSS-JS pages (final sites can be found
+        <a href="#sister">here</a>) and C++ applications (coming soon).
+        Art projects include photorealistic renderings and hand drawings.<br>
+        New projects are always coming, so stay posted!
+      </div>
     </div>
   </div>
+
   <!--projects title-->
   <div class = "bigpic" id = "projects" style = "background-image: url(programming.gif)">
     <div class = "title">
@@ -52,13 +59,14 @@
     </div>
     <hr class = "divider">
     <div class = "subtitle">
-      HTML | CSS | JS | more
+      HTML, Javascript, CSS, and more
     </div>
   </div>
+
   <!--projects-->
-  <div class = "bodyblock">
+  <div class = "bodycontainer">
     <!--superskin-->
-    <div class = "jumbotron">
+    <div class = "bodyblock">
       <div class = "heading">
         SuperSkin
       </div>
@@ -72,7 +80,7 @@
       <a class = "btn" href = "/superskin">See collection</a>
     </div>
     <!--crystal grower-->
-    <div class = "jumbotron">
+    <div class = "bodyblock">
       <div class = "heading">
         Crystal Grower v2
       </div>
@@ -85,7 +93,7 @@
       <a class = "btn" href = "crystalgrower.html">Play</a>
     </div>
     <!--John1site-->
-    <div class = "jumbotron">
+    <div class = "bodyblock">
       <div class = "heading">
         John 1 Site
       </div>
@@ -97,7 +105,7 @@
       <a class = "btn" href = "john1site/john1site.html">Read John1</a>
     </div>
     <!--cimarronlibrary-->
-    <div class = "jumbotron">
+    <div class = "bodyblock">
       <div class = "heading">
         Cimarron Library
       </div>
@@ -110,6 +118,7 @@
       </div>
     </div>
   </div>
+
   <!--sister sites description-->
   <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(ptgallery/picture.jpg)">
     <div class = "title">
@@ -120,10 +129,11 @@
       Links to sister websites
     </div>
   </div>
+
   <!--sister sites-->
-  <div class = "bodyblock">
+  <div class = "bodycontainer">
     <!--bellingham leasing-->
-    <div class = "jumbotron">
+    <div class = "bodyblock">
       <div class = "heading">
         Sycacorp.com
       </div>
@@ -135,7 +145,7 @@
       <a class = "btn" href = "https://sycacorp.com/">Go to site</a>
     </div>
     <!--syacmore corporation-->
-    <div class = "jumbotron">
+    <div class = "bodyblock">
       <div class = "heading">
         Sycamore Corporation
       </div>
@@ -147,7 +157,7 @@
       <a class = "btn" href = "sycamorecorporation/index.html">See website</a>
     </div>
     <!--ptgallery-->
-    <div class = "jumbotron">
+    <div class = "bodyblock">
       <div class = "heading">
         PT Gallery
       </div>
@@ -167,8 +177,23 @@
   </div>
 
   <div id ="sidenote">
-    "Now thanks be unto God, which always causeth us to triumph in Christ, and maketh manifest the savour of his knowledge by us in every place" (II Cor 2:14).
+    Hi there, friend. Glad you made it to my website. Make sure to check out all the cool sister sites!
   </div>
+
+  <div id = "alert">
+    <img src="cone3d.png" width=100px height= 100px></img>
+    <div class = "text">
+    This site is currently under construction.
+    </div>
+    <div class = "text">
+      Please watch your step.
+    </div>
+    <a class="btn" onclick="hideIt('alert')" href="#home">
+      Dismiss
+    </a>
+  </div>
+
+
 
   <script type="text/javascript" src="script.js"></script>
 </body>
