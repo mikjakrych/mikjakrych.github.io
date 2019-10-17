@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="MK Studios">
+  <meta name="keywords" content="mikja,krych,onine,projects,css,javascript,html,sycamore,sycacorp,perry,thompson,gallery,john1site,crystalgrower,cimarron library">
+  <meta name="author" content="Mikja Krych">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK Studios | Home</title>
 </head>
 <body>
 
 
-  <div id = "navbar">
-    <a class = "navitem" href = "#home">Home</a>
-    <a class = "navitem" href = "#about">About</a>
-    <a class = "navitem" href = "#projects">Projects</a>
-    <a class = "navitem" href = "#sister">Sister Sites</a>
+
+  <div id = "navbar" class = "navdefault">
+    <a class = "navitemdefault" href = "#home">Home</a>
+    <a class = "navitemdefault" href = "#about">About</a>
+    <a class = "navitemdefault" href = "#projects">Projects</a>
+    <a class = "navitemdefault" href = "#sister">Sister Sites</a>
   </div>
+
+  <svg id = "navtoggle" class = "navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen')">
+    <polygon points="14,0 21,0 21,14 35,14 35,21 21,21 21,35 14,35 14,21 0,21 0,14 14,14"/>
+    Sorry, your browser does not support inline SVG.
+  </svg>
 
   <!--splash-->
   <div class = "bigpic" id = "home" style = "height:100%; background-image: linear-gradient(#00001055, #00001055), url('volocofire roadster.png')">
@@ -154,7 +166,7 @@
     </div>
   </div>
 
-  <div id ="sidenote" onclick="clickHide('sidenote')">
+  <div id ="sidenote">
     Hello there, friend! Glad you're here. Check out this cool site along with its sister sites.
   </div>
 
