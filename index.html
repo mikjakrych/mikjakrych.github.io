@@ -6,7 +6,8 @@
   <meta name="description" content="MK Studios">
   <meta name="keywords" content="mikja,krych,onine,projects,css,javascript,html,sycamore,sycacorp,perry,thompson,gallery,john1site,crystalgrower,cimarron library">
   <meta name="author" content="Mikja Krych">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/x-icon" href="mk.gif"/>
   <title>MK Studios | Home</title>
 </head>
 <body>
@@ -29,7 +30,8 @@
   </div>
 
   <!--splash-->
-  <div class = "bigpic" id = "home" style = "height:100%; background-image: url('volocofire roadster.png')">
+  <div class = "bigpic" id = "home" style = "height:100%; background-image: url('volocofire.jpg')">
+    <img width=150px height=150px src="mk.gif">
     <h1 class = "title">
       MK | Online
     </h1>
@@ -53,7 +55,7 @@
   </section>
 
   <!--projects title-->
-  <div class = "bigpic" id = "projects" style = "background-image: url(programming.gif)">
+  <div class = "bigpic" id = "projects" style = "background-image: url(programming.jpg)">
     <h1 class = "title">
       Projects
     </h1>
@@ -120,7 +122,7 @@
   </section>
 
   <!--sister sites description-->
-  <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(ptgallery/picture.jpg)">
+  <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(blueberry.jpg)">
     <h1 class = "title">
       Sister Sites
     </h1>
@@ -177,14 +179,14 @@
     </p>
   </footer>
 
-<!-- little sidenote message -->
+  <!-- little sidenote message -->
   <aside id ="sidenote">
     Hi there, friend. Glad you made it to my website. Make sure to check out all the cool sister sites!
   </aside>
 
-<!-- under construction alert -->
-  <dialog id = "alert">
-    <img src="cone3d.png" width=100px height= 100px></img>
+  <!-- under construction alert -->
+  <div id = "alert">
+    <img src="cone.gif" width=100px height= 100px></img>
     <span class = "text">
       This site is currently under construction.
     </span>
@@ -194,7 +196,7 @@
     <a class="btn" onclick="hideIt('alert')" href="#home">
       Dismiss
     </a>
-  </dialog>
+  </div>
 
   <script type="text/javascript" src="script.js"></script>
 </body>

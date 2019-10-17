@@ -2,7 +2,7 @@
   --color-base1: #7c992c;
   --color-base2: #577284;
   --color-highlight1: #DBC76D;
-  --color-highlight2: #52a1df;
+  --color-highlight2: #53A0DE;
 
   --transition1: .6s ease;
   --transition2: .2s ease;
@@ -22,7 +22,7 @@ body{
   padding: 0;
   border: 0;
   font-family: monospace;
-  font-weight: lighter;
+  font-weight: normal;
 }
 a{
   text-decoration: none;
