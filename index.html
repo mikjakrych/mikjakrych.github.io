@@ -13,187 +13,188 @@
 
 
   <!-- navbar setup -->
-  <div id = "navbar" class = "navdefault">
+  <nav id = "navbar" class = "navdefault">
     <a class = "navitemdefault" href = "#home">Home</a>
     <a class = "navitemdefault" href = "#about">About</a>
     <a class = "navitemdefault" href = "#projects">Projects</a>
     <a class = "navitemdefault" href = "#sister">Sister Sites</a>
-  </div>
+  </nav>
 
   <!-- navbar toggle that appears when window width < 600 -->
   <svg id = "navtoggle" class = "navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
   </svg>
 
   <!-- escaper that appears so that you can close the navbar by clicking anyting on the window -->
-  <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')"> 
+  <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
   </div>
 
   <!--splash-->
   <div class = "bigpic" id = "home" style = "height:100%; background-image: url('volocofire roadster.png')">
-    <div class = "title">
+    <h1 class = "title">
       MK | Online
-    </div>
+    </h1>
     <hr class = "divider">
-    <div class = "subtitle" id = "subtitle">
+    <span class = "subtitle" id = "subtitle">
       The official website for all mk projects
-    </div>
+    </span>
   </div>
 
   <!--short description-->
-  <div class = "bodycontainer" id = "about">
-    <div class = "bodyblock">
-      <div class = "text">
+  <section class = "bodycontainer" id = "about">
+    <article class = "bodyblock">
+      <p class = "text">
         MK Online contains all my newest programming and art projects. Programming
         projects include dynamic HTML-CSS-JS pages (final sites can be found
         <a href="#sister">here</a>) and C++ applications (coming soon).
         Art projects include photorealistic renderings and hand drawings.<br>
         New projects are always coming, so stay posted!
-      </div>
-    </div>
-  </div>
+      </p>
+    </article>
+  </section>
 
   <!--projects title-->
   <div class = "bigpic" id = "projects" style = "background-image: url(programming.gif)">
-    <div class = "title">
+    <h1 class = "title">
       Projects
-    </div>
+    </h1>
     <hr class = "divider">
-    <div class = "subtitle">
-      HTML, Javascript, CSS, and more
-    </div>
+    <span class = "subtitle">
+      HTspanML, Javascript, CSS, and more
+    </span>
   </div>
 
   <!--projects-->
-  <div class = "bodycontainer">
+  <section class = "bodycontainer">
     <!--superskin-->
-    <div class = "bodyblock">
-      <div class = "heading">
+    <article class = "bodyblock">
+      <h2 class = "heading">
         SuperSkin
-      </div>
+      </h2>
       <hr class = "divider">
-      <div class = "text">
+      <p class = "text">
         SuperSkin is a collection of elegant faceplates for the
         <a href = "https://thomasokken.com/free42">Free42</a>
         desktop calculator. This collection was designed by
         Perry Thompson in cooperation with MK Studios.
-      </div>
+      </p>
       <a class = "btn" href = "/superskin">See collection</a>
-    </div>
+    </article>
     <!--crystal grower-->
-    <div class = "bodyblock">
-      <div class = "heading">
+    <article class = "bodyblock">
+      <h2 class = "heading">
         Crystal Grower v2
-      </div>
+      </h2>
       <hr class = "divider">
-      <div class = "text">
+      <p class = "text">
         CG2 is a javascript-based video game in which players grow a crystal from
         its seed by capturing solutes from drips of solution, while trying not to hit water
         drops or smash into a block of dynamite.
-      </div>
+      </p>
       <a class = "btn" href = "crystalgrower.html">Play</a>
-    </div>
+    </article>
     <!--John1site-->
-    <div class = "bodyblock">
-      <div class = "heading">
+    <article class = "bodyblock">
+      <h2 class = "heading">
         John 1 Site
-      </div>
+      </h2>
       <hr class = "divider">
-      <div class = "text">
+      <p class = "text">
         This semi-permanent webpage was primarily created to test z-index and
         sticky functions. This page might later be used to create a Bible database.
-      </div>
+      </p>
       <a class = "btn" href = "john1site/john1site.html">Read John1</a>
-    </div>
+    </article>
     <!--cimarronlibrary-->
-    <div class = "bodyblock">
-      <div class = "heading">
+    <article class = "bodyblock">
+      <h2 class = "heading">
         Cimarron Library
-      </div>
+      </h2>
       <hr class = "divider">
-      <div class = "text">
+      <p class = "text">
         Cimarron Library is going to be a .php based book tracking system where users
         can get information about books in the library including whether or not its available.
         Much work still needs to be done on this project, but there is already
         a <a href = "cimarronlibrary/cimarronlibrary.html">video demo</a>.
-      </div>
-    </div>
-  </div>
+      </p>
+    </article>
+  </section>
 
   <!--sister sites description-->
   <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(ptgallery/picture.jpg)">
-    <div class = "title">
+    <h1 class = "title">
       Sister Sites
-    </div>
+    </h1>
     <hr class = "divider">
-    <div class = "subtitle">
+    <span class = "subtitle">
       Links to sister websites
-    </div>
+    </span>
   </div>
 
   <!--sister sites-->
-  <div class = "bodycontainer">
+  <section class = "bodycontainer">
     <!--bellingham leasing-->
-    <div class = "bodyblock">
-      <div class = "heading">
+    <article class = "bodyblock">
+      <h2 class = "heading">
         Sycacorp.com
-      </div>
+      </h2>
       <hr class = "divider">
-      <div class = "text">
+      <p class = "text">
         This website is the official home of Sycamore Corporation (Bellingham Leasing).
         It was designed and built by MK Studios in 2018.
-      </div>
+      </p>
       <a class = "btn" href = "https://sycacorp.com/">Go to site</a>
-    </div>
+    </article>
     <!--syacmore corporation-->
-    <div class = "bodyblock">
-      <div class = "heading">
+    <article class = "bodyblock">
+      <h2 class = "heading">
         Sycamore Corporation
-      </div>
+      </h2>
       <hr class = "divider">
-      <div class = "text">
+      <p class = "text">
         This is the retired Sycamore Corporation website, designed and built
         by MK Studios.
-      </div>
+      </p>
       <a class = "btn" href = "sycamorecorporation/index.html">See website</a>
-    </div>
+    </article>
     <!--ptgallery-->
-    <div class = "bodyblock">
-      <div class = "heading">
+    <article class = "bodyblock">
+      <h2 class = "heading">
         PT Gallery
-      </div>
+      </h2>
       <hr class = "divider">
-      <div class = "text">
+      <p class = "text">
         This website was created to display all Perry Thompson's projects,
         photos, and artwork.
-      </div>
+      </p>
       <a class = "btn" href = "ptgallery/index.html">View gallery</a>
-    </div>
-  </div>
+    </article>
+  </section>
+
   <!--footer-->
-  <div class = "footer">
-    <div class="text">
-      © 2019 Mikja Krych Studios
-    </div>
-  </div>
+  <footer class = "footer">
+    <p class="text">
+      &copy; 2019 Mikja Krych Studios
+    </p>
+  </footer>
 
-  <div id ="sidenote">
+<!-- little sidenote message -->
+  <aside id ="sidenote">
     Hi there, friend. Glad you made it to my website. Make sure to check out all the cool sister sites!
-  </div>
+  </aside>
 
-  <div id = "alert">
+<!-- under construction alert -->
+  <dialog id = "alert">
     <img src="cone3d.png" width=100px height= 100px></img>
-    <div class = "text">
-    This site is currently under construction.
-    </div>
-    <div class = "text">
+    <span class = "text">
+      This site is currently under construction.
+    </span>
+    <span class = "text">
       Please watch your step.
-    </div>
+    </span>
     <a class="btn" onclick="hideIt('alert')" href="#home">
       Dismiss
     </a>
-  </div>
-
-
+  </dialog>
 
   <script type="text/javascript" src="script.js"></script>
 </body>
