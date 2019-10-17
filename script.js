@@ -19,10 +19,10 @@ function typer(id, wait){
     function innerTyper(){
       object.style.display = "block";
       if (i < length){
-        object.style.background = "hsl(" + (i/length*210) + ", 100%, 56%)";
+        object.style.background = "hsl(" + (50+20*Math.sin(i/10)) + ", 100%, 40%)";
         object.innerHTML += txt.charAt(i);
         i++;
-        setTimeout(innerTyper, randInt(60,100));
+        setTimeout(innerTyper, randInt(40,70));
       };
     },
 
@@ -53,8 +53,8 @@ function toggleNav(navbar_id, navbar_open_class, nav_item_default_class, nav_ite
       if (i < navitems.length){
         navitems[i].classList.toggle(nav_item_open_class);
         i ++;
-        setTimeout(innerToggleNav,40);
+        setTimeout(innerToggleNav,30);
     }
   },
-  200)
+  400)
 }
