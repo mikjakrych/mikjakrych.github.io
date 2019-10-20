@@ -10,7 +10,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="mk.gif"/>
   <title>MK Studios | Home</title>
 </head>
-<body>
+<body onload="initializeCanvas()" onresize="resizeCanvas()">
 
 
   <!-- navbar setup -->
@@ -42,8 +42,8 @@
   </div>
 
   <!--short description-->
-  <section class = "bodycontainer" id = "about">
-    <article class = "bodyblock">
+  <div class = "bodycontainer" id = "about">
+    <div class = "bodyblock">
       <p class = "text">
         MK Online contains all my newest programming and art projects. Programming
         projects include dynamic HTML-CSS-JS pages (final sites can be found
@@ -51,8 +51,8 @@
         Art projects include photorealistic renderings and hand drawings.<br>
         New projects are always coming, so stay posted!
       </p>
-    </article>
-  </section>
+    </div>
+  </div>
 
   <!--projects title-->
   <div class = "bigpic" id = "projects" style = "background-image: url(programming.jpg)">
@@ -66,9 +66,9 @@
   </div>
 
   <!--projects-->
-  <section class = "bodycontainer">
+  <div class = "bodycontainer">
     <!--superskin-->
-    <article class = "bodyblock">
+    <div class = "bodyblock">
       <h2 class = "heading">
         SuperSkin
       </h2>
@@ -79,23 +79,35 @@
         desktop calculator. This collection was designed by
         Perry Thompson in cooperation with MK Studios.
       </p>
-      <a class = "btn" href = "/superskin">See collection</a>
-    </article>
+      <a class = "btn" href = "/superskin.html">See collection</a>
+    </div>
     <!--crystal grower-->
-    <article class = "bodyblock">
+    <div class = "bodyblock">
       <h2 class = "heading">
         Crystal Grower v2
       </h2>
       <hr class = "divider">
       <p class = "text">
-        CG2 is a javascript-based video game in which players grow a crystal from
-        its seed by capturing solutes from drips of solution, while trying not to hit water
-        drops or smash into a block of dynamite.
+        <b>Before you begin: </b>Crystal Grower v2 is just a video game (don't spend too much time on it!). If you are intrested in REAL crystal growing, do some research on how crystals are made and how they are used. The instructions are as follows:
       </p>
-      <a class = "btn" href = "crystalgrower.html">Play</a>
-    </article>
+      <ul>
+        <li>
+          Click and hold the mouse button (over the game area) to make the crystal seed float up.
+        </li>
+        <li>
+          Try to catch the solution droplets (green). The solute material will precipitate onto your crystal and make it grow larger. The amount your crystal grows depends on the size of the droplet.
+        </li>
+        <li>
+          Avoid the water droplets (blue). These will dissolve some of your crystal away reducing the value. Once again, the amount the solvent shrinks your crystal depends on the size of the solvent drop.
+        </li>
+        <li>
+          Try all you can to avoid the blocks of dynamite. They will shatter your crystal, whose value becomes absolutely ZERO.
+        </li>
+      </ul>
+      <canvas id="mycanvas"></canvas>
+    </div>
     <!--John1site-->
-    <article class = "bodyblock">
+    <div class = "bodyblock">
       <h2 class = "heading">
         John 1 Site
       </h2>
@@ -105,9 +117,9 @@
         sticky functions. This page might later be used to create a Bible database.
       </p>
       <a class = "btn" href = "john1site/john1site.html">Read John1</a>
-    </article>
+    </div>
     <!--cimarronlibrary-->
-    <article class = "bodyblock">
+    <div class = "bodyblock">
       <h2 class = "heading">
         Cimarron Library
       </h2>
@@ -118,8 +130,8 @@
         Much work still needs to be done on this project, but there is already
         a <a href = "cimarronlibrary/cimarronlibrary.html">video demo</a>.
       </p>
-    </article>
-  </section>
+    </div>
+  </div>
 
   <!--sister sites description-->
   <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(blueberry.jpg)">
@@ -133,9 +145,9 @@
   </div>
 
   <!--sister sites-->
-  <section class = "bodycontainer">
+  <div class = "bodycontainer">
     <!--bellingham leasing-->
-    <article class = "bodyblock">
+    <div class = "bodyblock">
       <h2 class = "heading">
         Sycacorp.com
       </h2>
@@ -145,9 +157,9 @@
         It was designed and built by MK Studios in 2018.
       </p>
       <a class = "btn" href = "https://sycacorp.com/">Go to site</a>
-    </article>
+    </div>
     <!--syacmore corporation-->
-    <article class = "bodyblock">
+    <div class = "bodyblock">
       <h2 class = "heading">
         Sycamore Corporation
       </h2>
@@ -157,9 +169,9 @@
         by MK Studios.
       </p>
       <a class = "btn" href = "sycamorecorporation/index.html">See website</a>
-    </article>
+    </div>
     <!--ptgallery-->
-    <article class = "bodyblock">
+    <div class = "bodyblock">
       <h2 class = "heading">
         PT Gallery
       </h2>
@@ -169,8 +181,8 @@
         photos, and artwork.
       </p>
       <a class = "btn" href = "ptgallery/index.html">View gallery</a>
-    </article>
-  </section>
+    </div>
+  </div>
 
   <!--footer-->
   <footer class = "footer">
@@ -185,7 +197,9 @@
   </aside>
 
   <!-- under construction alert -->
-  <div id = "alert">
+
+
+  <!-- <div id = "alert">
     <img src="cone.gif" width=100px height= 100px></img>
     <span class = "text">
       This site is currently under construction.
@@ -196,8 +210,17 @@
     <a class="btn" onclick="hideIt('alert')" href="#home">
       Dismiss
     </a>
-  </div>
+  </div> -->
 
   <script type="text/javascript" src="script.js"></script>
+  <script>
+    typer("sidenote", 10000);
+    hideIt("sidenote");
+    document.getElementById("navtoggle").innerHTML = "<polygon points = '" + cross(35) + "'></polygon>";
+  </script>
+
+  <script type = "text/javascript" src = "cgv3.js"></script>
+
+
 </body>
 </html>

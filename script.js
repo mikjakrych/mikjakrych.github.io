@@ -1,9 +1,3 @@
-//initialize and call all the functions needed
-
-typer("sidenote", 10000);
-hideIt("sidenote");
-document.getElementById("navtoggle").innerHTML = "<polygon points = '" + cross(35) + "'></polygon>";
-
 //function to output a random integer based on minimum and maximum
 function randInt(min, max){
   return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -31,8 +25,8 @@ function typer(id, wait){
 }
 
 //function to hide things when they are clicked
-function hideIt(thing_id){
-  var thing = document.getElementById(thing_id);
+function hideIt(id){
+  var thing = document.getElementById(id);
   thing.onclick = function(){
     thing.style.display = "none";
   }
@@ -79,4 +73,10 @@ function cross(width){
   0 + "," + b + " " +
   0 + "," + a + " " +
   a + "," + a;
+}
+
+//function to resize game window
+function resizeCanvas(){
+  var canvas = document.getElementById("mycanvas");
+  var canvas_parent = canvas.parentElement;
 }
