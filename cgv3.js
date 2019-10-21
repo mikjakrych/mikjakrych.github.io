@@ -56,6 +56,7 @@ function startGame(){
   gameArea.addEventListener("mouseup", function(){clicking = false});
   gameArea.addEventListener("touchstart", function(){clicking = true});
   gameArea.addEventListener("touchend", function(){clicking = false});
+  gameArea.style.userSelect = "none";
   //make the crystal object
   crystal1 = new crystal(70, 200, 32, 20);
   //make obstacles
@@ -135,9 +136,10 @@ function endGame(){
     gameArea.context.fillStyle = "rgb(87, 114, 132)";
     gameArea.context.font = "30px monospace";
     gameArea.context.textAlign = "center";
-    gameArea.context.fillText("Timeout, buddy!", gameArea.width/2, gameArea.height/2);
+    gameArea.context.fillText("Crystal value: " + crystal1.value, gameArea.width/2, gameArea.height/2-10);
     gameArea.context.font = "15px monospace";
     gameArea.context.textAlign = "center";
+    gameArea.context.fillText("Timeout, buddy!", gameArea.width/2, gameArea.height/2 +10);
     gameArea.context.fillText("It looks like you've played", gameArea.width/2, gameArea.height/2 +25);
     gameArea.context.fillText("five games already. Time to", gameArea.width/2, gameArea.height/2 +40);
     gameArea.context.fillText("take a break. See you later!", gameArea.width/2, gameArea.height/2 +55);
