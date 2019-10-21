@@ -232,6 +232,7 @@ ul{
 .navtoggledefault{
   display:none;
 }
+
 @media only screen and (max-width: 600px){
   .escaper{
     z-index: 2;
@@ -299,5 +300,8 @@ ul{
     transform: rotate(225deg);
     background-color: var(--color-base2, #577284);
     fill: var(--color-highlight2,#53A0DE);
+  }
+  #mycanvas{
+    transform: scale(.75,.75);
   }
 }
