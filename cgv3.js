@@ -131,6 +131,8 @@ function endGame(){
     gameArea.addEventListener('click', startGame);
     //increment games_played
     games_played += 1;
+    //increase speed;
+    game_speed += .3;
   } else{
     gameArea.context.fillStyle = "rgb(87, 114, 132)";
     gameArea.context.font = "30px monospace";
