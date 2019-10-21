@@ -54,6 +54,8 @@ function startGame(){
   gameArea.removeEventListener("click", startGame);
   gameArea.addEventListener("mousedown", function(){clicking = true});
   gameArea.addEventListener("mouseup", function(){clicking = false});
+  gameArea.addEventListener("touchstart", function(){clicking = true});
+  gameArea.addEventListener("touchend", function(){clicking = false});
   //make the crystal object
   crystal1 = new crystal(70, 200, 32, 20);
   //make obstacles
