@@ -20,7 +20,7 @@ var rise_image = "up.png";
 var fall_image = "down.png";
 var obstacle_amount = 50;
 var obstacle_spacing;
-var game_speed = 3;
+var game_speed = 1.5;
 var games_played = 0;
 
 var crystal1;
