@@ -22,8 +22,8 @@
   </nav>
 
   <!-- navbar toggle that appears when window width < 600 -->
-  <svg id = "navtoggle" class = "navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
-  </svg>
+  <div id = "navtoggle" class="navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
+  </div>
 
   <!-- escaper that appears so that you can close the navbar by clicking anyting on the window -->
   <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
@@ -61,7 +61,7 @@
     </h1>
     <hr class = "divider">
     <span class = "subtitle">
-      HTspanML, Javascript, CSS, and more
+      HTML, Javascript, CSS, and more
     </span>
   </div>
 
@@ -77,9 +77,51 @@
         SuperSkin is a collection of elegant faceplates for the
         <a href = "https://thomasokken.com/free42">Free42</a>
         desktop calculator. This collection was designed by
-        Perry Thompson in cooperation with MK Studios.
+        Perry Thompson in cooperation with MK Studios. Collection
+        coming below!
       </p>
-      <a class = "btn" href = "/superskin.html">See collection</a>
+      <div class = "cardcontainer">
+        <div class = "flipcard">
+          <div class = "flipcardinner">
+            <div class = "flipfront">
+              bla bla bla
+            </div>
+            <div class = "flipback">
+              <a href = "mk.gif" download="logo">logo</a>
+            </div>
+          </div>
+        </div>
+        <div class = "flipcard">
+          <div class = "flipcardinner">
+            <div class = "flipfront">
+              flipping card
+            </div>
+            <div class = "flipback">
+              back
+            </div>
+          </div>
+        </div>
+        <div class = "flipcard">
+          <div class = "flipcardinner">
+            <div class = "flipfront">
+              giraffe
+            </div>
+            <div class = "flipback">
+              kangaroo
+            </div>
+          </div>
+        </div>
+        <div class = "flipcard">
+          <div class = "flipcardinner">
+            <div class = "flipfront">
+              tortoise
+            </div>
+            <div class = "flipback">
+              salmon
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--crystal grower-->
     <div class = "bodyblock">
@@ -88,11 +130,11 @@
       </h2>
       <hr class = "divider">
       <p class = "text">
-        <b>Before you begin: </b>Crystal Grower v2 is just a video game (don't spend too much time on it!). If you are intrested in REAL crystal growing, do some research on how crystals are made and how they are used. The instructions are as follows:
+        <b>Before you begin: </b>Crystal Grower v2 is just a video game (don't spend too much time on it!). If you are intrested in <em>real</em> crystal growing, do some research on how crystals are made and how they are used. The instructions are as follows:
       </p>
       <ul>
         <li>
-          Click and hold the mouse button (over the game area) to make the crystal seed float up.
+          Click and hold the mouse button over the game area to make the crystal seed float up. (This is more difficult on tap screen devices.)
         </li>
         <li>
           Try to catch the solution droplets (green). The solute material will precipitate onto your crystal and make it grow larger. The amount your crystal grows depends on the size of the droplet.
@@ -101,7 +143,7 @@
           Avoid the water droplets (blue). These will dissolve some of your crystal away reducing the value. Once again, the amount the solvent shrinks your crystal depends on the size of the solvent drop.
         </li>
         <li>
-          Try all you can to avoid the blocks of dynamite. They will shatter your crystal, whose value becomes absolutely ZERO.
+          Try all you can to avoid the blocks of dynamite. They will shatter your crystal, whose value becomes absolutely <em>zero</em>.
         </li>
       </ul>
       <canvas id="mycanvas"></canvas>
@@ -216,7 +258,7 @@
   <script>
     typer("sidenote", 10000);
     hideIt("sidenote");
-    document.getElementById("navtoggle").innerHTML = "<polygon points = '" + cross(35) + "'></polygon>";
+    document.getElementById("navtoggle").innerHTML = "<svg><polygon points = '" + cross(35) + "'></polygon></svg>";
   </script>
 
   <script type = "text/javascript" src = "cgv3.js"></script>
