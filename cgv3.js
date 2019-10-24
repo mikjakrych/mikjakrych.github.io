@@ -34,7 +34,7 @@ function initializeCanvas(){
   var c = document.cookie;
   var t = c.indexOf("timeout=");
   var s = c.indexOf(";",t);
-
+console.log(c);
 console.log(t + "," + s);
   //give it dimensions and context
   gameArea.width = 400;
