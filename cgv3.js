@@ -140,7 +140,8 @@ function endGame(){
   } else{
     var curr_date = new Date();
     var timeout_end = new Date(curr_date.getTime() + 600000);
-    document.cookie += (";timeout=" + timeout_end.getTime());
+    var c = document.cookie;
+    document.cookie = (c + ";timeout=" + timeout_end.getTime());
     gameArea.addEventListener('click', timeOut);
   }
 }
