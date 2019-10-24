@@ -141,7 +141,7 @@ function endGame(){
     gameArea.context.textAlign = "center";
     gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
 
-  if(games_played < 4){
+  if(games_played < 0){ //4
     //add event listener so that game begins when canvas is clicked
     gameArea.addEventListener('click', startGame);
     //increment games_played
@@ -150,10 +150,12 @@ function endGame(){
     game_speed += .3;
   } else{
     var curr_date = new Date();
-    var timeout_end = curr_date.getTime() + 600000);
+    var timeout_end = new Date(curr_date.getTime() + 600000);
     var t = timeout_end.toGMTString();
     document.cookie += "timeout=" + t;
     gameArea.addEventListener('click', timeOut);
+    var c = document.cookie;
+    console.log(c);
   }
 }
 function timeOut(){
