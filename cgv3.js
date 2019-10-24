@@ -31,6 +31,20 @@ var updater;
 var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
+  var c = document.cookie;
+  var t = c.indexOf("timeout=");
+  var s = c.indexOf(";",t);
+  var a = "NaN";
+  if (c && b){
+    a = t+8;
+  }
+
+  var b = "NaN";
+  if (c && b){
+    b = s-1;
+  };
+
+  alert(a + "," + b);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
@@ -94,8 +108,7 @@ function updateGame(){
     particles[i].draw();
   }
   //if the last obstacle is gone, end the game
-  if(obstacles[obstacles.length-1].x < 0 && game_state){
-    game_state = 0;
+  if(obstacles[obstacles.length-1].x < 0){
     setTimeout(endGame,1000);
   }
 }
@@ -118,7 +131,7 @@ function endGame(){
   gameArea.context.fillStyle = "rgb(219, 199, 109)";
   gameArea.context.fillRect(0,0,gameArea.width, gameArea.height);
 
-  if(games_played < 4){
+
     //display end game graphics
     gameArea.context.fillStyle = "rgb(87, 114, 132)";
     gameArea.context.font = "30px monospace";
@@ -127,6 +140,8 @@ function endGame(){
     gameArea.context.font = "15px monospace";
     gameArea.context.textAlign = "center";
     gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
+
+  if(games_played < 4){
     //add event listener so that game begins when canvas is clicked
     gameArea.addEventListener('click', startGame);
     //increment games_played
@@ -134,16 +149,10 @@ function endGame(){
     //increase speed;
     game_speed += .3;
   } else{
-    gameArea.context.fillStyle = "rgb(87, 114, 132)";
-    gameArea.context.font = "30px monospace";
-    gameArea.context.textAlign = "center";
-    gameArea.context.fillText("Crystal value: " + crystal1.value, gameArea.width/2, gameArea.height/2-10);
-    gameArea.context.font = "15px monospace";
-    gameArea.context.textAlign = "center";
-    gameArea.context.fillText("Timeout, buddy!", gameArea.width/2, gameArea.height/2 +10);
-    gameArea.context.fillText("It looks like you've played", gameArea.width/2, gameArea.height/2 +25);
-    gameArea.context.fillText("five games already. Time to", gameArea.width/2, gameArea.height/2 +40);
-    gameArea.context.fillText("take a break. See you later!", gameArea.width/2, gameArea.height/2 +55);
+    var d = setTime(d.getTime() + 600000);
+    var t = d.toGMTString();
+    document.cookie = "timeout=" + t;
+    gameArea.addEventListener('click', timeOut);
   }
 }
 function timeOut(){
@@ -153,10 +162,12 @@ function timeOut(){
   gameArea.context.fillStyle = "rgb(87, 114, 132)";
   gameArea.context.font = "30px monospace";
   gameArea.context.textAlign = "center";
-  gameArea.context.fillText("Crystal value: " + crystal1.value, gameArea.width/2, gameArea.height/2);
+  gameArea.context.fillText("Timeout, buddy!", gameArea.width/2, gameArea.height/2);
   gameArea.context.font = "15px monospace";
   gameArea.context.textAlign = "center";
-  gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
+  gameArea.context.fillText("It looks like you've played", gameArea.width/2, gameArea.height/2 +25);
+  gameArea.context.fillText("five games already. Time to", gameArea.width/2, gameArea.height/2 +40);
+  gameArea.context.fillText("take a break. See you later!", gameArea.width/2, gameArea.height/2 +55);
 }
 function crystal(x, y, width, height){
   this.x = x;
@@ -205,13 +216,11 @@ function droplet(x, y, m, speed, dtype, fill){ //x-position, y-position, droplet
     ctx.fill();
   }
   this.update = function(crystal){
-    if (this.x-.2*m <= crystal.x + crystal.width && this.x-.2*m + .4*m >= crystal.x && this.y-.5*m <= crystal.y + crystal.height && this.y-.5*m + .75*m >= crystal.y){
+    if (this.x-.2*m <= crystal.x + crystal.width && this.x-.2*m + .4*m >= crystal.x && this.y-.5*m <= crystal.y + crystal.height && this.y-.5*m + .75*m >= crystal.y && game_state){
       this.y = -400;
-      if(game_state){
       crystal.value += m * this.dtype;
       crystal.width += m * this.dtype / crystal.height;
       crystal.height += m * this.dtype / crystal.width;
-      }
     } else{
       this.x -= speed;
     }
@@ -227,7 +236,7 @@ function dynamite(x, y, m, speed){
     ctx.fillRect(this.x, this.y, m, m, 4);
   }
   this.update = function(crystal){
-    if (this.x <= crystal.x + crystal.width && this.x + m >= crystal.x && this.y <= crystal.y + crystal.height && this.y + m >= crystal.y && game_state){
+    if (this.x <= crystal.x + crystal.width && this.x + m >= crystal.x && this.y <= crystal.y + crystal.height && this.y + m >= crystal.y && game_speed){
       this.y = -400;
       crystal.width, crystal.height = 0;
       crystal.value = 0;
