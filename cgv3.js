@@ -141,7 +141,7 @@ function endGame(){
     var curr_date = new Date();
     var timeout_end = new Date(curr_date.getTime() + 600000);
     var c = document.cookie;
-    document.cookie = (c + ";timeout=" + timeout_end.getTime());
+    document.cookie = c + ";timeout=" + timeout_end.getTime();
     gameArea.addEventListener('click', timeOut);
   }
 }
