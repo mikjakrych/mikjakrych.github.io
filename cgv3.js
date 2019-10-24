@@ -1,15 +1,15 @@
 /***
-     _/_/_/   _/_/_/   _/   _/  _/_/_/  _/_/_/   _/      _/
-    _/       _/   _/   _/  _/  _/        _/    _/ _/    _/
-   _/       _/_/_/      _/     _/_/     _/    _/_/_/   _/
-  _/       _/ _/       _/         _/   _/   _/    _/  _/
- _/_/_/   _/   _/     _/     _/_/_/   _/   _/     _/ _/_/_/
+_/_/_/   _/_/_/   _/   _/  _/_/_/  _/_/_/   _/      _/
+_/       _/   _/   _/  _/  _/        _/    _/ _/    _/
+_/       _/_/_/      _/     _/_/     _/    _/_/_/   _/
+_/       _/ _/       _/         _/   _/   _/    _/  _/
+_/_/_/   _/   _/     _/     _/_/_/   _/   _/     _/ _/_/_/
 
-     _/_/_/   _/_/_/   _/_/_/  _/      _/   _/_/_/   _/_/_/               _/_/
-    _/       _/  _/  _/    _/  _/     _/   _/       _/   _/                 _/
-   _/       _/_/_/  _/    _/   _/    _/   _/_/_/   _/_/_/      _/   _/    _/
-  _/  _/   _/ _/   _/    _/    _/ _/_/   _/       _/  _/        _/_/       _/
- _/_/_/   _/   _/  _/_/_/      _/  _/   _/_/_/   _/   _/        _/     _/_/
+_/_/_/   _/_/_/   _/_/_/  _/      _/   _/_/_/   _/_/_/               _/_/
+_/       _/  _/  _/    _/  _/     _/   _/       _/   _/                 _/
+_/       _/_/_/  _/    _/   _/    _/   _/_/_/   _/_/_/      _/   _/    _/
+_/  _/   _/ _/   _/    _/    _/ _/_/   _/       _/  _/        _/_/       _/
+_/_/_/   _/   _/  _/_/_/      _/  _/   _/_/_/   _/   _/        _/     _/_/
 ***/
 
 //declare variables
@@ -34,8 +34,8 @@ function initializeCanvas(){
   var c = document.cookie;
   var t = c.indexOf("timeout=");
   var s = c.indexOf(";",t);
-console.log(c);
-console.log(t + "," + s);
+  console.log(c);
+  console.log(t + "," + s);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
@@ -87,19 +87,20 @@ function updateGame(){
     obstacles[i].draw();
   }
   //check whether crystal is rising or falling and then draw
-    if(clicking){
-      crystal1.rise();
-    } else{
-      crystal1.fall();
-    }
-    crystal1.draw();
+  if(clicking){
+    crystal1.rise();
+  } else{
+    crystal1.fall();
+  }
+  crystal1.draw();
   //draw any particles that exist
   for (var i = 0; i < particles.length; i ++){
     particles[i].update();
     particles[i].draw();
   }
   //if the last obstacle is gone, end the game
-  if(obstacles[obstacles.length-1].x < 0){
+  if(game_state && obstacles[obstacles.length-1].x < 0){
+    game_state = 0;
     setTimeout(endGame,1000);
   }
 }
@@ -118,19 +119,16 @@ function endGame(){
   game_state = 1;
   //reference log
   console.log("score: " + crystal1.value);
-
+  //display end game graphics
   gameArea.context.fillStyle = "rgb(219, 199, 109)";
   gameArea.context.fillRect(0,0,gameArea.width, gameArea.height);
-
-
-    //display end game graphics
-    gameArea.context.fillStyle = "rgb(87, 114, 132)";
-    gameArea.context.font = "30px monospace";
-    gameArea.context.textAlign = "center";
-    gameArea.context.fillText("Crystal value: " + crystal1.value, gameArea.width/2, gameArea.height/2);
-    gameArea.context.font = "15px monospace";
-    gameArea.context.textAlign = "center";
-    gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
+  gameArea.context.fillStyle = "rgb(87, 114, 132)";
+  gameArea.context.font = "30px monospace";
+  gameArea.context.textAlign = "center";
+  gameArea.context.fillText("Crystal value: " + crystal1.value, gameArea.width/2, gameArea.height/2);
+  gameArea.context.font = "15px monospace";
+  gameArea.context.textAlign = "center";
+  gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
 
   if(games_played < 0){ //4
     //add event listener so that game begins when canvas is clicked
@@ -142,7 +140,7 @@ function endGame(){
   } else{
     var curr_date = new Date();
     var timeout_end = new Date(curr_date.getTime() + 600000);
-    document.cookie += "timeout=" + timeout_end.getTime();
+    document.cookie += ";timeout=" + timeout_end.getTime();
     gameArea.addEventListener('click', timeOut);
   }
 }
