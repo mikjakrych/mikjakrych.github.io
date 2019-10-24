@@ -34,17 +34,8 @@ function initializeCanvas(){
   var c = document.cookie;
   var t = c.indexOf("timeout=");
   var s = c.indexOf(";",t);
-  var a = "NaN";
-  if (c && b){
-    a = t+8;
-  }
 
-  var b = "NaN";
-  if (c && b){
-    b = s-1;
-  };
-
-  alert(a + "," + b);
+console.log(t + "," + s);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
@@ -151,11 +142,8 @@ function endGame(){
   } else{
     var curr_date = new Date();
     var timeout_end = new Date(curr_date.getTime() + 600000);
-    var t = timeout_end.toGMTString();
-    document.cookie += "timeout=" + t;
+    document.cookie += "timeout=" + timeout_end.getTime();
     gameArea.addEventListener('click', timeOut);
-    var c = document.cookie;
-    console.log(c);
   }
 }
 function timeOut(){
