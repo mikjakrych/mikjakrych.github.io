@@ -149,9 +149,10 @@ function endGame(){
     //increase speed;
     game_speed += .3;
   } else{
-    var d = setTime(d.getTime() + 600000);
-    var t = d.toGMTString();
-    document.cookie = "timeout=" + t;
+    var curr_date = new Date();
+    var timeout_end = curr_date.getTime() + 600000);
+    var t = timeout_end.toGMTString();
+    document.cookie += "timeout=" + t;
     gameArea.addEventListener('click', timeOut);
   }
 }
@@ -236,7 +237,7 @@ function dynamite(x, y, m, speed){
     ctx.fillRect(this.x, this.y, m, m, 4);
   }
   this.update = function(crystal){
-    if (this.x <= crystal.x + crystal.width && this.x + m >= crystal.x && this.y <= crystal.y + crystal.height && this.y + m >= crystal.y && game_speed){
+    if (this.x <= crystal.x + crystal.width && this.x + m >= crystal.x && this.y <= crystal.y + crystal.height && this.y + m >= crystal.y && game_state){
       this.y = -400;
       crystal.width, crystal.height = 0;
       crystal.value = 0;
