@@ -135,14 +135,15 @@ function endGame(){
     //increase speed;
     game_speed += .3;
   } else{
-    var curr_date = new Date();
-    var timeout_end = new Date(curr_date.getTime() + 600000);
-    var c = document.cookie;
-    var cont = c + ";to=" + timeout_end.getTime();
-    document.cookie = cont;
-    gameArea.addEventListener("click", timeOut);
-    var cookie = document.cookie;
-    console.log(cookie);
+    // var curr_date = new Date();
+    // var timeout_end = new Date(curr_date.getTime() + 600000);
+    // var c = document.cookie;
+    // var cont = c + ";to=" + timeout_end.getTime();
+    // document.cookie = cont;
+    // gameArea.addEventListener("click", timeOut);
+    // var cookie = document.cookie;
+    // console.log(cookie);
+    document.cookie = "name=john";
   }
 }
 function timeOut(){
