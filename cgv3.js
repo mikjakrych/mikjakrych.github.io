@@ -140,7 +140,8 @@ function endGame(){
     gameArea.addEventListener('click', timeOut);
     var d = new Date();
     var e = d.getTime() + 10000;
-    document.cookie = "timeout=true;expires=" + e +";path=/";
+    var wholecookie = "timeout=true;expires=" + e + ";path=/";
+    document.cookie = wholecookie;
   }
 }
 function timeOut(){
