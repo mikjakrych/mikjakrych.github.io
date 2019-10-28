@@ -36,6 +36,7 @@ function initializeCanvas(){
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
+  gameArea.userSelect="none";
   gameArea.context = gameArea.getContext("2d");
   //add event listener so that game starts when canvas is clicked
   gameArea.addEventListener('click', startGame);
@@ -127,23 +128,17 @@ function endGame(){
   gameArea.context.textAlign = "center";
   gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
 
-  if(games_played < 0){ //4
+  if(games_played < 4){
     //add event listener so that game begins when canvas is clicked
     gameArea.addEventListener('click', startGame);
     //increment games_played
     games_played += 1;
     //increase speed;
-    game_speed += .3;
+    game_speed += .2;
   } else{
-    // var curr_date = new Date();
-    // var timeout_end = new Date(curr_date.getTime() + 600000);
-    // var c = document.cookie;
-    // var cont = c + ";to=" + timeout_end.getTime();
-    // document.cookie = cont;
-    // gameArea.addEventListener("click", timeOut);
-    // var cookie = document.cookie;
-    // console.log(cookie);
-    document.cookie = "name=john";
+    gameArea.addEventListener('click', timeOut);
+    var d = new Date();
+    document.cookie = "date=" + d;
   }
 }
 function timeOut(){
@@ -210,8 +205,10 @@ function droplet(x, y, m, speed, dtype, fill){ //x-position, y-position, droplet
     if (this.x-.2*m <= crystal.x + crystal.width && this.x-.2*m + .4*m >= crystal.x && this.y-.5*m <= crystal.y + crystal.height && this.y-.5*m + .75*m >= crystal.y && game_state){
       this.y = -400;
       crystal.value += m * this.dtype;
-      crystal.width += m * this.dtype / crystal.height;
-      crystal.height += m * this.dtype / crystal.width;
+      if(crystal.width > 2){
+        crystal.width += m * this.dtype / crystal.height;
+        crystal.height += m * this.dtype / crystal.width;
+      }
     } else{
       this.x -= speed;
     }

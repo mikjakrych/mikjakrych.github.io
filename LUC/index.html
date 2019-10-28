@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <title>Home | Linus Uy Consultancy</title>
+  </head>
+  <body>
+      <nav class="navbar">
+        <a href= "index.html" class="logo">
+          <img src="resources/banner.svg" style="height:inherit">
+        </a>
+        <div class="navgroup">
+        <a href="about.html" class="navclass">
+          About
+        </a>
+        <a href="services.html" class="navclass">
+          Services
+        </a>
+        <a href="contact.html" class="navclass">
+          Contact
+        </a>
+        <a href="gallery.html" class="navclass">
+          Gallery
+        </a>
+        <a href="branding.html" class="navclass">
+          Branding
+        </a>
+      </div>
+      </nav>
+      <div class="hamburger" onclick="toggleNav('navbar','navbaropen','navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen')">
+        <img src="resources/logo.svg">
+      </div>
+
+      <script type="text/javascript" src="script.js"></script>
+      <script>
+        // typer("sidenote", 10000);
+        // hideIt("sidenote");
+        document.getElementsByClassName("hamburger")[0].innerHTML += "<svg><polygon points = '" + cross(24) + "'></polygon></svg>";
+      </script>
+  </body>
+</html>
