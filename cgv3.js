@@ -32,6 +32,7 @@ var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
   var cookie = document.cookie;
+  var pos =
   console.log(cookie);
   //give it dimensions and context
   gameArea.width = 400;
@@ -138,7 +139,8 @@ function endGame(){
   } else{
     gameArea.addEventListener('click', timeOut);
     var d = new Date();
-    document.cookie = "date=" + d;
+    var e = d.getTime() + 10000;
+    document.cookie = "timeout=true;expires=" + e +";path=/";
   }
 }
 function timeOut(){
