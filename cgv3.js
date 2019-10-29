@@ -35,7 +35,10 @@ function initializeCanvas(){
   var n = str.indexOf("state=");
   var k = str.indexOf(";",n);
   var t = str.slice(6+n,1+k);
-  console.log("n="+n+"k="+k+"t="+t);
+  console.log(str);
+  console.log(n);
+  console.log(k);
+  console.log(t);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
