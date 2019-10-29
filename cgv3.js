@@ -139,8 +139,10 @@ function endGame(){
   } else{
     gameArea.addEventListener('click', timeOut);
     var d = new Date();
-    var e = d.getTime() + 10000;
-    var wholecookie = "timeout=true;expires=" + e + ";path=/";
+    d.setTime(d.getTime() + 10000);
+    var expires = "expires="+ d.toUTCString();
+    var wholecookie = "timeout=true;" + expires + ";path=/";
+    console.log(wholecookie);
     document.cookie = wholecookie;
   }
 }
