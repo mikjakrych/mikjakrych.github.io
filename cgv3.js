@@ -31,16 +31,23 @@ var updater;
 var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
-  var cookie = document.cookie;
-  var pos =
-  console.log(cookie);
+  var str = document.cookie;
+  var n = str.indexOf("timeout=");
+  var k = str.indexOf(";",n);
+  var t = str.slice(8+n, k);
+  console.log(t);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
   gameArea.userSelect="none";
   gameArea.context = gameArea.getContext("2d");
-  //add event listener so that game starts when canvas is clicked
-  gameArea.addEventListener('click', startGame);
+  if(t="true"){
+    //go directly to timeout
+    gameArea.addEventListener('click',timeOut);
+  } else{
+    //start the game
+    gameArea.addEventListener('click', startGame);
+  }
   //draw home screen graphics
   gameArea.context.fillStyle = "rgb(219, 199, 109)";
   gameArea.context.fillRect(0,0,gameArea.width, gameArea.height);
