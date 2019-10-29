@@ -35,7 +35,8 @@ var game_state = 1; //1 = game is going; 0 = crystal exploded
 function initializeCanvas(){
   var str = document.cookie;
   var n = str.indexOf("timeout_state=");
-  var t = str.slice(14+n,15+n);
+  var t = str.slice(16+n,17+n);
+  console.log(str);
   console.log(t);
   //give it dimensions and context
   gameArea.width = 400;
