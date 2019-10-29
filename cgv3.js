@@ -1,15 +1,17 @@
 /***
-_/_/_/   _/_/_/   _/   _/  _/_/_/  _/_/_/   _/      _/
-_/       _/   _/   _/  _/  _/        _/    _/ _/    _/
-_/       _/_/_/      _/     _/_/     _/    _/_/_/   _/
-_/       _/ _/       _/         _/   _/   _/    _/  _/
-_/_/_/   _/   _/     _/     _/_/_/   _/   _/     _/ _/_/_/
 
-_/_/_/   _/_/_/   _/_/_/  _/      _/   _/_/_/   _/_/_/               _/_/
-_/       _/  _/  _/    _/  _/     _/   _/       _/   _/                 _/
-_/       _/_/_/  _/    _/   _/    _/   _/_/_/   _/_/_/      _/   _/    _/
-_/  _/   _/ _/   _/    _/    _/ _/_/   _/       _/  _/        _/_/       _/
-_/_/_/   _/   _/  _/_/_/      _/  _/   _/_/_/   _/   _/        _/     _/_/
+ _/_/_/  _/_/_/   _/    _/  _/_/_/  _/_/_/_/   _/      _/
+_/       _/   _/   _/  _/  _/         _/      _/_/     _/
+_/       _/_/_/      _/     _/_/      _/     _/  _/    _/
+_/       _/ _/       _/         _/    _/    _/_/_/_/   _/
+_/_/_/   _/   _/     _/    _/_/_/     _/   _/      _/  _/_/_/
+
+_/_/_/    _/_/_/     _/_/_/   _/        _/  _/_/_/   _/_/_/       _/    _/  _/_/_/
+_/        _/   _/   _/    _/  _/       _/   _/       _/   _/      _/   _/        _/
+_/        _/_/_/    _/    _/  _/  _/  _/    _/_/_/   _/_/_/       _/  _/    _/_/_/
+_/  _/_/  _/  _/    _/    _/  _/_/ _/_/     _/       _/  _/       _/_/           _/
+_/_/_/    _/   _/    _/_/_/   _/    _/      _/_/_/   _/   _/      _/        _/_/_/
+
 ***/
 
 //declare variables
@@ -32,19 +34,14 @@ var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
   var str = document.cookie;
-  var n = str.indexOf("state=");
-  var k = str.indexOf(";",n);
-  var t = str.slice(6+n,1+k);
-  console.log(str);
-  console.log(n);
-  console.log(k);
-  console.log(t);
+  var n = str.indexOf("timeoutstate=");
+  var t = str.slice(14+n,15+n);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
   gameArea.userSelect="none";
   gameArea.context = gameArea.getContext("2d");
-  if (t=="timeout"){
+  if (t=="1"){
     //go directly to timeout
     gameArea.addEventListener('click',timeOut);
   } else{
@@ -151,7 +148,7 @@ function endGame(){
     var d = new Date();
     d.setTime(d.getTime() + 30000);
     var expires = "expires="+ d.toUTCString();
-    var wholecookie = "state=timeout;" + expires + ";path=/";
+    var wholecookie = "timeout_state=1;" + expires + ";path=/";
     console.log(wholecookie);
     document.cookie = wholecookie;
   }
