@@ -34,7 +34,7 @@ function initializeCanvas(){
   var str = document.cookie;
   var n = str.indexOf("state=");
   var k = str.indexOf(";",n);
-  var t = str.slice(6+n, k);
+  var t = str.slice(6+n,1+k);
   console.log("n="+n+"k="+k+"t="+t);
   //give it dimensions and context
   gameArea.width = 400;
