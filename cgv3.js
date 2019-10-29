@@ -31,17 +31,17 @@ var updater;
 var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
-  var str = document.cookie;
-  var n = str.indexOf("timeout=");
+  var str = "state=timeout;expires=Tue, 29 Oct 2019 00:34:03 GMT;path=/";
+  var n = str.indexOf("state=");
   var k = str.indexOf(";",n);
-  var t = str.slice(8+n, k);
-  console.log(t);
+  var t = str.slice(6+n, k);
+  console.log("n="+n+"k="+k+"t="+t);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
   gameArea.userSelect="none";
   gameArea.context = gameArea.getContext("2d");
-  if(t=="true"){
+  if (t=="timeout"){
     //go directly to timeout
     gameArea.addEventListener('click',timeOut);
   } else{
@@ -148,7 +148,7 @@ function endGame(){
     var d = new Date();
     d.setTime(d.getTime() + 30000);
     var expires = "expires="+ d.toUTCString();
-    var wholecookie = "timeout=true;" + expires + ";path=/";
+    var wholecookie = "state=timeout;" + expires + ";path=/";
     console.log(wholecookie);
     document.cookie = wholecookie;
   }
