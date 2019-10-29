@@ -31,7 +31,7 @@ var updater;
 var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
-  var str = "state=timeout;expires=Tue, 29 Oct 2019 00:34:03 GMT;path=/";
+  var str = document.cookie;
   var n = str.indexOf("state=");
   var k = str.indexOf(";",n);
   var t = str.slice(6+n, k);
