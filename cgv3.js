@@ -41,7 +41,7 @@ function initializeCanvas(){
   gameArea.height = 400;
   gameArea.userSelect="none";
   gameArea.context = gameArea.getContext("2d");
-  if(t="true"){
+  if(t=="true"){
     //go directly to timeout
     gameArea.addEventListener('click',timeOut);
   } else{
@@ -146,7 +146,7 @@ function endGame(){
   } else{
     gameArea.addEventListener('click', timeOut);
     var d = new Date();
-    d.setTime(d.getTime() + 10000);
+    d.setTime(d.getTime() + 30000);
     var expires = "expires="+ d.toUTCString();
     var wholecookie = "timeout=true;" + expires + ";path=/";
     console.log(wholecookie);
