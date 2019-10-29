@@ -36,6 +36,7 @@ function initializeCanvas(){
   var str = document.cookie;
   var n = str.indexOf("timeoutstate=");
   var t = str.slice(14+n,15+n);
+  console.log(t);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
