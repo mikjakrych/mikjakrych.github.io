@@ -34,9 +34,10 @@ var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
   var str = document.cookie;
-  var n = str.indexOf("timeout_state=");
-  var t = str.slice(16+n,17+n);
+  var n = str.indexOf("timeoutstate=");
+  var t = str.slice(n+13,n+14);
   console.log(str);
+  console.log(n);
   console.log(t);
   //give it dimensions and context
   gameArea.width = 400;
@@ -150,7 +151,7 @@ function endGame(){
     var d = new Date();
     d.setTime(d.getTime() + 5 * 60 * 1000);
     var expires = "expires="+ d.toUTCString();
-    var wholecookie = "timeout_state=1;" + expires + ";path=/";
+    var wholecookie = "timeoutstate=1;" + expires + ";path=/";
     document.cookie = wholecookie;
   }
 }
