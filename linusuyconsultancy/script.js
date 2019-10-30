@@ -37,3 +37,7 @@ function toggleNav(navbar_default_class, navbar_open_class, nav_group_default_cl
   // },
   // 400)
 }
+function carousel(){
+  var slides = document.getElementsByClassName("carouselslide");
+  console.log(slides);
+}

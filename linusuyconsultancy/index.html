@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
     <title>Home | Linus Uy Consultancy</title>
+    <!-- <meta name="description" content="MK Studios">
+    <meta name="keywords" content="mikja,krych,onine,projects,css,javascript,html,sycamore,sycacorp,perry,thompson,gallery,john1site,crystalgrower,cimarron library">
+    <meta name="author" content="Mikja Krych"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="resources/logo.svg"/>
+
+
   </head>
-  <body>
+  <body onload="carousel()">
       <nav class="navbar">
         <a href= "index.html" class="logo">
           <img src="resources/banner.svg" style="height:inherit">
@@ -32,6 +38,16 @@
       </nav>
       <div class="hamburger" onclick="toggleNav('navbar','navbaropen','navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen')">
         <img src="resources/logo.svg">
+      </div>
+      <div id="carouselbox">
+        <div class="carouselslide carouselactive" style="background-image: url(resources/carousel1.jpg)">
+        </div>
+        <div class="carouselslide" style="background-image: url(resources/carousel2.jpg)">
+        </div>
+        <div class="carouselslide" style="background-image: url(resources/carousel3.jpg)">
+        </div>
+        <div class="carouselslide" style="background-image: url(resources/carousel4.jpg)">
+        </div>
       </div>
 
       <script type="text/javascript" src="script.js"></script>
