@@ -85,6 +85,7 @@ ul{
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 50%;
+  min-height: 280px;
 
   -webkit-align-items: center;
   align-items: center;
@@ -242,51 +243,54 @@ ul{
 }
 .cardcontainer{
   width:80%;
-  padding: 10px 10%;
+  padding: 0 10%;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction:row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.card{
+  margin:10px 10px;
+  width:125px;
+  height:196px;
+  background-position: top;
+  background-size: cover;
+  overflow: auto;
+}
+.cardslicer{
+  width:100%;
+  height:100%;
+  transform: translateY(-100%);
+  background-color: #DBC76D;
+  transition: .6s ease;
+
+  -webkit-align-items: center;
+  align-items: center;
+
   display:-webkit-flex;
   display:-moz-flex;
   display:flex;
 
-  -webkit-flex-direction: row;
-  -moz-flex-direction:row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -moz-flex-direction:column;
+  flex-direction: column;
 
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
 
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
-.flipcard{
-  padding: 10px;
-  perspective: 1000px;
-}
-.flipcardinner{
-  position:relative;
-  width:100px;
-  height: 100px;
-  transition: .8s ease;
-  transform-style: preserve-3d;
-}
-.flipfront, .flipback{
-  position:absolute;
-  width:100%;
-  height:100%;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.flipfront{
-  background-color: blue;
-}
-.flipback{
-  background-color:red;
-  transform: rotateY(180deg);
-}
-.flipcard:hover .flipcardinner{
-  transform: rotateY(180deg);
+.card:hover .cardslicer{
+  transform: initial;
+  transition: .6s ease;
 }
 #mycanvas{
   margin: 10px 0;
@@ -364,5 +368,9 @@ ul{
   }
   #mycanvas{
     transform: scale(.75,.75);
+  }
+  .bodyblock{
+    margin: 20px 5%;
+    width:90%;
   }
 }

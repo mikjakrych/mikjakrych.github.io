@@ -7,8 +7,9 @@
   <meta name="keywords" content="mikja,krych,onine,projects,css,javascript,html,sycamore,sycacorp,perry,thompson,gallery,john1site,crystalgrower,cimarron library">
   <meta name="author" content="Mikja Krych">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" type="image/x-icon" href="mk.gif"/>
+  <link rel="shortcut icon" type="image/x-icon" href="resources/mk.gif"/>
   <title>MK Studios | Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body onload="initializeCanvas()" onresize="resizeCanvas()">
 
@@ -30,8 +31,8 @@
   </div>
 
   <!--splash-->
-  <div class = "bigpic" id = "home" style = "height:100%; background-image: url('volocofire.jpg')">
-    <img width=150px height=150px src="mk.gif">
+  <div class = "bigpic" id = "home" style = "height:100%; min-height: 550px; background-image: url('resources/volocofire.jpg')">
+    <img width=150px height=150px src="resources/mk.gif">
     <h1 class = "title">
       MK | Online
     </h1>
@@ -55,7 +56,7 @@
   </div>
 
   <!--projects title-->
-  <div class = "bigpic" id = "projects" style = "background-image: url(programming.jpg)">
+  <div class = "bigpic" id = "projects" style = "background-image: url(resources/programming.jpg)">
     <h1 class = "title">
       Projects
     </h1>
@@ -77,48 +78,55 @@
         SuperSkin is a collection of elegant faceplates for the
         <a href = "https://thomasokken.com/free42">Free42</a>
         desktop calculator. This collection was designed by
-        Perry Thompson in cooperation with MK Studios. Collection
-        coming below!
+        Perry Thompson in cooperation with MK Studios. New designs are always coming!
       </p>
       <div class = "cardcontainer">
-        <div class = "flipcard">
-          <div class = "flipcardinner">
-            <div class = "flipfront">
-              bla bla bla
-            </div>
-            <div class = "flipback">
-              <a href = "mk.gif" download="logo">logo</a>
-            </div>
+        <div class = "card" style = "background-image:url(resources/superskin/bbq.gif)">
+          <div class = "cardslicer">
+            <a class = "btn" href="resources/superskin/bbq.gif" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .gif
+            </a>
+            <a class = "btn" href="resources/superskin/bbq.layout" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .layout
+            </a>
           </div>
         </div>
-        <div class = "flipcard">
-          <div class = "flipcardinner">
-            <div class = "flipfront">
-              flipping card
-            </div>
-            <div class = "flipback">
-              back
-            </div>
+        <div class = "card" style = "background-image:url(resources/superskin/moonlight.gif)">
+          <div class = "cardslicer">
+            <a class = "btn" href="resources/superskin/moonlight.gif" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .gif
+            </a>
+            <a class = "btn" href="resources/superskin/moonlight.layout" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .layout
+            </a>
           </div>
         </div>
-        <div class = "flipcard">
-          <div class = "flipcardinner">
-            <div class = "flipfront">
-              giraffe
-            </div>
-            <div class = "flipback">
-              kangaroo
-            </div>
+        <div class = "card" style = "background-image:url(resources/superskin/mwb.gif)">
+          <div class = "cardslicer">
+            <a class = "btn" href="resources/superskin/mwb.gif" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .gif
+            </a>
+            <a class = "btn" href="resources/superskin/mwb.layout" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .layout
+            </a>
           </div>
         </div>
-        <div class = "flipcard">
-          <div class = "flipcardinner">
-            <div class = "flipfront">
-              tortoise
-            </div>
-            <div class = "flipback">
-              salmon
-            </div>
+        <div class = "card" style = "background-image:url(resources/superskin/original.gif)">
+          <div class = "cardslicer">
+            <a class = "btn" href="resources/superskin/original.gif" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .gif
+            </a>
+            <a class = "btn" href="resources/superskin/original.layout" download>
+              <i class = "material-icons">&#xe2c4;</i>
+              .layout
+            </a>
           </div>
         </div>
       </div>
@@ -176,7 +184,7 @@
   </div>
 
   <!--sister sites description-->
-  <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(blueberry.jpg)">
+  <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(resources/blueberry.jpg)">
     <h1 class = "title">
       Sister Sites
     </h1>
@@ -242,7 +250,7 @@
 
 
   <!-- <div id = "alert">
-    <img src="cone.gif" width=100px height= 100px></img>
+    <img src="resources/cone.gif" width=100px height= 100px></img>
     <span class = "text">
       This site is currently under construction.
     </span>

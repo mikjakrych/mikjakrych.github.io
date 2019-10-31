@@ -18,8 +18,8 @@ _/_/_/    _/   _/    _/_/_/   _/    _/      _/_/_/   _/   _/      _/        _/_/
 var gameArea = document.getElementById("mycanvas");
 var rise_speed = 5;
 var fall_speed = 5;
-var rise_image = "up.png";
-var fall_image = "down.png";
+var rise_image = "resources/up.png";
+var fall_image = "resources/down.png";
 var obstacle_amount = 50;
 var obstacle_spacing;
 var game_speed = 1.5;
