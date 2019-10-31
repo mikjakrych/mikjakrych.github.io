@@ -13,7 +13,7 @@
 
 
   </head>
-  <body onload="carousel()">
+  <body>
       <nav class="navbar">
         <a href= "index.html" class="logo">
           <img src="resources/banner.svg" style="height:inherit">
@@ -40,14 +40,18 @@
         <img src="resources/logo.svg">
       </div>
       <div id="carouselbox">
-        <div class="carouselslide carouselactive" style="background-image: url(resources/carousel1.jpg)">
+        <div class="carouselslide slideactive" style="background-image: url(../programming.jpg)">
         </div>
-        <div class="carouselslide" style="background-image: url(resources/carousel2.jpg)">
+        <div class="carouselslide" style="background-image: url(../volocofire.jpg)">
         </div>
-        <div class="carouselslide" style="background-image: url(resources/carousel3.jpg)">
+        <div class="carouselslide" style="background-image: url(../blueberry.jpg)">
         </div>
-        <div class="carouselslide" style="background-image: url(resources/carousel4.jpg)">
+        <div class="carouselslide" style="background-image: url(../CCIC/grasshopper.png)">
         </div>
+          <a class = "carouselbutton buttonactive" onclick="changeSlide(0)"></a>
+          <a class = "carouselbutton" onclick="changeSlide(1)"></a>
+          <a class = "carouselbutton" onclick="changeSlide(2)"></a>
+          <a class = "carouselbutton" onclick="changeSlide(3)"></a>
       </div>
 
       <script type="text/javascript" src="script.js"></script>

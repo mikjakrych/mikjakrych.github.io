@@ -37,7 +37,30 @@ function toggleNav(navbar_default_class, navbar_open_class, nav_group_default_cl
   // },
   // 400)
 }
-function carousel(){
-  var slides = document.getElementsByClassName("carouselslide");
-  console.log(slides);
+
+//set the current to the index of the first slide
+var current = 0;
+var timer = setTimeout(nextSlide,4000);
+
+function changeSlide(next_index){
+  var old_button = document.getElementsByClassName("buttonactive")[0];
+  var new_button = document.getElementsByClassName("carouselbutton")[next_index];
+  var old_slide = document.getElementsByClassName("slideactive")[0];
+  var new_slide = document.getElementsByClassName("carouselslide")[next_index];
+
+  old_slide.classList.toggle("slideactive");
+  new_slide.classList.toggle("slideactive");
+  old_button.classList.toggle("buttonactive");
+  new_button.classList.toggle("buttonactive");
+
+  current = next_index;
+  clearTimeout(timer);
+  timer = setTimeout(nextSlide,4000);
+}
+function nextSlide(){
+  if (current == document.getElementsByClassName("carouselslide").length - 1){ //you need to subtract the 1 because the highest index is one less than the count of the slides (index of nodelist begins with 0, not 1).
+    changeSlide(0); //go back to the first slide
+  } else{
+    changeSlide(current + 1); //find the next slide
+  }
 }
