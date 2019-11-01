@@ -6,8 +6,8 @@
   --color-highlight1: #DBC76D;
   --color-highlight2: #53A0DE;
 
-  --transition1: .6s ease;
-  --transition2: .2s ease;
+  --transition1: .6s ease !important;
+  --transition2: .2s ease !important;
   --shadow: none;
   --font-big: 18px;
   --font-huge: 36px;
@@ -25,13 +25,33 @@ body{
   border: 0;
   font-family: "Candara";
   word-wrap: normal;
+  overflow-x: hidden;
 }
-a{
+.link{
   text-decoration: none;
   color: #53A0DE;
   font-weight: bold;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
+  display: inline-block;
+}
+.link::after{
+  content: "";
+  background-color:#53A0DE;
+  display:block;
+  position: relative;
+  width:100%;
+  height:2px;
+  margin-bottom: -20px;
+  transform-origin: center;
+  transform: scaleX(0);
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
+}
+.link:hover::after{
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
+  transform: initial;
 }
 ul{
   color: #DBC76D;
@@ -74,10 +94,14 @@ ul{
   width: 200px;
   text-align: center;
   font-weight: bold;
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
 }
 .navitemdefault:hover{
   background-color: #DBC76D;
   color: #53A0DE;
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
 }
 .bigpic{
   background-position: center;
@@ -140,7 +164,7 @@ ul{
   width:70%;
   padding: 30px 0;
   background-color: #577284;
-  transition: .2s ease;
+  transition: .2s ease !important;
 
   -webkit-align-items: center;
   align-items: center;
@@ -178,6 +202,7 @@ ul{
   width:80%;
   padding: 10px 10%;
   margin: 0;
+  line-height: 20px;
 }
 .btn{
   color:#53A0DE;
@@ -188,10 +213,16 @@ ul{
   font-size: 16px;
   border: 1px solid #53A0DE;
   text-align: center;
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
+  text-decoration: none;
+  font-weight: bold;
 }
 .btn:hover{
   background-color:#53A0DE;
   color:#577284;
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
 }
 .footer{
   background-color: #577284;
@@ -210,8 +241,8 @@ ul{
   z-index: 1;
   box-shadow: none;
   font-size: 16px;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
 }
 #alert{
   position: fixed;
@@ -240,6 +271,7 @@ ul{
 }
 .navtoggledefault{
   display:none;
+  overflow: hidden;
 }
 .cardcontainer{
   width:80%;
@@ -271,7 +303,7 @@ ul{
   width:100%;
   transform: translateY(195px);
   background-color: #DBC76D;
-  transition: .6s ease;
+  transition: .6s ease !important;
 
   -webkit-align-items: center;
   align-items: center;
@@ -292,7 +324,7 @@ ul{
 }
 .card:hover .cardslicer{
   transform: translateY(calc(195px - 100%));
-  transition: .6s ease;
+  transition: .6s ease !important;
 }
 .cardtitle{
   margin:2px;
@@ -301,6 +333,7 @@ ul{
   display:block;
 }
 .cardbutton{
+  text-decoration: none;
   padding:5px;
   margin:5px;
   display:inline;
@@ -308,10 +341,15 @@ ul{
   font-size: 18px;
   border: 1px solid #53A0DE;
   text-align: center;
+  color:#53A0DE;
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
 }
 .cardbutton:hover{
+  -webkit-transition: .2s ease !important;
+  transition: .2s ease !important;
   background-color:#53A0DE;
-  color:#577284;
+  color:#DBC76D;
 }
 #mycanvas{
   margin: 10px 0;
@@ -342,8 +380,8 @@ ul{
     -moz-transform:translateY(-100%);
     -o-transform:translateY(-100%);
     transform: translateY(-100%);
-    -webkit-transition: .6s ease;
-    transition: .6s ease;
+    -webkit-transition: .6s ease !important;
+    transition: .6s ease !important;
   }
   .navopen{
     -webkit-transform:initial;
@@ -352,8 +390,8 @@ ul{
     -o-transform:initial;
     transform: translate(0,0);
 
-    -webkit-transition: .6s ease;
-    transition: .6s ease;
+    -webkit-transition: .6s ease !important;
+    transition: .6s ease !important;
   }
   .navitemdefault{
     opacity: 0;
@@ -367,8 +405,8 @@ ul{
     position:fixed;
     top:10px;
     right:10px;
-    -webkit-transition: .6s ease;
-    transition: .6s ease;
+    -webkit-transition: .6s ease !important;
+    transition: .6s ease !important;
     z-index:4;
     width:35px;
     height:35px;
