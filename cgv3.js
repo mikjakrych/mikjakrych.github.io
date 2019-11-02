@@ -34,14 +34,14 @@ var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
   var str = document.cookie;
-  var n = str.indexOf("games=");
+  var n = str.indexOf("timeoutstate=");
   var t = str.slice(n+13,n+14);
   //give it dimensions and context
   gameArea.width = 400;
   gameArea.height = 400;
   gameArea.userSelect="none";
   gameArea.context = gameArea.getContext("2d");
-  if (t=="5"){
+  if (t=="1"){
     //go directly to timeout
     gameArea.addEventListener('click',timeOut);
   } else{
@@ -136,22 +136,20 @@ function endGame(){
   gameArea.context.textAlign = "center";
   gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
 
-  //increment games_played
-  games_played += 1;
-  //increase speed;
-  game_speed += .2;
-
-  if(games_played < 5){
+  if(games_played < 4){
     //add event listener so that game begins when canvas is clicked
     gameArea.addEventListener('click', startGame);
-
+    //increment games_played
+    games_played += 1;
+    //increase speed;
+    game_speed += .2;
+  } else{
+    gameArea.addEventListener('click', timeOut);
     var d = new Date();
     d.setTime(d.getTime() + 10 * 60 * 1000);
     var expires = "expires="+ d.toUTCString();
-    var wholecookie = "games=" + games_played + ";"+ expires + ";path=/";
+    var wholecookie = "timeoutstate=1;" + expires + ";path=/";
     document.cookie = wholecookie;
-  } else{
-    gameArea.addEventListener('click', timeOut);
   }
 }
 function timeOut(){
