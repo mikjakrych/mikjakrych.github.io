@@ -14,21 +14,17 @@
   --font-medium: 24px;
   --font-normal: 16px;
 } */
-*{
-  box-sizing: border-box;
-}
 html{
   height: 100%;
-  width:100%;
   scroll-behavior: smooth;
 }
 body{
   height: 100%;
-  width:100%;
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Candara";
+  font-family:"Josefin Sans";
+  word-wrap: normal;
 }
 .link{
   text-decoration: none;
@@ -74,7 +70,7 @@ ul{
   -moz-box-shadow: none;
   box-shadow: none;
   top:0px;
-  left:0px;
+  right:0px;
 
   display:-webkit-flex;
   display:-moz-flex;
@@ -130,13 +126,14 @@ ul{
   justify-content: center;
 }
 .title{
+  font-family: "Nanum Pen Script";
   background-color: #DBC76D;
   color: #577284;
   font-size: 36px;
   font-weight: bold;
   padding: 10px;
   text-align: center;
-  /* mix-blend-mode: screen; */
+  max-width: 100%;
 }
 .subtitle{
   padding:10px;
@@ -202,7 +199,7 @@ ul{
 .text{
   color: #DBC76D;
   font-size: 16px;
-  width:100%;
+  width:80%;
   padding: 10px 10%;
   margin: 0;
   line-height: 20px;
@@ -237,7 +234,7 @@ ul{
   bottom: 10px;
   left: 10px;
   background-color: #53A0DE;
-  max-width:200px;
+  max-width:150px;
   color: #DBC76D;
   padding:8px;
   display:none;
@@ -275,22 +272,9 @@ ul{
 .navtoggledefault{
   display:none;
   overflow: hidden;
-  position:fixed;
-  top:10px;
-  right:10px;
-  width:51px;
-  height:51px;
-  padding: 8px;
-  -webkit-transition: .6s ease !important;
-  transition: .6s ease !important;
-  z-index:4;
-  border-radius: 25.5px;
-  background-color: #53A0DE;
-  stroke: none;
-  fill: #577284;
 }
 .cardcontainer{
-  width:100%;
+  width:80%;
   padding: 0 10%;
   display:-webkit-flex;
   display:-moz-flex;
@@ -374,6 +358,15 @@ ul{
   .bigpic{
     background-attachment: scroll;
   }
+  .title{
+    font-size: 24px;
+  }
+  .subtitle{
+    font-size: 16px;
+  }
+  .heading{
+    font-size: 16px;
+  }
   .escaper{
     z-index: 2;
     width:100%;
@@ -385,8 +378,11 @@ ul{
     display: block;
   }
   .navdefault{
-    display:block;
-    width:100%;
+    position:fixed;
+    width: 100%;
+    -webkit-flex-direction: column;
+    -moz-flex-direction:column;
+    flex-direction: column;
     height:auto;
     -webkit-transform:translateY(-100%);
     -ms-transform:translateY(-100%);
@@ -401,21 +397,33 @@ ul{
     -ms-transform:initial;
     -moz-transform:initial;
     -o-transform:initial;
-    transform: initial;
+    transform: translate(0,0);
 
     -webkit-transition: .6s ease !important;
     transition: .6s ease !important;
   }
   .navitemdefault{
-    display:block;
-    width:100%;
     opacity: 0;
+    width: 100%;
   }
   .navitemopen{
     opacity: 1;
   }
   .navtoggledefault{
     display:block;
+    position:fixed;
+    top:10px;
+    right:10px;
+    -webkit-transition: .6s ease !important;
+    transition: .6s ease !important;
+    z-index:4;
+    width:35px;
+    height:35px;
+    border-radius: 27.5px;
+    padding:10px;
+    background-color: #53A0DE;
+    stroke: none;
+    fill: #577284;
   }
   .navtoggleopen{
     -webkit-transform: rotate(225deg);
@@ -425,9 +433,6 @@ ul{
     transform: rotate(225deg);
     background-color: #577284;
     fill: #53A0DE;
-  }
-  #mycanvas{
-    transform: scale(.75,.75);
   }
   .bodyblock{
     margin: 20px 5%;

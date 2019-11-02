@@ -79,7 +79,11 @@ function cross(width){
 //function to resize game window
 function resizeCanvas(){
   var canvas = document.getElementById("mycanvas");
-  var canvas_parent = canvas.parentElement;
+  var pwidth = canvas.parentElement.clientWidth;
+  if(pwidth <= 400){
+    var factor = pwidth / 400;
+    canvas.style.transform = "scale(" + factor + "," + factor + ")"
+  }
 }
 
 var animate = 1;
@@ -111,7 +115,7 @@ pushIntoThings(lists);
 
 function move1(object){
   object.style.opacity = "0";
-  object.style.transform = "translateX(10%)";
+  object.style.transform = "translateX(12px)";
 }
 function move2(object){
   object.style.opacity = "0";
@@ -122,11 +126,11 @@ function move3(object){
 }
 function move4(object){
   object.style.opacity = "0";
-  object.style.transform = "translateY(10%)";
+  object.style.transform = "translateY(12px)";
 }
 function move5(object){
   object.style.opacity = "0";
-  object.style.transform = "translateX(-10%)";
+  object.style.transform = "translateX(-12px)";
 }
 function moveAll(){
   if(animate){
