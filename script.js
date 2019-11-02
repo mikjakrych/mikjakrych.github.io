@@ -116,10 +116,14 @@ pushIntoThings(lists);
 function move1(object){
   object.style.opacity = "0";
   object.style.transform = "translateX(12px)";
+  object.style.msTransform = "translateX(12px)";
+  object.style.WebkitTransform = "translateX(12px)";
 }
 function move2(object){
   object.style.opacity = "0";
   object.style.transform = "scale(.9,.9)";
+  object.style.msTransform = "scale(.9,.9)";
+  object.style.WebkitTransform = "scale(.9,.9)";
 }
 function move3(object){
   object.style.opacity = "0";
@@ -127,10 +131,14 @@ function move3(object){
 function move4(object){
   object.style.opacity = "0";
   object.style.transform = "translateY(12px)";
+  object.style.msTransform = "translateY(12px)";
+  object.style.WebkitTransform = "translateY(12px)";
 }
 function move5(object){
   object.style.opacity = "0";
   object.style.transform = "translateX(-12px)";
+  object.style.msTransform = "translateX(-12px)";
+  object.style.WebkitTransform = "translateX(-12px)";
 }
 function moveAll(){
   if(animate){
@@ -139,7 +147,10 @@ function moveAll(){
       if(t >= things[i].offsetTop){
         things[i].style.opacity = "1";
         things[i].style.transition = "1.5s ease";
+        things[i].style.WebkitTransition = "1.5s ease";
         things[i].style.transform = "initial";
+        things[i].style.msTransform = "initial";
+        things[i].style.WebkitTransform = "initial";
       }
       else{
         var z = i % 5;
