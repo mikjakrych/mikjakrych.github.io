@@ -278,6 +278,6 @@ function getGamesFromCookie(){
   var str = document.cookie;
   var n = str.indexOf("games=");
   var t = str.slice(n+6,n+7);
-  return t;
+  return t.parseInt();
   console.log(str);
 }
