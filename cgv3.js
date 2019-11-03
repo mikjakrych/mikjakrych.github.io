@@ -274,10 +274,20 @@ function randomSign(){
     return 1;
   }
 }
+function pushGamesToCookie(g){
+  var d = new Date();
+  d.setTime(d.getTime() + 5 * 60 * 1000);
+  var expires = "expires="+ d.toUTCString();
+  var wholecookie = "games=" + g + ";" + expires + ";path=/";
+  document.cookie = wholecookie;
+}
 function getGamesFromCookie(){
   var str = document.cookie;
   var n = str.indexOf("games=");
   var t = parseInt(str.slice(n+6,n+7));
+  if(t == "NaN"){
+    t = 0;
+  }
   return t;
   console.log(str);
 }

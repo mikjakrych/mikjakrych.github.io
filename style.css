@@ -308,7 +308,7 @@ ul{
 .cardslicer{
   /* height:100%; */
   width:100%;
-  transform: translateY(195px);
+  transform: translateY(175px);
   background-color: #DBC76D;
   transition: .6s ease !important;
 
