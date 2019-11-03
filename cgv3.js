@@ -277,7 +277,7 @@ function randomSign(){
 function getGamesFromCookie(){
   var str = document.cookie;
   var n = str.indexOf("games=");
-  var t = str.slice(n+6,n+7);
-  return t.parseInt();
+  var t = parseInt(str.slice(n+6,n+7));
+  return t;
   console.log(str);
 }
