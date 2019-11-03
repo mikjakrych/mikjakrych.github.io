@@ -33,29 +33,29 @@ var updater;
 var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
-  //give it dimensions and context
-  gameArea.width = 400;
-  gameArea.height = 400;
-  gameArea.userSelect="none";
-  gameArea.context = gameArea.getContext("2d");
+
   if (getGamesFromCookie() == 5){
     //go directly to timeout
     gameArea.addEventListener('click',timeOut);
   } else{
     //start the game
     gameArea.addEventListener('click', startGame);
+    //give it dimensions and context
+    gameArea.width = 400;
+    gameArea.height = 400;
+    gameArea.userSelect="none";
+    gameArea.context = gameArea.getContext("2d");
+    //draw home screen graphics
+    gameArea.context.fillStyle = "rgb(219, 199, 109)";
+    gameArea.context.fillRect(0,0,gameArea.width, gameArea.height);
+    gameArea.context.fillStyle = "rgb(87, 114, 132)";
+    gameArea.context.font = "30px monospace";
+    gameArea.context.textAlign = "center";
+    gameArea.context.fillText("Crystal Grower v3", gameArea.width/2, gameArea.height/2);
+    gameArea.context.font = "15px monospace";
+    gameArea.context.textAlign = "center";
+    gameArea.context.fillText("Click to begin", gameArea.width/2, gameArea.height/2 +25);
   }
-  //draw home screen graphics
-  gameArea.context.fillStyle = "rgb(219, 199, 109)";
-  gameArea.context.fillRect(0,0,gameArea.width, gameArea.height);
-  gameArea.context.fillStyle = "rgb(87, 114, 132)";
-  gameArea.context.font = "30px monospace";
-  gameArea.context.textAlign = "center";
-  gameArea.context.fillText("Crystal Grower v3", gameArea.width/2, gameArea.height/2);
-  gameArea.context.font = "15px monospace";
-  gameArea.context.textAlign = "center";
-  gameArea.context.fillText("Click to begin", gameArea.width/2, gameArea.height/2 +25);
-
 }
 function startGame(){
   //remove old eventlistener and add ones to make the crystal float

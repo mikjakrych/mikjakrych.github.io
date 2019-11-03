@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+    <title>Home | Linus Uy Consultancy</title>
+    <!-- <meta name="description" content="MK Studios">
+    <meta name="keywords" content="mikja,krych,onine,projects,css,javascript,html,sycamore,sycacorp,perry,thompson,gallery,john1site,crystalgrower,cimarron library">
+    <meta name="author" content="Mikja Krych"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="resources/logo.png"/>
+
+
+  </head>
+  <body>
+      <nav class="navbar">
+        <a href= "index.html" class="logo">
+          <img src="resources/banner.svg" style="height:inherit">
+        </a>
+        <div class="navgroup">
+        <a href="about.html" class="navclass">
+          About
+        </a>
+        <a href="services.html" class="navclass">
+          Services
+        </a>
+        <a href="contact.html" class="navclass">
+          Contact
+        </a>
+        <a href="gallery.html" class="navclass">
+          Gallery
+        </a>
+        <a href="branding.html" class="navclass">
+          Branding
+        </a>
+      </div>
+      </nav>
+      <div class="hamburger" onclick="toggleNav('navbar','navbaropen','navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen')">
+      </div>
+      <div id="carouselbox">
+        <div class="carouselslide slideactive" style="background-image: url(resources/carousel1.jpg)">
+        </div>
+        <div class="carouselslide" style="background-image: url(../resources/volocofire.jpg)">
+        </div>
+        <div class="carouselslide" style="background-image: url(../resources/programming.jpg)">
+        </div>
+        <div class="carouselslide" style="background-image: url(../resources/blueberry.jpg)">
+        </div>
+          <a class = "carouselbutton buttonactive" onclick="changeSlide(0)"></a>
+          <a class = "carouselbutton" onclick="changeSlide(1)"></a>
+          <a class = "carouselbutton" onclick="changeSlide(2)"></a>
+          <a class = "carouselbutton" onclick="changeSlide(3)"></a>
+      </div>
+
+      <div class = "block">
+        <div class = "pic" style="background-image: url(../resources/volocofire.jpg)">
+          asdfasdf
+        </div>
+        <div class = "text">
+          What is Permaculture?<br>
+          What is permaculture? This science can be called "sustainable agriculture." Someone once said, "There are three important values in the realms of permaculture: 'people care,' 'earth care,' and 'return of surplus.'" "People care" refers to the fact the permaculture must help people. "Earth care" represents the importance of nurturing Nature. "Return of surplus" is putting extra stuff (like food scraps) back into nature. WOW! What incredible values.
+        </div>
+      </div>
+      <div class="slogan">
+        Slogan.
+      </div>
+        <div class = "block">
+
+          <div class = "text">
+            What is Permaculture?<br>
+            What is permaculture? This science can be called "sustainable agriculture." Someone once said, "There are three important values in the realms of permaculture: 'people care,' 'earth care,' and 'return of surplus.'" "People care" refers to the fact the permaculture must help people. "Earth care" represents the importance of nurturing Nature. "Return of surplus" is putting extra stuff (like food scraps) back into nature. WOW! What incredible values.
+          </div>
+          <div class = "pic" style="background-image: url(../resources/volocofire.jpg)">
+            asdfasdf
+          </div>
+      </div>
+      <div class = "block">
+        <div class = "pic" style="background-image: url(../resources/volocofire.jpg)">
+          asdfasdf
+        </div>
+        <div class = "text">
+          What is Permaculture?<br>
+          What is permaculture? This science can be called "sustainable agriculture." Someone once said, "There are three important values in the realms of permaculture: 'people care,' 'earth care,' and 'return of surplus.'" "People care" refers to the fact the permaculture must help people. "Earth care" represents the importance of nurturing Nature. "Return of surplus" is putting extra stuff (like food scraps) back into nature. WOW! What incredible values.
+        </div>
+      </div>
+      <div class="slogan">
+        Slogan.
+      </div>
+        <div class = "branding" style="background-image: url(../resources/volocofire.jpg)">
+see trending styles here
+
+      </div>
+      <div class="gallery" style="background-image: url(../resources/volocofire.jpg)">
+        see pictures soon
+      </div>
+
+      <script type="text/javascript" src="script.js"></script>
+      <script>
+        // typer("sidenote", 10000);
+        // hideIt("sidenote");
+        document.getElementsByClassName("hamburger")[0].innerHTML += "<svg><polygon points = '" + cross(24) + "'></polygon></svg>";
+      </script>
+  </body>
+</html>
