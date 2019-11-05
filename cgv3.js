@@ -23,7 +23,6 @@ var fall_image = "resources/down.png";
 var obstacle_amount = 50;
 var obstacle_spacing;
 var game_speed = 1.5;
-var games_played = 0;
 
 var crystal1;
 var obstacles = [];
@@ -34,7 +33,7 @@ var game_state = 1; //1 = game is going; 0 = crystal exploded
 
 function initializeCanvas(){
 
-  if (getGamesFromCookie() == 5){
+  if (getGamesFromCookie() >= 5){
     gameArea.style.display = "none";
   } else{
     //start the game
@@ -132,15 +131,12 @@ function endGame(){
   gameArea.context.textAlign = "center";
   gameArea.context.fillText("Click to restart", gameArea.width/2, gameArea.height/2 +25);
 
-  //increment games_played
-  games_played += 1;
-
   //increment the games on the cookie
   incrementGamesInCookie();
   //increase speed;
   game_speed += .2;
 
-  if(games_played < 5){
+  if(getGamesFromCookie() < 5){
     gameArea.addEventListener('click', startGame);
   } else{
     gameArea.addEventListener('click', timeOut);
