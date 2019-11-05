@@ -280,7 +280,7 @@ function incrementGamesInCookie(){
 function getGamesFromCookie(){
   var str = document.cookie;
   var t;
-  if(str = ""){
+  if(str == ""){
     t = 0;
   } else{
     var n = str.indexOf("games=");
