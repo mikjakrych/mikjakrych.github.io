@@ -49,6 +49,7 @@ body{
   position: relative;
   width:100%;
   height:2px;
+  margin-top: -2px;
   margin-bottom: -20px;
   transform-origin: center;
   transform: scaleX(0);
@@ -112,6 +113,9 @@ ul{
 }
 .bigpic{
   background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -301,6 +305,9 @@ ul{
   width:125px;
   height:195px;
   background-position: top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow:hidden;
   text-align: center;
@@ -308,7 +315,8 @@ ul{
 .cardslicer{
   /* height:100%; */
   width:100%;
-  transform: translateY(175px);
+  padding-top:4px;
+  transform: translateY(168px);
   background-color: #DBC76D;
   transition: .6s ease !important;
 

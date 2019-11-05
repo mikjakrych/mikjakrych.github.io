@@ -28,7 +28,13 @@ function typer(id, wait){
 function hideIt(id){
   var thing = document.getElementById(id);
   thing.onclick = function(){
-    thing.style.display = "none";
+    thing.style.opacity = "0";
+    thing.transformOrigin = "left bottom";
+    thing.msTransformOrigin = "left bottom";
+    thing.WebkitTransformOrigin = "left bottom";
+    thing.style.transform = "scale(.9,.9)";
+    thing.style.msTransform = "scale(.9,.9)";
+    thing.style.WebkitTransform = "scale(.9,.9)";
   }
 }
 
