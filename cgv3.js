@@ -35,8 +35,7 @@ var game_state = 1; //1 = game is going; 0 = crystal exploded
 function initializeCanvas(){
 
   if (getGamesFromCookie() == 5){
-    //go directly to timeout
-    gameArea.addEventListener('click',timeOut);
+    gameArea.style.display = "none";
   } else{
     //start the game
     gameArea.addEventListener('click', startGame);
@@ -137,11 +136,7 @@ function endGame(){
   games_played += 1;
 
   //increment the games on the cookie
-  var d = new Date();
-  d.setTime(d.getTime() + 5 * 60 * 1000);
-  var expires = "expires="+ d.toUTCString();
-  var wholecookie = "games=" + (getGamesFromCookie() + 1) + ";" + expires + ";path=/";
-  document.cookie = wholecookie;
+  incrementGamesInCookie();
   //increase speed;
   game_speed += .2;
 
@@ -292,6 +287,4 @@ function getGamesFromCookie(){
     t = parseInt(str.slice(n+6,n+7));
   }
   return t;
-  console.log(str);
-  console.log(t);
 }
