@@ -18,12 +18,10 @@ _/_/_/    _/   _/    _/_/_/   _/    _/      _/_/_/   _/   _/      _/        _/_/
 var gameArea = document.getElementById("mycanvas");
 var rise_speed = 5;
 var fall_speed = 5;
-var rise_image = "resources/up.png";
-var fall_image = "resources/down.png";
-var obstacle_amount = 50;
+var obstacle_amount = 80;
 var obstacle_spacing;
 var game_speed = 1.5;
-
+var solute_color;
 var crystal1;
 var obstacles = [];
 var particles = [];
@@ -62,17 +60,19 @@ function startGame(){
   gameArea.addEventListener("mouseup", function(){clicking = false});
   gameArea.addEventListener("touchstart", function(){clicking = true});
   gameArea.addEventListener("touchend", function(){clicking = false});
+  //get a nice solute_color
+  solute_color = "rgb(" + randomInt(80,180) + "," + randomInt(80,180) + "," + randomInt(80,180) + ")";
   //make the crystal object
   crystal1 = new crystal(70, 200, 32, 20);
   //make obstacles
   for (var i = 0; i < obstacle_amount; i ++){
     var obsgen = Math.floor(randomInt(1,10));
     if (obsgen < 7){
-      obstacles.push(new droplet(i*40 + 300, randomInt(20,260), randomInt(30,60), game_speed, 1, "rgb(124, 153, 44)"));
+      obstacles.push(new droplet(i*40 + 300, randomInt(20,260), randomInt(30,60), game_speed, 1, solute_color));
     } else if (obsgen < 9){
-      obstacles.push(new droplet(i*40 + 300, randomInt(20,260), randomInt(30,60), game_speed, -1, "rgb(83, 160, 222)"));
+      obstacles.push(new droplet(i*40 + 300, randomInt(20,260), randomInt(30,60), game_speed, -1, "#53A0DE"));
     } else{
-      obstacles.push(new dynamite(i * 40 + 300, randomInt(20, 260), 20, game_speed));
+      obstacles.push(new dynamite(i * 40 + 300, randomInt(20, 260), 20, game_speed, "#8c5f62"));
     }
   }
   //set interval for updating the game
@@ -108,7 +108,7 @@ function updateGame(){
 function propogateParticles(crystal){
   //make the particles
   for (var i = 0; i < 200; i ++){
-    particles.push(new particle(crystal.x, crystal.y, randomInt(1,50)*randomSign(), randomInt(1,50)*randomSign() ));
+    particles.push(new particle(crystal.x, crystal.y, randomInt(1,50)*randomSign(), randomInt(1,50)*randomSign(),"rgb(" + randomInt(80,180) + "," + randomInt(80,180) + "," + randomInt(80,180) + ")"));
   }
 }
 function endGame(){
@@ -164,16 +164,23 @@ function crystal(x, y, width, height){
   this.height = height;
   this.value = 0;
 
-  this.img = new Image();
-  this.img.src = rise_image;
-
   this.draw = function(){
     ctx = gameArea.context;
-    ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+    ctx.beginPath();
+    ctx.moveTo(this.x,this.y+this.height/4);
+    ctx.lineTo(this.x,this.y+this.height*3/4);
+    ctx.lineTo(this.x+this.height/4,this.y+this.height);
+    ctx.lineTo(this.x+this.width-this.height/4,this.y+this.height);
+    ctx.lineTo(this.x+this.width,this.y+this.height*3/4);
+    ctx.lineTo(this.x+this.width,this.y+this.height/4);
+    ctx.lineTo(this.x+this.width-this.height/4,this.y);
+    ctx.lineTo(this.x+this.height/4,this.y);
+    ctx.closePath();
+    ctx.fillStyle = solute_color;
+    ctx.fill();
   }
 
   this.rise = function(){
-    this.img.src = rise_image;
     if (this.y <= 10){
       this.y = 10;
     } else{
@@ -182,7 +189,6 @@ function crystal(x, y, width, height){
   }
 
   this.fall = function(){
-    this.img.src = fall_image;
     if (this.y >= 400 - 10 - this.height){
       this.y = 400-10-this.height;
     } else{
@@ -206,23 +212,27 @@ function droplet(x, y, m, speed, dtype, fill){ //x-position, y-position, droplet
   this.update = function(crystal){
     if (this.x-.2*m <= crystal.x + crystal.width && this.x-.2*m + .4*m >= crystal.x && this.y-.5*m <= crystal.y + crystal.height && this.y-.5*m + .75*m >= crystal.y && game_state){
       this.y = -400;
-      crystal.value += m * this.dtype;
-      if(crystal.width > 2){
-        crystal.width += m * this.dtype / crystal.height;
-        crystal.height += m * this.dtype / crystal.width;
+      crystal.value += m * this.dtype * 5;
+      crystal.width += m * this.dtype / 50;
+      crystal.height += m * this.dtype / 50;
+      if(crystal.width <= 0 || crystal.height <= 0){
+        crystal.width, crystal.height = 0;
+        crystal.value = 0;
+        game_state = 0;
+        setTimeout(endGame,1000);
       }
     } else{
       this.x -= speed;
     }
   }
 }
-function dynamite(x, y, m, speed){
+function dynamite(x, y, m, speed, color){
   this.x = x;
   this.y = y;
 
   this.draw = function(){
     ctx = gameArea.context;
-    ctx.fillStyle = "rgb(87, 114, 132)";
+    ctx.fillStyle = color;
     ctx.fillRect(this.x, this.y, m, m, 4);
   }
   this.update = function(crystal){
@@ -238,13 +248,13 @@ function dynamite(x, y, m, speed){
     }
   }
 }
-function particle(x, y, xs, ys){ //x, y, x-speed, y-speed
+function particle(x, y, xs, ys, color){ //x, y, x-speed, y-speed
   this.x = x;
   this.y = y;
 
   this.draw = function(){
     ctx = gameArea.context;
-    ctx.fillStyle = "rgb(87, 114, 132)";
+    ctx.fillStyle = color;
     ctx.beginPath();
     ctx.arc(this.x, this.y, 2, 0, 2 * Math.PI);
     ctx.fill();
