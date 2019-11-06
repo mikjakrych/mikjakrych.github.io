@@ -5,27 +5,30 @@ function randInt(min, max){
 
 //function that types out a message in a div based on the div's id and wait time
 function typer(id, wait){
-  var i = 0;
-  var object = document.getElementById(id);
-  var txt = object.innerHTML;
-  var length = txt.length;
-  object.innerHTML = "";
-  setTimeout(
-    function innerTyper(){
-      object.style.display = "block";
-      if (i < length){
-        //object.style.background = "hsl(" + (50+20*Math.sin(i/10)) + ", 100%, 40%)";
-        object.innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(innerTyper, randInt(40,70));
-      };
-    },
-    wait,i, txt, length, id
-  );
+  var c = document.cookie;
+  if (c.includes(id) == false){
+    var i = 0;
+    var object = document.getElementById(id);
+    var txt = object.innerHTML;
+    var length = txt.length;
+    object.innerHTML = "";
+    setTimeout(
+      function innerTyper(){
+        object.style.display = "block";
+        if (i < length){
+          //object.style.background = "hsl(" + (50+20*Math.sin(i/10)) + ", 100%, 40%)";
+          object.innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(innerTyper, randInt(40,70));
+        };
+      },
+      wait,i, txt, length, id
+    );
+  }
 }
 
-//function to hide things when they are clicked
-function hideIt(id){
+//function to hide things when they are clicked; second argument is used if one does not want the side not to appear in some time
+function hideIt(id, days){
   var thing = document.getElementById(id);
   thing.onclick = function(){
     thing.style.opacity = "0";
@@ -35,6 +38,10 @@ function hideIt(id){
     thing.style.transform = "scale(.9,.9)";
     thing.style.msTransform = "scale(.9,.9)";
     thing.style.WebkitTransform = "scale(.9,.9)";
+    var t = new Date();
+    t.setTime(t.getTime() + days * 24 * 60 * 60 * 1000);
+    var wholecookie = id + "=hidden;expires=" + t.toUTCString() + ";path=/";
+    document.cookie = wholecookie;
   }
 }
 
