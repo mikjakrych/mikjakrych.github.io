@@ -14,7 +14,7 @@
   <title>MK Studios | Home</title>
 
 </head>
-<body onload="typer('sidenote',10000);popup('alert');initializeCanvas();resizeCanvas();" onresize="resizeCanvas()" onscroll="moveAll()">
+<body onresize="resizeCanvas()" onscroll="moveAll()">
 
 
   <!-- navbar setup -->
@@ -258,17 +258,20 @@
     <span class = "subtitle">
       Please watch your step.
     </span>
-    <a class="btn" onclick="hideIt('alert', 5)" href="#">
+    <a class="btn" href="javascript:hideIt('alert', 5)">
       Dismiss
     </a>
   </div>
 
   <script type="text/javascript" src="script.js"></script>
+  <script type = "text/javascript" src = "cgv3.js"></script>
   <script>
+    typer('sidenote',10000);
+    popup('alert');
+    initializeCanvas();
+    resizeCanvas();
     document.getElementById("navtoggle").innerHTML = "<svg><polygon points = '" + cross(35) + "'></polygon></svg>";
   </script>
-
-  <script type = "text/javascript" src = "cgv3.js"></script>
 
 
 </body>
