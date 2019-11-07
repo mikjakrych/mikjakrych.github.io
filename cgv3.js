@@ -286,10 +286,10 @@ function incrementGamesInCookie(){
 function getGamesFromCookie(){
   var str = document.cookie;
   var t;
-  if(str == ""){
+  var n = str.indexOf("games=");
+  if(n == -1){
     t = 0;
   } else{
-    var n = str.indexOf("games=");
     t = parseInt(str.slice(n+6,n+7));
   }
   return t;

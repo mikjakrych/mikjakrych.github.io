@@ -14,7 +14,7 @@
   <title>MK Studios | Home</title>
 
 </head>
-<body onload="initializeCanvas();resizeCanvas()" onresize="resizeCanvas()" onscroll="moveAll()">
+<body onload="typer('sidenote',10000);popup('alert');initializeCanvas();resizeCanvas();" onresize="resizeCanvas()" onscroll="moveAll()">
 
 
   <!-- navbar setup -->
@@ -245,30 +245,26 @@
   </footer>
 
   <!-- little sidenote message -->
-  <aside id ="sidenote">
+  <aside id ="sidenote" onclick = "hideIt('sidenote', 5);">
     Hi there, friend. Glad you made it to my website. Please make sure to check out all the sister sites. Also don't forget to come back again because new content is being created constantly. :)
   </aside>
 
   <!-- under construction alert -->
-
-
-  <!-- <div id = "alert">
-    <img src="resources/cone.gif" width=100px height= 100px></img>
-    <span class = "text">
+  <div id = "alert">
+    <img src="resources/cone.gif" width=100px height=100px></img>
+    <span class = "subtitle">
       This site is currently under construction.
     </span>
-    <span class = "text">
+    <span class = "subtitle">
       Please watch your step.
     </span>
-    <a class="btn" onclick="hideIt('alert')" href="#home">
+    <a class="btn" onclick="hideIt('alert', 5)" href="#">
       Dismiss
     </a>
-  </div> -->
+  </div>
 
   <script type="text/javascript" src="script.js"></script>
   <script>
-    typer("sidenote", 10000);
-    hideIt("sidenote", 5);
     document.getElementById("navtoggle").innerHTML = "<svg><polygon points = '" + cross(35) + "'></polygon></svg>";
   </script>
 

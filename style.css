@@ -248,12 +248,9 @@ ul{
   max-width:150px;
   color: #DBC76D;
   padding:8px;
-  display:none;
   z-index: 1;
   box-shadow: none;
   font-size: 16px;
-  -webkit-transition: .2s ease !important;
-  transition: .2s ease !important;
 }
 #alert{
   position: fixed;

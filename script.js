@@ -5,13 +5,14 @@ function randInt(min, max){
 
 //function that types out a message in a div based on the div's id and wait time
 function typer(id, wait){
+  var i = 0;
+  var object = document.getElementById(id);
+  var txt = object.innerHTML;
+  var length = txt.length;
+  object.style.display = "none";
+  object.innerHTML = "";
   var c = document.cookie;
   if (c.includes(id) == false){
-    var i = 0;
-    var object = document.getElementById(id);
-    var txt = object.innerHTML;
-    var length = txt.length;
-    object.innerHTML = "";
     setTimeout(
       function innerTyper(){
         object.style.display = "block";
@@ -26,23 +27,47 @@ function typer(id, wait){
     );
   }
 }
-
+//function that popups something up based one id (used for alert)
+function popup(id){
+  var object = document.getElementById(id);
+  var op = object.style.opacity;
+  var d = object.style.display;
+  var c = document.cookie;
+  object.style.display = "none";
+  object.style.opacity = "0";
+  object.style.transition = ".6s ease";
+  object.style.WebkitTransition = ".6s ease";
+  if (c.includes(id) == false){
+    setTimeout(
+      function displayIt(){
+        object.style.display = d;
+        setTimeout(
+          function fadeIt(){
+            object.style.opacity = op;
+          },
+          600
+        )
+      },
+      1000
+    );
+  }
+}
 //function to hide things when they are clicked; second argument is used if one does not want the side not to appear in some time
 function hideIt(id, days){
-  var thing = document.getElementById(id);
-  thing.onclick = function(){
-    thing.style.opacity = "0";
-    thing.transformOrigin = "left bottom";
-    thing.msTransformOrigin = "left bottom";
-    thing.WebkitTransformOrigin = "left bottom";
-    thing.style.transform = "scale(.9,.9)";
-    thing.style.msTransform = "scale(.9,.9)";
-    thing.style.WebkitTransform = "scale(.9,.9)";
-    var t = new Date();
-    t.setTime(t.getTime() + days * 24 * 60 * 60 * 1000);
-    var wholecookie = id + "=hidden;expires=" + t.toUTCString() + ";path=/";
-    document.cookie = wholecookie;
-  }
+  var object = document.getElementById(id);
+  object.style.transition = ".6s ease";
+  object.style.WebkitTransition = ".6s ease";
+  object.style.opacity = "0";
+  setTimeout(
+    function (){
+      object.style.display = "none";
+    },
+    600
+  )
+  var t = new Date();
+  t.setTime(t.getTime() + days * 24 * 60 * 60 * 1000);
+  var wholecookie = id + "=hidden;expires=" + t.toUTCString() + ";path=/";
+  document.cookie = wholecookie;
 }
 
   //function to open and close nave when screen is below certain width
