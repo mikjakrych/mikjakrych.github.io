@@ -15,7 +15,7 @@
    viewBox="0 0 200 200"
    version="1.1"
    id="svg825"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="logo_bl.svg"
    inkscape:export-filename="C:\Users\timuy\Desktop\testlogo.png"
    inkscape:export-xdpi="2032"
@@ -82,16 +82,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="54.567864"
+     inkscape:cx="195.98922"
      inkscape:cy="130.07898"
      inkscape:document-units="mm"
      inkscape:current-layer="whites"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:window-width="971"
+     inkscape:window-height="794"
+     inkscape:window-x="308"
+     inkscape:window-y="85"
+     inkscape:window-maximized="0"
      showguides="false"
      inkscape:measure-start="158.392,362.746"
      inkscape:measure-end="164.756,2.82843"
@@ -194,17 +194,16 @@
      id="whites"
      inkscape:label="whites"
      style="display:inline">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:100px;font-family:'Lucida Handwriting';-inkscape-font-specification:'Lucida Handwriting Bold';text-align:start;text-anchor:start;fill:#ffffff"
-       x="32.266678"
-       y="144.97917"
-       id="bl"><tspan
-         sodipodi:role="line"
-         id="bl-in"
-         x="32.266678"
-         y="144.97917"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:100px;line-height:0.25;font-family:'Lucida Handwriting';-inkscape-font-specification:'Lucida Handwriting Bold';text-align:start;baseline-shift:baseline;text-anchor:start;stroke-width:1">bl</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path833"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:100px;line-height:0.25;font-family:'Lucida Handwriting';-inkscape-font-specification:'Lucida Handwriting Bold';text-align:start;baseline-shift:baseline;text-anchor:start;fill:#ffffff;stroke-width:1"
+       d="m 96.28035,110.94597 q 0.683593,2.39258 0.683593,4.88281 0,12.25586 -8.59375,21.33789 -8.59375,9.0332 -20.214843,9.0332 -8.496094,0 -13.867188,-5.07812 -5.322265,-5.07813 -5.322265,-13.08594 0,-5.81054 2.148437,-16.65039 l 8.203125,-41.406248 q -2.392578,0.439453 -4.199219,0.439453 -10.449218,0 -10.449218,-10.888672 3.173828,3.027344 10.15625,3.027344 6.103515,0 16.259765,-3.125 L 59.5616,117.2448 q -1.123047,5.85937 -1.123047,10.35156 0,6.00586 3.173828,9.76562 3.173828,3.71094 8.251953,3.71094 7.666016,0 12.988281,-6.93359 5.371094,-6.98242 5.371094,-16.84571 0,-4.88281 -1.611328,-9.52148 -6.152344,-2.05078 -10.107422,-5.32227 -3.90625,-3.271479 -3.90625,-6.445308 0,-1.660156 1.367188,-4.345703 13.183593,1.025391 20.068359,11.425781 6.347654,3.02734 13.378904,3.02734 7.17774,0 14.59961,-4.3457 l 2.49024,3.95508 q -8.4961,6.44531 -19.04297,6.44531 -4.83399,0 -9.17969,-1.2207 z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path835"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:100px;line-height:0.25;font-family:'Lucida Handwriting';-inkscape-font-specification:'Lucida Handwriting Bold';text-align:start;baseline-shift:baseline;text-anchor:start;fill:#ffffff;stroke-width:1"
+       d="m 165.17683,105.18425 q -10.10742,19.18945 -20.3125,30.12695 -10.20507,10.88867 -18.0664,10.88867 -5.71289,0 -9.22852,-4.39453 -3.51562,-4.44336 -3.51562,-11.57226 0,-4.00391 1.46484,-11.32813 l 9.7168,-48.925778 q -1.9043,0.292969 -3.32031,0.292969 -11.23047,0 -11.23047,-9.375 v -1.123047 q 5.85937,3.320312 13.23242,3.320312 7.37305,0 12.89062,-3.662109 l -11.32812,58.740233 q -1.51367,7.91016 -1.51367,10.88867 0,8.25196 6.05468,8.25196 5.85938,0 11.76758,-6.5918 5.95703,-6.64063 19.48242,-28.22266 z" />
     <path
        sodipodi:type="star"
        style="opacity:1;fill:#ffffff"

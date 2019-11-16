@@ -33,11 +33,11 @@ var timer = setTimeout(nextSlide,5000);
 function changeSlide(next_index){
   // var old_button = document.getElementsByClassName("buttonactive")[0];
   // var new_button = document.getElementsByClassName("carouselbutton")[next_index];
-  var old_slide = document.getElementsByClassName("slideactive")[0];
+  var old_slide = document.getElementsByClassName("carouselslideactive")[0];
   var new_slide = document.getElementsByClassName("carouselslide")[next_index];
 
-  old_slide.classList.toggle("slideactive");
-  new_slide.classList.toggle("slideactive");
+  old_slide.classList.toggle("carouselslideactive");
+  new_slide.classList.toggle("carouselslideactive");
   // old_button.classList.toggle("buttonactive");
   // new_button.classList.toggle("buttonactive");
 
@@ -77,7 +77,6 @@ function mkParallax(){
   for (var i = 0; i < parallax.length; i ++){
     var o = parallax[i];
     var v = o.getBoundingClientRect().y + (window.pageYOffset - o.offsetTop)/1.2;
-    o.style.backgroundAttachment = "fixed";
     o.style.backgroundPosition = "50% " + v + "px";
   }
 }
