@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="MK Studios">
+  <meta name="author" content="Mikja Krych">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/x-icon" href="resources/mk.gif"/>
+  <title>MK Studios | Home</title>
+
+</head>
+<body>
+  <style>
+    body{
+      overflow-x:hidden;
+    }
+    .box{
+      width:20px;
+      height:20px;
+      display:inline-block;
+      background-color:grey;
+      border-radius:100%;
+      margin:5px;
+    }
+    .box:hover{
+      animation-name: woohoo;
+      animation-duration:.5s;
+      animation-fill-mode:forwards;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+    }
+    #wrapper{
+      margin:100px;
+    }
+    @keyframes woohoo{
+      0%{}
+      50%{border-radius:0;background-color:red}
+      100%{border-radius:-100%;background-color:grey}
+    }
+    #l1{
+      animation-delay:0s;
+    }
+    #l2{
+      animation-delay:.2s;
+    }
+    #l3{
+      animation-delay:.4s;
+    }
+    #l4{
+      animation-delay:.6s;
+    }
+  </style>
+  <div id="wrapper">
+    <div id="l1" class="box">
+    </div>
+    <div id="l2" class="box">
+    </div>
+    <div id="l3" class="box">
+    </div>
+    <div id="l4" class="box">
+    </div>
+  </div>
+</body>
+</html>
