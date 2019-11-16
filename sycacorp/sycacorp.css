@@ -11,7 +11,7 @@ body{
   padding:0;
   margin:0;
   font-family: "Libre Franklin";
-  font-size: 18px;
+  line-height: 1.5;
   color:#5d5d5d;
   background-color: #ffffff;
 }
@@ -29,7 +29,7 @@ hr{
 h1{
   color:#85BF5A;
   text-transform:uppercase;
-  font-size: 32px;
+  font-size: 1.8em;
   font-weight: 500;
   margin:0;
   padding-bottom: 30px;
@@ -37,7 +37,7 @@ h1{
 h2{
   color:#ffffff;
   text-transform:uppercase;
-  font-size: 24px;
+  font-size: 1.2em;
   font-weight: 500;
   margin:0;
   padding-bottom: 30px;
@@ -53,6 +53,9 @@ img{
   height: 100%;
   z-index: 1000;
   background-color: #ffffff;
+  -webkit-animation: preloader .8s ease-in-out 0s 1 normal forwards paused;
+  -moz-animation: preloader .8s ease-in-out 0s 1 normal forwards paused;
+  -o-animation: preloader .8s ease-in-out 0s 1 normal forwards paused;
   animation: preloader .8s ease-in-out 0s 1 normal forwards paused;
 }
 .banner{
@@ -216,6 +219,9 @@ img{
   -o-transform: translateX(50px);
   transform: translateX(50px);
   position: absolute;
+  -webkit-animation: lollistick 4.5s linear 0s infinite normal forwards running;
+  -moz-animation: lollistick 4.5s linear 0s infinite normal forwards running;
+  -o-animation: lollistick 4.5s linear 0s infinite normal forwards running;
   animation: lollistick 4.5s linear 0s infinite normal forwards running;
 }
 .lollitop{
@@ -224,6 +230,9 @@ img{
   -moz-transform-origin: center;
   -o-transform-origin: center;
   transform-origin: center;
+  -webkit-animation: lollitop 4.5s linear 0s infinite normal forwards running;
+  -moz-animation: lollitop 4.5s linear 0s infinite normal forwards running;
+  -o-animation: lollitop 4.5s linear 0s infinite normal forwards running;
   animation: lollitop 4.5s linear 0s infinite normal forwards running;
 }
 .navbar{
