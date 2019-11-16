@@ -10,7 +10,7 @@ body{
   border: 0;
   padding:0;
   margin:0;
-  font-family: "Segoe UI";
+  font-family: "Libre Franklin";
   font-size: 18px;
   color:#5d5d5d;
   background-color: #ffffff;
@@ -108,6 +108,10 @@ img{
   transition: .5s ease;
 }
 .hamburgeropen{
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
   transform: rotate(315deg);
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -159,7 +163,15 @@ img{
   width:100%;
   height:2px;
   margin-bottom: -100px;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  -moz-transform-origin: center;
+  -o-transform-origin: center;
   transform-origin: center;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transition: .2s ease;
   transition: .2s ease;
@@ -167,6 +179,10 @@ img{
 .link:hover::after{
   -webkit-transition: .2s ease;
   transition: .2s ease;
+  -webkit-transform: initial;
+  -ms-transform: initial;
+  -moz-transform: initial;
+  -o-transform: initial;
   transform: initial;
 }
 .logo{
@@ -189,12 +205,24 @@ img{
 .lollistick{
   width:50px;
   height:75px;
+  -webkit-transform-origin: 25px 75px;
+  -ms-transform-origin: 25px 75px;
+  -moz-transform-origin: 25px 75px;
+  -o-transform-origin: 25px 75px;
   transform-origin: 25px 75px;
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -moz-transform: translateX(50px);
+  -o-transform: translateX(50px);
   transform: translateX(50px);
   position: absolute;
   animation: lollistick 4.5s linear 0s infinite normal forwards running;
 }
 .lollitop{
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  -moz-transform-origin: center;
+  -o-transform-origin: center;
   transform-origin: center;
   animation: lollitop 4.5s linear 0s infinite normal forwards running;
 }
@@ -260,6 +288,10 @@ img{
   position: relative;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
 .row{
@@ -306,10 +338,46 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
 }
+@-webkit-keyframes preloader {
+  0%{opacity: 1}
+  99%{opacity: 0}
+  100%{visibility: hidden}
+}
+@-moz-keyframes preloader {
+  0%{opacity: 1}
+  99%{opacity: 0}
+  100%{visibility: hidden}
+}
+@-o-keyframes preloader {
+  0%{opacity: 1}
+  99%{opacity: 0}
+  100%{visibility: hidden}
+}
 @keyframes preloader {
   0%{opacity: 1}
   99%{opacity: 0}
   100%{visibility: hidden}
+}
+@-webkit-keyframes lollistick {
+  0%{-webkit-transform: translateX(50px)}
+  25.58%{-webkit-transform: translateX(200px)}
+  50%{-webkit-transform: translateX(200px) rotate(180deg)}
+  74.42%{-webkit-transform: translateX(50px) rotate(180deg)}
+  100%{-webkit-transform: translateX(50px) rotate(360deg)}
+}
+@-moz-keyframes lollistick {
+  0%{-moz-transform: translateX(50px)}
+  25.58%{-moz-transform: translateX(200px)}
+  50%{-moz-transform: translateX(200px) rotate(180deg)}
+  74.42%{-moz-transform: translateX(50px) rotate(180deg)}
+  100%{-moz-transform: translateX(50px) rotate(360deg)}
+}
+@-o-keyframes lollistick {
+  0%{-o-transform: translateX(50px)}
+  25.58%{-o-transform: translateX(200px)}
+  50%{-o-transform: translateX(200px) rotate(180deg)}
+  74.42%{-o-transform: translateX(50px) rotate(180deg)}
+  100%{-o-transform: translateX(50px) rotate(360deg)}
 }
 @keyframes lollistick {
   0%{transform: translateX(50px)}
@@ -317,6 +385,27 @@ img{
   50%{transform: translateX(200px) rotate(180deg)}
   74.42%{transform: translateX(50px) rotate(180deg)}
   100%{transform: translateX(50px) rotate(360deg)}
+}
+@-webkit-keyframes lollitop {
+  0%{-webkit-transform: initial}
+  25.58%{-webkit-transform: initial}
+  50%{-webkit-transform: rotate(-180deg)}
+  74.42%{-webkit-transform: rotate(-180deg)}
+  100%{-webkit-transform: rotate(-360deg)}
+}
+@-moz-keyframes lollitop {
+  0%{-moz-transform: initial}
+  25.58%{-moz-transform: initial}
+  50%{-moz-transform: rotate(-180deg)}
+  74.42%{-moz-transform: rotate(-180deg)}
+  100%{-moz-transform: rotate(-360deg)}
+}
+@-o-keyframes lollitop {
+  0%{-o-transform: initial}
+  25.58%{-o-transform: initial}
+  50%{-o-transform: rotate(-180deg)}
+  74.42%{-o-transform: rotate(-180deg)}
+  100%{-o-transform: rotate(-360deg)}
 }
 @keyframes lollitop {
   0%{transform: initial}
@@ -326,18 +415,12 @@ img{
   100%{transform: rotate(-360deg)}
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
-
+@media only screen and (max-width: 600px) {}
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
-
+@media only screen and (min-width: 600px) {}
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
-
+@media only screen and (min-width: 768px) {}
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-
+@media only screen and (min-width: 992px) {}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 1200px) {}
