@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="">
   <link rel="stylesheet" href="sycacorp.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
@@ -11,41 +10,42 @@
   <link rel="shortcut icon" type="image/x-icon" href="resources/logo_bl.png"/>
 </head>
 <body onload="mkParallax(); hidePreloader()" onscroll="mkParallax()">
-  <div class="preloader"></div>
+  <div class="preloader" data-mk-animate="pointfive">
+    Welcome to Bellingham Leasing
+  </div>
   <nav class="navbar">
-    <a href= "index.html" class="logo">
+    <a href= "index.html" class="logo" data-mk-animate="pointtwo">
       <img src="resources/logo_bl.svg" style="height:inherit">
     </a>
-    <div class="navgroup">
-      <a href="index.html" class="navclass">
+    <div class="navgroup" data-mk-animate="pointfive">
+      <a href="index.html" class="navclass" data-mk-animate="pointtwo">
         Home
       </a>
-      <a href="about.html" class="navclass">
+      <a href="about.html" class="navclass" data-mk-animate="pointtwo">
         About
       </a>
-      <a href="buildings.html" class="navclass">
+      <a href="buildings.html" class="navclass" data-mk-animate="pointtwo">
         Buildings
       </a>
-      <a href="rent.html" class="navclass navspecial">
+      <a href="rent.html" class="navclass navspecial" data-mk-animate="pointtwo">
         Rent now
       </a>
     </div>
   </nav>
-  <div class="hamburger" onclick="toggleNav('navbar','navbaropen','navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen', 'escaper', 'escaperopen')"></div>
-  <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navbaropen', 'navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen', 'escaper', 'escaperopen')">
-  </div>
-  <div class="splash parallax" style="background-image:url(resources/blueberry.jpg)">
+  <div class="hamburger"  data-mk-animate="pointfive" onclick="toggleNav('navbar','navbaropen','navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen', 'escaper', 'escaperopen')"></div>
+  <div id = "escaper" class = "escaper"  data-mk-animate="pointfive" onclick = "toggleNav('navbar', 'navbaropen', 'navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen', 'escaper', 'escaperopen')"></div>
+  <div class="splash" data-mk-image="parallax" style="background-image:url(resources/blueberry.jpg)">
     <div class="subtitle">
       Serving Bellinghamsters since 1994
     </div>
     <div class="title">
       Bellingham Leasing
     </div>
-    <a class="greenbutton" href="#">Rent Today</a>
+    <a class="greenbutton" href="#" data-mk-animate="pointtwo">Rent Today</a>
   </div>
   <hr>
   <div class="maxwrap">
-    <div class="offset" style="background-image:url(resources/briarwood.jpg)">
+    <div class="offset" data-mk-image = "cover" style="background-image:url(resources/briarwood.jpg)">
       <div class="inneroffset">
         <h1>
           Quality.<br>Integrity.<br>Dependability.
@@ -80,7 +80,7 @@
   </div>
   <hr>
   <div class="maxwrap">
-    <div class="widen" style="background-image:url(resources/blueberry2.jpg)">
+    <div class="widen" data-mk-image = "cover" style="background-image:url(resources/blueberry2.jpg)">
       <h1 class="innerwidenhead">
         Discover your habitat.
       </h1>
@@ -93,11 +93,11 @@
   <div class="banner">
     Are you looking for rental housing, commercial office, or street-facing storefront? Check for availability today!
     <br>
-    <a class="bluebutton" href="#">Check availability</a>
+    <a class="bluebutton" href="#" data-mk-animate="pointtwo">Check availability</a>
   </div>
   <hr>
   <div class="maxwrap">
-    <div class="onright" style="background-image:url(resources/12thstreet.jpg)">
+    <div class="onright" data-mk-image = "cover" style="background-image:url(resources/12thstreet.jpg)">
       <table class="inneronright">
         <tbody>
           <tr>
@@ -143,25 +143,20 @@
     </div>
   </div>
   <hr>
+
+
+
   <div class="businesses">
     <h1>
       Commercial tenants
     </h1>
-    <div class="lollipack">
-      <div class="lollistick" style="animation-delay:2s"><img class="lollitop" style="animation-delay:2s" src="../sycatest/logos/CCIC.png"></div>
-      <div class="lollistick" style="animation-delay:1.5s"><img style="animation-delay:1.5s" class="lollitop" src="../sycatest/logos/john1site.png"></div>
-      <div class="lollistick" style="animation-delay:1s"><img style="animation-delay:1s" class="lollitop" src="../sycatest/logos/mk.png"></div>
-      <div class="lollistick" style="animation-delay:.5s"><img style="animation-delay:.5s" class="lollitop" src="../sycatest/logos/ptgallery.png"></div>
-      <div class="lollistick" style="animation-delay:2.5s"><img style="animation-delay:2.5s" class="lollitop" src="../sycatest/logos/sycamorecorporation.png"></div>
-      <div class="lollistick" style="animation-delay:3s"><img style="animation-delay:3s" class="lollitop" src="../sycatest/logos/CCIC.png"></div>
-      <div class="lollistick" style="animation-delay:3.5s"><img style="animation-delay:3.5s" class="lollitop" src="../sycatest/logos/john1site.png"></div>
-      <div class="lollistick" style="animation-delay:4s"><img style="animation-delay:4s" class="lollitop" src="../sycatest/logos/mk.png"></div>
-      <div class="lollistick"><img class="lollitop" src="../sycatest/logos/ptgallery.png"></div>
-    </div>
   </div>
+
+
+
   <hr>
   <div class="maxwrap">
-    <div class="middle" style="background-image:url(resources/sycamore.jpg)">
+    <div class="middle" data-mk-image = "cover" style="background-image:url(resources/sycamore.jpg)">
       <div class="innermiddle">
         <h1>
           High traffic storefronts
@@ -170,124 +165,111 @@
       </div>
     </div>
   </div>
-  <!-- <div class="trianglebox">
-  <div class="triangletext">
-  <h1>
-  High traffic storefronts
-</h1>
-Bellingham Leasing offers quality storefronts located at the heart of Fairhaven to give your business the maximum exposure. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ni. <a href="buildings.html" class="link">See Units</a>
-</div>
-<div class="triangles">
-<div class="triangle"><div class="innertriangle"></div></div>
-<div class="triangle"><div class="innertriangle"></div></div>
-<div class="triangle"><div class="innertriangle"></div></div>
-<div class="triangle"><div class="innertriangle"></div></div>
-</div>
-</div> -->
-<hr>
-<div id="carouselbox">
-  <h1>
-    From our clients
-  </h1>
-  <div class="carouselslide carouselslideactive">
-    <i class="material-icons">format_quote</i>
-    <div class="quote">
-      Lorem ipsum dolor <b>sit amet</b>, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+  <hr>
+  <div id="carouselbox">
+    <h1>
+      From our clients
+    </h1>
+    <div class="carouselslide carouselslideactive">
+      <i class="material-icons">format_quote</i>
+      <div class="quote">
+        Lorem ipsum dolor <b>sit amet</b>, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </div>
+      <div class="client">
+        Lauren Ipsom
+      </div>
     </div>
-    <div class="client">
-      Lauren Ipsom
+    <div class="carouselslide">
+      <i class="material-icons">format_quote</i>
+      <div class="quote">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore <b>magna aliquam erat volutpat.</b>
+      </div>
+      <div class="client">
+        Dee Laurasette - Laurasette Art
+      </div>
     </div>
-  </div>
-  <div class="carouselslide">
-    <i class="material-icons">format_quote</i>
-    <div class="quote">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore <b>magna aliquam erat volutpat.</b>
+    <div class="carouselslide">
+      <i class="material-icons">format_quote</i>
+      <div class="quote">
+        Awesome!!! Cool!!! Sensationary!!! Astounding!!! Great!!! Excellent!!! <i>Bellinghamsterisationatory!!!</i>
+      </div>
+      <div class="client">
+        Fat Hampster - The Cool Guy
+      </div>
     </div>
-    <div class="client">
-      Dee Laurasette - Laurasette Art
+    <div class="carouselslide">
+      <i class="material-icons">format_quote</i>
+      <div class="quote">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet <b>dolore</b> magna aliquam erat volutpat.
+      </div>
+      <div class="client">
+        Amet Con - Con Accounting
+      </div>
     </div>
-  </div>
-  <div class="carouselslide">
-    <i class="material-icons">format_quote</i>
-    <div class="quote">
-      Awesome!!! Cool!!! Sensationary!!! Astounding!!! Great!!! Excellent!!! <i>Bellinghamsterisationatory!!!</i>
-    </div>
-    <div class="client">
-      Fat Hampster - The Cool Guy
-    </div>
-  </div>
-  <div class="carouselslide">
-    <i class="material-icons">format_quote</i>
-    <div class="quote">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet <b>dolore</b> magna aliquam erat volutpat.
-    </div>
-    <div class="client">
-      Amet Con - Con Accounting
+    <div class="carouselslide">
+      <i class="material-icons">format_quote</i>
+      <div class="quote">
+        The website is especially cool. I am poor.
+      </div>
+      <div class="client">
+        No Nummy - No Money
+      </div>
     </div>
   </div>
-  <div class="carouselslide">
-    <i class="material-icons">format_quote</i>
-    <div class="quote">
-      The website is especially cool. I am poor.
+  <hr>
+  <div class="linkbox" data-mk-image = "parallax" style="background-image:url(resources/plans.jpg)">
+    <div class="linkcol">
+      <h2>
+        Bellingham Leasing
+      </h2>
+      <a href="index.html" class="link">
+        Home
+      </a><br>
+      <a href="about.html" class="link">
+        About Bellingham Leasing
+      </a><br>
+      <a href="buildings.html" class="link">
+        Rental Buildings
+      </a><br>
+      <a href="rent.html" class="link">
+        Rent today
+      </a>
     </div>
-    <div class="client">
-      No Nummy - No Money
+    <div class="linkcol">
+      <h2>
+        Residential
+      </h2>
+      <a href="#" class="link">
+        Briarwood Terrace
+      </a><br>
+      <a href="#" class="link">
+        Blueberry Triplex
+      </a>
+    </div>
+    <div class="linkcol">
+      <h2>
+        Commercial
+      </h2>
+      <a href="#" class="link">
+        Sycamore Square
+      </a><br>
+      <a href="#" class="link">
+        12th Street Village
+      </a><br>
+      <a href="#" class="link">
+        Stanellos
+      </a>
     </div>
   </div>
-</div>
-<hr>
-<div class="linkbox parallax" style="background-image:url(resources/plans.jpg)">
-  <div class="linkcol">
-    <h2>
-      Bellingham Leasing
-    </h2>
-    <a href="index.html" class="link">
-      Home
-    </a><br>
-    <a href="about.html" class="link">
-      About Bellingham Leasing
-    </a><br>
-    <a href="buildings.html" class="link">
-      Rental Buildings
-    </a><br>
-    <a href="rent.html" class="link">
-      Rent today
-    </a>
-  </div>
-  <div class="linkcol">
-    <h2>
-      Residential
-    </h2>
-    <a href="#" class="link">
-      Briarwood Terrace
-    </a><br>
-    <a href="#" class="link">
-      Blueberry Triplex
-    </a>
-  </div>
-  <div class="linkcol">
-    <h2>
-      Commercial
-    </h2>
-    <a href="#" class="link">
-      Sycamore Square
-    </a><br>
-    <a href="#" class="link">
-      12th Street Village
-    </a><br>
-    <a href="#" class="link">
-      Stanellos
-    </a>
-  </div>
-</div>
-<hr>
-<footer>
-  Copyright 2019 Bellingham Leasing, Inc.<br>All rights reserved.
-</footer>
-<hr>
-<script type="text/javascript" src="script.js"></script>
-<script>
-document.getElementsByClassName("hamburger")[0].innerHTML += "<svg><polygon points = '" + cross(24) + "'></polygon></svg>";
-</script>
+  <hr>
+  <footer>
+    Copyright 2019 Bellingham Leasing, Inc.<br>All rights reserved.
+  </footer>
+  <hr>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    document.getElementsByClassName("hamburger")[0].innerHTML += "<svg><polygon points = '" + cross(24) + "'></polygon></svg>";
+  </script>
 </body>
 </html>

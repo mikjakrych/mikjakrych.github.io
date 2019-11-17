@@ -43,7 +43,7 @@ function nextSlide(){
     changeSlide(current + 1); //find the next slide
   }
 }
-var parallax = document.getElementsByClassName("parallax");
+var parallax = document.querySelectorAll("[data-mk-image ='parallax']");
 function mkParallax(){
   for (var i = 0; i < parallax.length; i ++){
     var o = parallax[i];
