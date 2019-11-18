@@ -15,7 +15,7 @@ function cross(width){
   0 + "," + a + " " +
   a + "," + a;
 }
-function toggleNav(navbar_default_class, navbar_open_class, nav_group_default_class, nav_group_open_class, nav_toggle_class, nav_toggle_open_class, escaper_id, escaper_open_class){
+function mkToggleNav(navbar_default_class, navbar_open_class, nav_group_default_class, nav_group_open_class, nav_toggle_class, nav_toggle_open_class, escaper_id, escaper_open_class){
   var navgroup = document.getElementsByClassName(nav_group_default_class)[0];
   var navtoggle = document.getElementsByClassName(nav_toggle_class)[0];
   var navbar = document.getElementsByClassName(navbar_default_class)[0];
@@ -26,21 +26,21 @@ function toggleNav(navbar_default_class, navbar_open_class, nav_group_default_cl
   escaper.classList.toggle(escaper_open_class);
 }
 var current = 0;
-var timer = setTimeout(nextSlide,5000);
-function changeSlide(next_index){
+var timer = setTimeout(mkNextSlide,5000);
+function mkChangeSlide(next_index){
   var old_slide = document.getElementsByClassName("carouselslideactive")[0];
   var new_slide = document.getElementsByClassName("carouselslide")[next_index];
   old_slide.classList.toggle("carouselslideactive");
   new_slide.classList.toggle("carouselslideactive");
   current = next_index;
   clearTimeout(timer);
-  timer = setTimeout(nextSlide,5000);
+  timer = setTimeout(mkNextSlide,5000);
 }
-function nextSlide(){
+function mkNextSlide(){
   if (current == document.getElementsByClassName("carouselslide").length - 1){ //you need to subtract the 1 because the highest index is one less than the count of the slides (index of nodelist begins with 0, not 1).
-    changeSlide(0); //go back to the first slide
+    mkChangeSlide(0); //go back to the first slide
   } else{
-    changeSlide(current + 1); //find the next slide
+    mkChangeSlide(current + 1); //find the next slide
   }
 }
 var parallax = document.querySelectorAll("[data-mk-image ='parallax']");
@@ -51,7 +51,15 @@ function mkParallax(){
     o.style.backgroundPosition = "50% " + v + "px";
   }
 }
-function hidePreloader(){
+function mkPreloader(){
   var preloader = document.getElementsByClassName("preloader")[0];
-  preloader.classList += " preloaderhidden";
+  preloader.classList.add("preloaderhidden");
+}
+var animated = document.querySelectorAll("[data-mk-animate]")
+function mkPrepAnimation(){
+  for (var i = 0; i < animated.length; i++){
+    var a = animated[i].getAttribute("data-mk-animate");
+    var b = animated[i].getAttribute("data-mk-delay")
+    console.log(a + "|" + b);
+  }
 }
