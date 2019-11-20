@@ -55,11 +55,27 @@ function mkPreloader(){
   var preloader = document.getElementsByClassName("preloader")[0];
   preloader.classList.add("preloaderhidden");
 }
-var animated = document.querySelectorAll("[data-mk-animate]")
-function mkPrepAnimation(){
-  for (var i = 0; i < animated.length; i++){
-    var a = animated[i].getAttribute("data-mk-animate");
-    var b = animated[i].getAttribute("data-mk-delay")
-    console.log(a + "|" + b);
+var animated = document.querySelectorAll("[data-mk-animate]");
+function mkAnimate(){
+  var zone = window.pageYOffset + window.innerHeight;
+  for(var i = 0; i < animated.length; i ++){
+    var obj = animated[i];
+    if(zone >= obj.offsetTop){
+      var a = obj.getAttribute("data-mk-animate");
+      var b = obj.getAttribute("data-mk-delay");
+      if(!b){b = 0}
+      var k = a + " 1.2s cubic-bezier(0.55, 0.43, 0.45, 0.93) " + b + "s 1 normal both running";
+      obj.style.WebkitAnimation = k;
+      obj.style.MozAnimation = k;
+      obj.style.OAnimation = k;
+      obj.style.animation = k;
+      obj.style.visibility = "visible";
+    } else{
+      obj.style.WebkitAnimation = "";
+      obj.style.MozAnimation = "";
+      obj.style.OAnimation = "";
+      obj.style.animation = "";
+      obj.style.visibility = "hidden";
+    }
   }
 }
