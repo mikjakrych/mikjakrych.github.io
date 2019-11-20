@@ -64,7 +64,7 @@ function mkAnimate(){
       var a = obj.getAttribute("data-mk-animate");
       var b = obj.getAttribute("data-mk-delay");
       if(!b){b = 0}
-      var k = a + " 1.2s cubic-bezier(0.55, 0.43, 0.45, 0.93) " + b + "s 1 normal both running";
+      var k = a + " 1.5s ease " + b + "s 1 normal both running";
       obj.style.WebkitAnimation = k;
       obj.style.MozAnimation = k;
       obj.style.OAnimation = k;
