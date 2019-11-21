@@ -16,6 +16,10 @@
   -webkit-align-items: center;
   align-items: center;
 }
+.preloaderhidden{
+  opacity: 0;
+  visibility: hidden;
+}
 .preloaderinner{
   position:relative;
   width: 100px;
@@ -55,7 +59,7 @@
     transform:initial;
   }
   to{
-    transform:preloaderrotate(180deg);
+    transform:rotate(180deg);
   }
 }
 @-moz-keyframes preloaderrotate {
@@ -63,7 +67,7 @@
     transform:initial;
   }
   to{
-    transform:preloaderrotate(180deg);
+    transform:rotate(180deg);
   }
 }
 @-o-keyframes preloaderrotate {
@@ -71,7 +75,7 @@
     transform:initial;
   }
   to{
-    transform:preloaderrotate(180deg);
+    transform:rotate(180deg);
   }
 }
 @keyframes preloaderrotate {
@@ -79,7 +83,7 @@
     transform:initial;
   }
   to{
-    transform:preloaderrotate(180deg);
+    transform:rotate(180deg);
   }
 }
 @-webkit-keyframes preloaderpulse {

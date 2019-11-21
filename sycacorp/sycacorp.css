@@ -354,21 +354,6 @@ main{
   font-size: 2.5em !important;
   padding:10px;
 }
-.preloader{
-  width:100%;
-  height:100%;
-  z-index: 1000;
-  position: fixed;
-  top:0px;
-  left: 0px;
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-.preloaderhidden{
-  opacity: 0;
-  visibility: hidden;
-}
 .quote{
   margin-left: auto;
   margin-right: auto;
