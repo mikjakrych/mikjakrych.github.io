@@ -9,12 +9,11 @@
   <title>Home | Sycacorp</title>
   <link rel="shortcut icon" type="image/x-icon" href="resources/logo_bl.png"/>
 </head>
-<body onload="mkParallax(); mkPreloader(); mkAnimate()" onscroll="mkParallax(); mkAnimate()">
-  <div class="preloader" data-mk-transition="pointseven">
-  </div>
+<body onload="mkLoad(); mkParallax(); mkAnimate();" onscroll="mkParallax(); mkAnimate()">
+  <iframe src="preloader.html" class="preloader" data-mk-transition="pointfive"></iframe>
   <nav class="navbar">
     <a href= "index.html" class="logo" data-mk-transition="pointtwo">
-      <img src="resources/logo_bl.svg" style="height:inherit">
+      <img src="resources/logo_bl.png" style="height:inherit">
     </a>
     <div class="navgroup" data-mk-transition="pointfive">
       <a href="index.html" class="navclass" data-mk-transition="pointtwo">
@@ -43,18 +42,18 @@
     <a class="greenbutton" href="#" data-mk-transition="pointtwo" data-mk-animate="fadeIn" data-mk-delay="1.5">Rent Today</a>
   </div>
   <main>
-    <hr>
-    <div class="maxwrap">
+    <div class="twelvehundred bgbay">
+      <hr>
       <div class="offset" data-mk-image = "cover" style="background-image:url(resources/briarwood.jpg)">
-        <div class="inneroffset" data-mk-animate="fadeInLeft">
+        <div class="inneroffset bgbay" data-mk-animate="fadeInLeft">
           <h1>
             Quality.<br>Integrity.<br>Dependability.
           </h1>
           Bellingham Leasing combines years of professional experience with friendly service, building lasting value in land, in business, and in community. <a class="link" href="about.html">Read more</a>
         </div>
       </div>
+      <hr>
     </div>
-    <hr>
     <div class="row">
       <div class="threecol" data-mk-animate="fadeInRight">
         <i class="material-icons bigicon">&#xe55f;</i>
@@ -78,72 +77,75 @@
         We will always be here to support fellow Hamsters.
       </div>
     </div>
-    <hr>
-    <div class="maxwrap">
+    <div class="twelvehundred bgcoal">
+      <hr>
       <div class="widen" data-mk-image = "cover" style="background-image:url(resources/blueberry2.jpg)">
         <h1 class="innerwidenhead" data-mk-animate="fadeInRight">
           Discover your habitat.
         </h1>
-        <div class="innerwidentext" data-mk-animate="fadeInRight">
+        <div class="innerwidentext bgcoal" data-mk-animate="fadeInRight">
           Each of our residential units is designed to be a home. These apartments offer a safe and friendly environment and come with all the amenities needed for comfortable living. <a class="link" href="buildings.html">See rentals</a>
         </div>
       </div>
+      <hr>
     </div>
-    <hr>
-    <div class="banner" data-mk-animate="fadeInUp">
+    <div class="banner bgsnow" data-mk-animate="fadeInUp">
+      <hr>
       Are you looking for rental housing, commercial office, or street-facing storefront? Check for availability today!
       <br>
       <a class="bluebutton" href="#" data-mk-transition="pointtwo">Check availability</a>
+      <hr>
     </div>
-    <hr>
-    <div class="maxwrap">
+    <div class="fourteenhundred bgcoal">
+      <hr>
       <div class="onright" data-mk-image = "cover" style="background-image:url(resources/12thstreet2.jpg)" data-mk-animate="cutLeft" >
         <table class="inneronright">
-            <tr>
-              <td></td>
-              <td>
-                <h1>
-                  The perfect workplace
-                </h1>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="inneronrighttext">
-                When it comes to layout and location, our office spaces are unrivaled. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="material-icons onrighticon" data-mk-animate="flipRight" data-mk-delay="1">
-                  &#xe640;
-                </div>
-              </td>
-              <td>
-                Streamline your workflow.
-              </td>
-            </tr>
-            <tr>
-              <td class="material-icons onrighticon" data-mk-animate="flipRight" data-mk-delay="1">
-                &#xe8d1;
-              </td>
-              <td>
-                Engage your clients.
-              </td>
-            </tr>
-            <tr>
-              <td class="material-icons onrighticon" data-mk-animate="flipRight" data-mk-delay="1">
-                &#xe838;
-              </td>
-              <td>
-                Grow your business.
-              </td>
-            </tr>
+          <tr>
+            <td></td>
+            <td>
+              <h1>
+                The perfect workplace
+              </h1>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="inneronrighttext">
+              When it comes to layout and location, our office spaces are unrivaled. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="material-icons onrighticon" data-mk-animate="flipRight" data-mk-delay="1">
+                &#xe640;
+              </div>
+            </td>
+            <td>
+              Streamline your workflow.
+            </td>
+          </tr>
+          <tr>
+            <td class="material-icons onrighticon" data-mk-animate="flipRight" data-mk-delay="1">
+              &#xe8d1;
+            </td>
+            <td>
+              Engage your clients.
+            </td>
+          </tr>
+          <tr>
+            <td class="material-icons onrighticon" data-mk-animate="flipRight" data-mk-delay="1">
+              &#xe838;
+            </td>
+            <td>
+              Grow your business.
+            </td>
+          </tr>
         </table>
       </div>
+      <hr>
     </div>
-    <hr>
-    <div class="businesses">
+    <div class="businesses bgsnow">
+      <hr>
       <h1>
         Commercial tenants
       </h1>
@@ -157,20 +159,22 @@
         <img class="business" data-mk-transition="pointtwo" src="resources/logo_bl.png" data-mk-animate="fadeIn" data-mk-delay=".7">
         <img class="business" data-mk-transition="pointtwo" src="resources/logo_bl.png" data-mk-animate="fadeIn" data-mk-delay=".8">
       </div>
+      <hr>
     </div>
-    <hr>
-    <div class="maxwrap">
+    <div class="twelvehundred bgbay">
+      <hr>
       <div class="middle" data-mk-image = "cover" style="background-image:url(resources/sycamore.jpg)" data-mk-animate="middle" data-mk-delay="1">
-        <div class="innermiddle">
+        <div class="innermiddle bgsnow">
           <h1>
             High traffic storefronts
           </h1>
           Bellingham Leasing offers quality storefronts, each located at the heart of Fairhaven, to give your business the maximum exposure. <a href="buildings.html" class="link">See Units</a>
         </div>
       </div>
+      <hr>
     </div>
-    <hr>
-    <div id="carouselbox">
+    <div class="carouselbox bgcoal">
+      <hr>
       <h1>
         From our clients
       </h1>
@@ -219,8 +223,8 @@
           No Nummy - No Money
         </div>
       </div>
+      <hr>
     </div>
-    <hr>
     <div class="linkbox" data-mk-image = "parallax" style="background-image:url(resources/plans.jpg)">
       <div class="linkcol" data-mk-animate="fadeInUp">
         <h2>
@@ -265,12 +269,12 @@
         </a>
       </div>
     </div>
-    <hr>
   </main>
-  <footer data-mk-animate="fadeIn">
+  <div class="maxwrap footer bgsnow" data-mk-animate="fadeIn">
+    <hr>
     Copyright 2019 Bellingham Leasing, Inc.<br>All rights reserved.
-  </footer>
-  <hr>
+    <hr>
+  </div>
   <script type="text/javascript" src="script.js"></script>
   <script>
   document.getElementsByClassName("hamburger")[0].innerHTML += "<svg><polygon points = '" + cross(24) + "'></polygon></svg>";

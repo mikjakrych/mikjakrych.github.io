@@ -51,7 +51,7 @@ function mkParallax(){
     o.style.backgroundPosition = "50% " + v + "px";
   }
 }
-function mkPreloader(){
+function mkLoad(){
   var preloader = document.getElementsByClassName("preloader")[0];
   preloader.classList.add("preloaderhidden");
 }

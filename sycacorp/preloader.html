@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+  <style>
+  html{
+    width:100%;
+    height:100%;
+  }
+  body{
+    width:100%;
+    height:100%;
+    margin: 0;
+    border: 0;
+    padding:0;
+  }
+  #a{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgb(255,255,255);
+    display:flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  #b{
+    position:relative;
+    width: 100px;
+    height:100px;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    -moz-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation: pulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
+    -moz-animation: pulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
+    -o-animation: pulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
+    animation: pulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
+  }
+  #c{
+    background: url(resources/ring.png) center /cover no-repeat scroll;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-animation: rotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
+    -moz-animation: rotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
+    -o-animation: rotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
+    animation: rotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
+  }
+  #d{
+    background: url(resources/core.png) center /cover no-repeat scroll;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  @-webkit-keyframes rotate {
+    from{
+      transform:initial;
+    }
+    to{
+      transform:rotate(180deg);
+    }
+  }
+  @-moz-keyframes rotate {
+    from{
+      transform:initial;
+    }
+    to{
+      transform:rotate(180deg);
+    }
+  }
+  @-o-keyframes rotate {
+    from{
+      transform:initial;
+    }
+    to{
+      transform:rotate(180deg);
+    }
+  }
+  @keyframes rotate {
+    from{
+      transform:initial;
+    }
+    to{
+      transform:rotate(180deg);
+    }
+  }
+  @-webkit-keyframes pulse {
+    0%{
+      transform:initial;
+    }
+    50{
+      transform:scale(1.2,1.2);
+    }
+  }
+  @-moz-keyframes pulse {
+    from{
+      transform:initial;
+    }
+    to{
+      transform:scale(1.2,1.2);
+    }
+  }
+  @-o-keyframes pulse {
+    from{
+      transform:initial;
+    }
+    to{
+      transform:scale(1.2,1.2);
+    }
+  }
+  @keyframes pulse {
+    from{
+      transform:initial;
+    }
+    to{
+      transform:scale(1.2,1.2);
+    }
+  }
+</style>
+  <div id="a">
+    <div id="b">
+      <div id="c"></div>
+      <div id="d"></div>
+    </div>
+  </div>
+</body>
+</html>
