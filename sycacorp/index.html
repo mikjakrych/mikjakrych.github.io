@@ -10,7 +10,7 @@
   <title>Home | Sycacorp</title>
   <link rel="shortcut icon" type="image/x-icon" href="resources/logo_bl.png"/>
 </head>
-<body onload="mkLoad(); mkParallax(); mkAnimate();" onscroll="mkParallax(); mkAnimate()">
+<body onload="mkLoad(); mkParallax(); mkAnimate(); mkBeginSlide(5000);" onscroll="mkParallax(); mkAnimate()">
   <div class="preloader" data-mk-transition="pointfive">
     <div class="preloaderinner">
       <div class="preloaderring"></div>
@@ -36,6 +36,7 @@
       </a>
     </div>
   </nav>
+  <div class="navspacer"></div>
   <div class="hamburger"  data-mk-transition="pointfive" onclick="mkToggleNav('navbar','navbaropen','navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen', 'escaper', 'escaperopen')"></div>
   <div id = "escaper" class = "escaper"  data-mk-transition="pointfive" onclick = "mkToggleNav('navbar', 'navbaropen', 'navgroup', 'navgroupopen', 'hamburger', 'hamburgeropen', 'escaper', 'escaperopen')"></div>
   <div class="splash" data-mk-image="parallax" style="background-image:url(resources/blueberry.jpg)">
@@ -45,7 +46,9 @@
     <div class="title" data-mk-animate="fadeInUp" data-mk-delay="1">
       Bellingham Leasing
     </div>
-    <a class="greenbutton" href="#" data-mk-transition="pointtwo" data-mk-animate="fadeIn" data-mk-delay="1.5">Rent Today</a>
+    <a class="greenbutton" href="rent.html" data-mk-transition="pointtwo" data-mk-animate="fadeIn" data-mk-delay="1.5">
+      Rent Today
+    </a>
   </div>
   <main>
     <div class="twelvehundred bgbay">
@@ -55,7 +58,7 @@
           <h1>
             Quality.<br>Integrity.<br>Dependability.
           </h1>
-          Bellingham Leasing combines years of professional experience with friendly service, building lasting value in land, in business, and in community. <a class="link" href="about.html">Read more</a>
+          Bellingham Leasing combines years of professional experience with friendly service, building lasting value in land, in business, and in community. <a class="link" href="about.html">Read more</a>.
         </div>
       </div>
       <hr>
@@ -63,34 +66,34 @@
     <div class="row">
       <div class="threecol" data-mk-animate="fadeInRight">
         <i class="material-icons bigicon">&#xe55f;</i>
-        <h2>
+        <h2 style="color:rgb(255,255,255)">
           Locally-based
         </h2>
         We are proud to be in Bellingham and we'll show it.
       </div>
       <div class="threecol" data-mk-animate="fadeInUp">
         <i class="material-icons bigicon">&#xeb42;</i>
-        <h2>
+        <h2 style="color:rgb(255,255,255)">
           Family-owned
         </h2>
         Bellingham Leasing is a multigenerational corporation.
       </div>
       <div class="threecol" data-mk-animate="fadeInLeft">
         <i class="material-icons bigicon">&#xe7ef;</i>
-        <h2>
+        <h2 style="color:rgb(255,255,255)">
           Community-oriented
         </h2>
         We will always be here to support fellow Hamsters.
       </div>
     </div>
-    <div class="twelvehundred bgcoal">
+    <div class="twelvehundred bgslate">
       <hr>
       <div class="widen" data-mk-image = "cover" style="background-image:url(resources/blueberry2.jpg)">
         <h1 class="innerwidenhead" data-mk-animate="fadeInRight">
           Discover your habitat.
         </h1>
-        <div class="innerwidentext bgcoal" data-mk-animate="fadeInRight">
-          Each of our residential units is designed to be a home. These apartments offer a safe and friendly environment and come with all the amenities needed for comfortable living. <a class="link" href="buildings.html">See rentals</a>
+        <div class="innerwidentext bgslate" data-mk-animate="fadeInRight">
+          Each of our residential units is designed to be a home. These apartments offer a safe and friendly environment and come with all the amenities needed for comfortable living. <a class="link" href="buildings.html">See rentals</a>.
         </div>
       </div>
       <hr>
@@ -99,10 +102,10 @@
       <hr>
       Are you looking for rental housing, commercial office, or street-facing storefront? Check for availability today!
       <br>
-      <a class="bluebutton" href="#" data-mk-transition="pointtwo">Check availability</a>
+      <a class="bluebutton" href="rent.html" data-mk-transition="pointtwo">Check availability</a>
       <hr>
     </div>
-    <div class="fourteenhundred bgcoal">
+    <div class="fourteenhundred bgslate">
       <hr>
       <div class="onright" data-mk-image = "cover" style="background-image:url(resources/12thstreet2.jpg)" data-mk-animate="cutLeft" >
         <table class="inneronright">
@@ -117,7 +120,7 @@
           <tr>
             <td></td>
             <td class="inneronrighttext">
-              When it comes to layout and location, our office spaces are unrivaled. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
+              When it comes to layout and location, our office spaces are unrivaled. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. <a href="buildings.html" class="greenbutton" data-mk-transition="pointtwo">See buildings</a>
             </td>
           </tr>
           <tr>
@@ -174,15 +177,15 @@
           <h1>
             High traffic storefronts
           </h1>
-          Bellingham Leasing offers quality storefronts, each located at the heart of Fairhaven, to give your business the maximum exposure. <a href="buildings.html" class="link">See Units</a>
+          Bellingham Leasing offers quality storefronts, each located at the heart of Fairhaven, to give your business the maximum exposure. <a href="buildings.html" class="link">See Units</a>.
         </div>
       </div>
       <hr>
     </div>
-    <div class="carouselbox bgcoal">
+    <div class="carouselbox bgslate">
       <hr>
       <h1>
-        From our clients
+        From a few hamsters
       </h1>
       <div class="carouselslide carouselslideactive">
         <i class="material-icons">format_quote</i>
@@ -231,6 +234,13 @@
       </div>
       <hr>
     </div>
+    <div class="banner bgsnow" data-mk-animate="fadeIn">
+      <hr>
+      Begin your journey with us today!
+      <br>
+      <a class="bluebutton" href="rent.html" data-mk-transition="pointtwo">Rent Now</a>
+      <hr>
+    </div>
     <div class="linkbox" data-mk-image = "parallax" style="background-image:url(resources/plans.jpg)">
       <div class="linkcol" data-mk-animate="fadeInUp">
         <h2>
@@ -253,10 +263,10 @@
         <h2>
           Residential
         </h2>
-        <a href="#" class="link">
+        <a href="buildings.html" class="link">
           Briarwood Terrace
         </a><br>
-        <a href="#" class="link">
+        <a href="buildings.html" class="link">
           Blueberry Triplex
         </a>
       </div>
@@ -264,13 +274,13 @@
         <h2>
           Commercial
         </h2>
-        <a href="#" class="link">
+        <a href="buildings.html" class="link">
           Sycamore Square
         </a><br>
-        <a href="#" class="link">
+        <a href="buildings.html" class="link">
           12th Street Village
         </a><br>
-        <a href="#" class="link">
+        <a href="buildings.html" class="link">
           Stanellos
         </a>
       </div>

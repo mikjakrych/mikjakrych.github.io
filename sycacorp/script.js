@@ -25,8 +25,12 @@ function mkToggleNav(navbar_default_class, navbar_open_class, nav_group_default_
   navbar.classList.toggle(navbar_open_class);
   escaper.classList.toggle(escaper_open_class);
 }
-var current = 0;
-var timer = setTimeout(mkNextSlide,5000);
+var current;
+var timer;
+function mkBeginSlide(ms){
+  current = 0;
+  timer = setTimeout(mkNextSlide,ms);
+}
 function mkChangeSlide(next_index){
   var old_slide = document.getElementsByClassName("carouselslideactive")[0];
   var new_slide = document.getElementsByClassName("carouselslide")[next_index];
