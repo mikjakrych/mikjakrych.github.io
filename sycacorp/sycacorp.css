@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 *::selection{
-  background: rgb(133,191,90,.5);
+  background: rgba(133,191,90,.5);
 }
 a{
   text-decoration: none;
@@ -57,7 +57,7 @@ main{
   padding: 0;
   margin: 0;
   border: 0;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .banner{
   width:100%;
@@ -161,8 +161,11 @@ main{
 .caption{
   font-size: .75em;
   color: rgba(255,255,255,.5);
+  display:block;
   position:absolute;
   bottom: 5%;
+  left:0%;
+  width:100%;
 }
 .caption:hover{
   color: rgba(255,255,255,.75);
@@ -471,6 +474,7 @@ main{
   text-transform:none;
   font-size: 1.5em;
   padding: 10px;
+  width:100%;
 }
 .threecol{
   width:100%;
@@ -483,6 +487,7 @@ main{
   font-size: 2.5em;
   font-weight: 600;
   padding: 10px;
+  width:100%;
 }
 .widen{
   padding-top: 200px;
@@ -511,7 +516,6 @@ main{
 }
 [data-mk-image = "parallax"]{
   background-image: rgb(255,255,255);
-  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -841,82 +845,98 @@ main{
 }
 @-webkit-keyframes middle {
   from{
+    opacity: 0;
     -webkit-clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
     clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
   }
   to{
+    opacity: 1;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
   }
 }
 @-moz-keyframes middle {
   from{
+    opacity: 0;
     -webkit-clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
     clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
   }
   to{
+    opacity: 1;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
   }
 }
 @-o-keyframes middle {
   from{
+    opacity: 0;
     -webkit-clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
     clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
   }
   to{
+    opacity: 1;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
   }
 }
 @keyframes middle {
   from{
+    opacity: 0;
     -webkit-clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
     clip-path: polygon(5% 0%, 95% 0%, 95% 200%, 5% 200%);
   }
   to{
+    opacity: 1;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%);
   }
 }
 @-webkit-keyframes cutLeft {
   from{
+    opacity: 0;
     -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
   to{
+    opacity: 1;
     -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 @-moz-keyframes cutLeft {
   from{
+    opacity: 0;
     -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
   to{
+    opacity: 1;
     -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 @-o-keyframes cutLeft {
   from{
+    opacity: 0;
     -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
   to{
+    opacity: 1;
     -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 @keyframes cutLeft {
   from{
-    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-  }
-  to{
+    opacity: 0;
     -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
     clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+  }
+  to{
+    opacity: 1;
+    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */

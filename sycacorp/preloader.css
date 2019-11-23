@@ -29,10 +29,10 @@
   -moz-transform-origin: center;
   -o-transform-origin: center;
   transform-origin: center;
-  -webkit-animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
-  -moz-animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
-  -o-animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
-  animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both running;
+  -webkit-animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both;
+  -moz-animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both;
+  -o-animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both;
+  animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both;
 }
 .preloaderring{
   background: url(resources/ring.png) center /cover no-repeat scroll;
@@ -41,10 +41,10 @@
   position:absolute;
   top:0;
   left:0;
-  -webkit-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
-  -moz-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
-  -o-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
-  animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both running;
+  -webkit-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
+  -moz-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
+  -o-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
+  animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
 }
 .preloadercore{
   background: url(resources/core.png) center /cover no-repeat scroll;

@@ -51,7 +51,7 @@ var parallax = document.querySelectorAll("[data-mk-image ='parallax']");
 function mkParallax(){
   for (var i = 0; i < parallax.length; i ++){
     var o = parallax[i];
-    var v = o.getBoundingClientRect().y / 3;
+    var v = (o.offsetTop - document.documentElement.scrollTop) / 3;
     o.style.backgroundPosition = "50% calc(50% + " + v + "px)";
   }
 }
@@ -68,7 +68,7 @@ function mkAnimate(){
       var a = obj.getAttribute("data-mk-animate");
       var b = obj.getAttribute("data-mk-delay");
       if(!b){b = 0}
-      var k = a + " 1.5s ease " + b + "s 1 normal both running";
+      var k = a + " 1.5s ease " + b + "s 1 normal both";
       obj.style.WebkitAnimation = k;
       obj.style.MozAnimation = k;
       obj.style.OAnimation = k;
@@ -83,3 +83,7 @@ function mkAnimate(){
     }
   }
 }
+window.onscroll = function() {
+  mkParallax();
+  mkAnimate();
+};
