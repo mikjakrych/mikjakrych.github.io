@@ -51,8 +51,8 @@ var parallax = document.querySelectorAll("[data-mk-image ='parallax']");
 function mkParallax(){
   for (var i = 0; i < parallax.length; i ++){
     var o = parallax[i];
-    var v = o.getBoundingClientRect().y + (window.pageYOffset - o.offsetTop)/1.2;
-    o.style.backgroundPosition = "50% " + v + "px";
+    var v = o.getBoundingClientRect().y / 3;
+    o.style.backgroundPosition = "50% calc(50% + " + v + "px)";
   }
 }
 function mkLoad(){
