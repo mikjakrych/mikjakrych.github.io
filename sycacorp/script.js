@@ -51,7 +51,7 @@ var parallax = document.querySelectorAll("[data-mk-image ='parallax']");
 function mkParallax(){
   for (var i = 0; i < parallax.length; i ++){
     var o = parallax[i];
-    var v = (o.offsetTop - document.documentElement.scrollTop) / 3;
+    var v = (o.offsetTop - window.pageYOffset) / 3;
     o.style.backgroundPosition = "50% calc(50% + " + v + "px)";
   }
 }

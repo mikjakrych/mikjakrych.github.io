@@ -894,49 +894,49 @@ main{
 @-webkit-keyframes cutLeft {
   from{
     opacity: 0;
-    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
   to{
     opacity: 1;
-    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 @-moz-keyframes cutLeft {
   from{
     opacity: 0;
-    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
   to{
     opacity: 1;
-    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 @-o-keyframes cutLeft {
   from{
     opacity: 0;
-    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
   to{
     opacity: 1;
-    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 @keyframes cutLeft {
   from{
     opacity: 0;
-    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
   to{
     opacity: 1;
-    -webkit-clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
-    clip-path: polygon(0% 0%, 0% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    -webkit-clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(30% 0%, 30% 10%, 0% 10%, 0% 100%, 100% 100%, 100% 0%);
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
