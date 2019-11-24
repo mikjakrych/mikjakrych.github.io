@@ -75,7 +75,7 @@ function mkParallax(){
   for (var i = 0; i < parallax.length; i ++){
     var o = parallax[i];
     var v = (o.offsetTop - window.pageYOffset) / 3;
-    o.style.backgroundPosition = "50% calc(50% + " + v + "px)";
+    o.style.backgroundPosition = "50% calc(100% + " + v + "px)";
   }
 }
 function mkLoad(){

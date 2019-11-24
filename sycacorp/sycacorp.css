@@ -68,8 +68,7 @@ h2{
   text-transform:capitalize;
   font-size: 1.2em;
   font-weight: 600;
-  margin: -14vw 0 0 0;
-  padding: 15vw 0 1vw 0;
+  padding: 70px 0 1vw 0;
 }
 li{
   list-style-type: square;
@@ -86,7 +85,7 @@ main{
   padding: 0 30px;
   text-align: center;
 }
-.bgbay{
+.bgbgbay{
   background-color: rgb(235, 245, 250);
 }
 .bgslate{
@@ -316,7 +315,7 @@ main{
   -moz-justify-content: center;
   justify-content: center;
   padding: 8px 15px;
-  border-left: 3px solid rgb(245,248,248);
+  border-left: 3px solid rgb(255,255,255);
 }
 .innerwidenhead{
   display:block;
@@ -393,14 +392,12 @@ main{
   border-radius: 100%;
   text-align: center;
   margin: 0 auto;
-  box-shadow:0px 5px 10px rgba(0,0,0,.125);
 }
 .logo:hover{
-  box-shadow:0px 5px 10px rgba(0,0,0,.375);
 }
 .middle{
   width: 100%;
-  padding-top:10vw;
+  padding-top:100px;
   margin-bottom: 150px;
 }
 .navbar{
@@ -1071,6 +1068,9 @@ main{
   .carouselslideimage, .carouselslidetext{
     width:50%;
     height:100%;
+  }
+  .middle{
+    padding-top: 200px;
   }
 }
 @media only screen and (min-width: 992px) {
