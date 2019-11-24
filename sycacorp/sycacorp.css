@@ -1,4 +1,26 @@
-/* Extra small devices (phones, 600px and down) */
+/*===============================
+
+.~`~.     .~`~.     .~`~.     .~`
+     `~,~'     `~,~'     `~,~'
+
+                ^
+              <   >
+                .
+
+        `Oo.oO  `Oo.oO
+            o       o
+           O  `Oo.oO
+           o    o  o    o
+           `o.o'   `o.o'
+
+                ^
+              <   >
+                .
+
+~`~.     .~`~.     .~`~.     .~`~
+    `~,~'     `~,~'     `~,~'
+
+===============================*/
 *{
   box-sizing: border-box;
 }
@@ -152,6 +174,7 @@ main{
   color: rgba(255,255,255,.6);
   display:block;
   position:absolute;
+  padding: 0 10px;
   bottom: 5%;
   left:0%;
   width:100%;
