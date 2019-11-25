@@ -1,26 +1,3 @@
-/*===============================
-
-.~`~.     .~`~.     .~`~.     .~`
-     `~,~'     `~,~'     `~,~'
-
-                ^
-              <   >
-                .
-
-        `Oo.oO  `Oo.oO
-            o       o
-           O  `Oo.oO
-           o    o  o    o
-           `o.o'   `o.o'
-
-                ^
-              <   >
-                .
-
-~`~.     .~`~.     .~`~.     .~`~
-    `~,~'     `~,~'     `~,~'
-
-===============================*/
 .preloader{
   position: fixed;
   top: 0;
@@ -58,7 +35,7 @@
   animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both;
 }
 .preloaderring{
-  background: url(resources/ring.png) center /cover no-repeat scroll;
+  background: url(resources/ring.gif) center /cover no-repeat scroll;
   width:100%;
   height:100%;
   position:absolute;
@@ -70,7 +47,7 @@
   animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
 }
 .preloadercore{
-  background: url(resources/core.png) center /cover no-repeat scroll;
+  background: url(resources/core.gif) center /cover no-repeat scroll;
   width:100%;
   height:100%;
   position:absolute;
