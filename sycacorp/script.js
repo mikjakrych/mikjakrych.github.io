@@ -51,8 +51,11 @@ var parallax = document.querySelectorAll("[data-mk-image ='parallax']");
 function mkParallax(){
   for (var i = 0; i < parallax.length; i ++){
     var o = parallax[i];
-    var v = (o.offsetTop - window.pageYOffset) / 3;
-    o.style.backgroundPosition = "50% calc(100% + " + v + "px)";
+    if(window.innerWidth >= 600){
+      o.style.backgroundPosition = "50% calc(100% + " + (o.offsetTop - window.pageYOffset) / 3 + "px)";
+    } else{
+      o.style.backgroundPosition = "center";
+    }
   }
 }
 function mkLoad(){
@@ -68,7 +71,7 @@ function mkAnimate(){
       var a = obj.getAttribute("data-mk-animate");
       var b = obj.getAttribute("data-mk-delay");
       if(!b){b = 0}
-      var k = a + " 1.5s ease " + b + "s 1 normal both";
+      var k = a + " 1.8s ease " + b + "s 1 normal both";
       obj.style.WebkitAnimation = k;
       obj.style.MozAnimation = k;
       obj.style.OAnimation = k;
@@ -86,4 +89,7 @@ function mkAnimate(){
 window.onscroll = function() {
   mkParallax();
   mkAnimate();
+};
+window.onresize = function() {
+  mkParallax();
 };

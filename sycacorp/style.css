@@ -548,20 +548,11 @@ main{
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
-[data-mk-image = "cover"]{
+[data-mk-image = "cover"], [data-mk-image = "parallax"]{
   background: rgb(255,255,255);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size:cover;
-  background-size: cover;
-}
-[data-mk-image = "parallax"]{
-  background: rgb(255,255,255);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size:cover;
@@ -1007,6 +998,9 @@ main{
   .carouselslideimage, .carouselslidetext{
     width:50%;
     height:100%;
+  }
+  [data-mk-image = "parallax"]{
+    background-attachment: fixed;
   }
 }
 @media only screen and (min-width: 768px) {
