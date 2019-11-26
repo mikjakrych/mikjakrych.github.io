@@ -44,6 +44,13 @@ h2{
   text-transform:capitalize;
   font-size: 1.2em;
   font-weight: 600;
+  padding-top: 70px;
+}
+h3{
+  color:rgb(21,88,159);
+  text-transform:capitalize;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 li{
   list-style-type: square;
@@ -59,12 +66,6 @@ main{
   width:100%;
   padding: 0 30px;
   text-align: center;
-}
-.bgbgbay{
-  background-color: rgb(235, 245, 250);
-}
-.bgslate{
-  background-color: rgb(245,248,248);
 }
 .bgsnow{
   background-color: rgb(255,255,255);
