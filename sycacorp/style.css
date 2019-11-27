@@ -87,7 +87,6 @@ main{
 }
 .bluebutton{
   color: rgb(21,88,159);
-  text-transform:lowercase;
   display:inline-block;
   padding: 14px 42px;
   border: 2px solid rgb(21,88,159);
@@ -226,7 +225,6 @@ main{
 }
 .greenbutton{
   color: rgb(255,255,255);
-  text-transform:lowercase;
   display:inline-block;
   padding: 14px 42px;
   background-color: rgb(133,191,90);
@@ -304,15 +302,7 @@ main{
   padding: 8px 15px;
   border-left: 3px solid rgb(255,255,255);
 }
-.innerwidenhead{
-  display:block;
-  padding-left: 30px;
-  padding-right: 30px;
-  width:70%;
-  background-color: rgba(0, 0, 0, 0.75);
-  max-width: 500px;
-}
-.innerwidentext{
+.innerwiden{
   padding:75px 30px;
   width:70%;
   max-width: 500px;
@@ -544,7 +534,7 @@ main{
   width:100%;
 }
 .widen{
-  padding-top: 200px;
+  padding-top: 300px;
 }
 [data-mk-transition = "pointfive"]{
   -webkit-transition: all .5s ease-in-out;
