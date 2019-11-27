@@ -1,3 +1,14 @@
+::-webkit-scrollbar{
+  width:12px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(21,88,159);
+  border:3px solid rgb(230,230,230);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(230,230,230);
+}
 *{
   box-sizing: border-box;
 }
@@ -411,10 +422,6 @@ main{
   padding-top:20px;
   height:220px;
 }
-.navspacer{
-  width:100%;
-  height:62px;
-}
 .navspecial{
   color:rgb(255,255,255);
   background-color: rgb(133,191,90);
@@ -481,8 +488,9 @@ main{
 .splash{
   background-color: rgb(133,191,90);
   width:100%;
-  height:calc(100% - 62px);
+  height:calc(100%);
   min-height:480px;
+  padding-top: 70px;
   text-align: center;
   display: flex;
   -webkit-flex-direction: column;
@@ -499,8 +507,9 @@ main{
 .splashhalf{
   background-color: rgb(133,191,90);
   width:100%;
-  height:50%;
+  height:75%;
   min-height:300px;
+  padding-top: 70px;
   text-align: center;
   display: flex;
   -webkit-flex-direction: column;
@@ -529,7 +538,7 @@ main{
 .title{
   color:rgb(255,255,255);
   text-transform:uppercase;
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: 600;
   padding: 10px;
   width:100%;
@@ -1008,7 +1017,6 @@ main{
   body{
     font-size: 1.2em;
   }
-
   .middle{
     padding-top: 200px;
   }
@@ -1019,6 +1027,12 @@ main{
   }
 }
 @media only screen and (min-width: 1200px) {
+  .subtitle{
+    font-size: 2.5em;
+  }
+  .title{
+    font-size: 3.5em;
+  }
   .twelvehundred{
     padding: 0 calc(50% - 600px);
   }
