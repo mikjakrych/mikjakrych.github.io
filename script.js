@@ -127,7 +127,7 @@ function animate(){
       var b = obj.getAttribute("data-animate-delay");
       var c = obj.getAttribute("data-animate-duration")
       if(!b){b = 0}
-      if(!c){c = 1.2}
+      if(!c){c = 1.8}
       var k = a + " " + c + "s ease " + b + "s 1 normal both";
       obj.style.WebkitAnimation = k;
       obj.style.MozAnimation = k;

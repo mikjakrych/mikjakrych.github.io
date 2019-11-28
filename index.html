@@ -26,17 +26,17 @@
   <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
   </div>
   <div class = "parallax" id = "home" style = "height:100%; min-height: 550px; background-image: url('resources/volocofire.jpg')">
-    <img class = "logo" src="resources/mk.gif" data-animate = "fadeIn">
-    <h1 data-animate = "fadeIn">
+    <img class = "logo" src="resources/mk.gif" data-animate = "fadeInUp" data-animate-delay = ".3">
+    <h1 data-animate = "fadeInUp" data-animate-delay = ".5">
       MK Studios | Online
     </h1>
-    <hr class = "divider" data-animate = "fadeIn">
-    <h2 data-animate = "fadeIn">
+    <hr data-animate = "widen">
+    <h2 data-animate = "fadeIn" data-animate-delay = ".8">
       Mikja's official website
     </h2>
   </div>
   <div class = "bodycontainer" id = "about">
-    <div class = "bodyblock" data-animate = "fadeIn">
+    <div class = "bodyblock" data-animate = "fadeInLeft">
       <p>
         MK Online contains all of my newest programming and art projects. As an aspiring coder, I enjoy working with Hyper Text Markup Language (HTML), Cascading Style Sheets (CSS), and Javascript (JS). One of my latest adventures is learning C++, one of the most fundamental computer languages. I hope to see many C++ games and other applications below soon. Art projects posted will include photorealistic renderings, architectural designs, and miscellaneous hand drawings.
       </p>
@@ -46,28 +46,28 @@
     </div>
   </div>
   <div class = "parallax" id = "projects" style = "background-image: url(resources/programming.jpg)">
-    <h1>
+    <h1 data-animate = "fadeIn">
       Projects
     </h1>
-    <hr class = "divider">
-    <h2>
+    <hr data-animate = "widen">
+    <h2 data-animate = "fadeIn">
       Coding and Art
     </h2>
   </div>
   <div class = "bodycontainer">
-    <div class = "bodyblock" data-animate = "fadeIn">
+    <div class = "bodyblock">
       <h3>
         SuperSkin
       </h3>
-      <hr class = "divider">
-      <p>
+      <hr data-animate = "widen">
+      <p data-animate = "fadeInLeft">
         SuperSkin is a collection of elegant faceplates for the <a class = "link" href = "https://thomasokken.com/free42">Free42</a> desktop calculator. This collection was assembled through a joint effort by Perry Thompson and MK Studios. New faceplate designs are always coming!
       </p>
-      <p>
+      <p data-animate = "fadeInRight">
         To install a SuperSkin, simply download both the image (.gif) and inner code (.layout) files. Move them into the folder containing the Free42 executable. The new themes should now appear under the "Skin" dropdown in the toolbar of the calculator.
       </p>
       <div class = "cardcontainer">
-        <div class = "card" style = "background-image:url(resources/superskin/bbq.gif)">
+        <div class = "card" style = "background-image:url(resources/superskin/bbq.gif)" data-animate = "fadeIn">
           <div class = "cardslicer">
             <p class = "cardtitle">
               BBQ
@@ -83,7 +83,7 @@
             </a>
           </div>
         </div>
-        <div class = "card" style = "background-image:url(resources/superskin/moonlight.gif)">
+        <div class = "card" style = "background-image:url(resources/superskin/moonlight.gif)" data-animate = "fadeIn" data-animate-delay=".2">
           <div class = "cardslicer">
             <p class = "cardtitle">
               Moonlight
@@ -99,7 +99,7 @@
             </a>
           </div>
         </div>
-        <div class = "card" style = "background-image:url(resources/superskin/mwb.gif)">
+        <div class = "card" style = "background-image:url(resources/superskin/mwb.gif)" data-animate = "fadeIn" data-animate-delay=".4">
           <div class = "cardslicer">
             <p class = "cardtitle">
               MWB
@@ -115,7 +115,7 @@
             </a>
           </div>
         </div>
-        <div class = "card" style = "background-image:url(resources/superskin/original.gif)">
+        <div class = "card" style = "background-image:url(resources/superskin/original.gif)" data-animate = "fadeIn" data-animate-delay=".6">
           <div class = "cardslicer">
             <p class = "cardtitle">
               Classic
@@ -133,18 +133,18 @@
         </div>
       </div>
     </div>
-    <div class = "bodyblock" data-animate = "fadeIn">
+    <div class = "bodyblock" data-animate = "fadeInUp">
       <h3>
         Crystal Grower v3
       </h3>
-      <hr class = "divider">
-      <p>
+      <hr>
+      <p data-animate = "fadeInRight">
         Crystal Grower is a Javascript-based video game which I first built on Khan Academy. Version 3 is a complete rebuild which does not use any external libraries.
       </p>
-      <p>
+      <p data-animate = "fadeIn">
         Remember, Crystal Grower v3 is merely a video game (don't spend too much time on it!). If you are interested in <em>real</em> crystal growing, do some research on how crystals are made and how they are used. The instructions are as follows:
       </p>
-      <ul>
+      <ul data-animate = "fadeInLeft">
         <li>
           Click and hold the mouse button over the game area to make the crystal seed float up. (This is more difficult on tap screen devices.)
         </li>
@@ -158,34 +158,34 @@
           Try all you can to avoid the blocks of dynamite. They will shatter your crystal, whose value becomes absolutely <em>zero</em>.
         </li>
       </ul>
-      <canvas id="mycanvas"></canvas>
+      <canvas id="mycanvas" data-animate = "fadeIn"></canvas>
     </div>
-    <div class = "bodyblock" data-animate = "fadeIn">
+    <div class = "bodyblock" data-animate = "fadeInRight">
       <h3>
         John 1 Site
       </h3>
-      <hr class = "divider">
+      <hr>
       <p>
         The John 1 Site is a semi-permanent webpage primarily created to test z-index and position:sticky functions. It would be interesting to transform this website into a large database to store my memory verses. But for now, the only content is a section from chapter one of the Gospel of John.
       </p>
       <a class = "btn" href = "john1site/john1site.html">Read John1</a>
     </div>
-    <div class = "bodyblock">
+    <div class = "bodyblock" data-animate = "fadeInLeft">
       <h3>
         Cimarron Library
       </h3>
-      <hr class = "divider">
+      <hr>
       <p>
         Cimarron Library is going to be a .php- and MariaDB-based book tracking system where users can get information about books in the Cimarron library and check books in and out. Much work still needs to be done on this project, but there is already a short <a class = "link" href = "cimarronlibrary/cimarronlibrary.html">video demo</a> to raise interest in this project.
       </p>
     </div>
   </div>
   <div class = "parallax" id = "sister" style = "height: 50%; background-image: url(resources/blueberry.jpg)">
-    <h1>
+    <h1 data-animate = "fadeInUp">
       Sister Sites
     </h1>
-    <hr class = "divider">
-    <h2>
+    <hr data-animate = "widen">
+    <h2 data-animate = "fadeIn" data-animate-delay = ".2">
       You might be interested in...
     </h2>
   </div>
@@ -194,17 +194,17 @@
       <h3>
         Sycacorp.com
       </h3>
-      <hr class = "divider">
+      <hr>
       <p>
         This official home of Bellingham Leasing (also known as Sycamore Corporation) was designed and built by MK Studios in 2018. Sycacorp.com uses Bootstrap's CSS and Javascript includes.
       </p>
       <a class = "btn" href = "https://sycacorp.com/">Go Sycacorp</a>
     </div>
-    <div class = "bodyblock" data-animate = "fadeIn">
+    <div class = "bodyblock" data-animate = "fadeInUp">
       <h3>
         Sycamore Corporation
       </h3>
-      <hr class = "divider">
+      <hr>
       <p>
         This is the retired Sycamore Corporation website, designed and built by MK Studios using Boostrap's awesome prebuilts.
       </p>
