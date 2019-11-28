@@ -12,74 +12,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/x-icon" href="resources/mk.gif"/>
   <title>MK Studios | Home</title>
-
 </head>
-<body onresize="resizeCanvas()" onscroll="moveAll()">
-
-
-  <!-- navbar setup -->
+<body>
+  <div id = "preloader" data-animate = "fadeOut" data-animate-duration = ".8"></div>
   <nav id = "navbar" class = "navdefault">
     <a class = "navitemdefault" href = "#home">Home</a>
     <a class = "navitemdefault" href = "#about">About</a>
     <a class = "navitemdefault" href = "#projects">Projects</a>
     <a class = "navitemdefault" href = "#sister">Sister Sites</a>
   </nav>
-
-  <!-- navbar toggle that appears when window width < 600 -->
   <div id = "navtoggle" class="navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
   </div>
-
-  <!-- escaper that appears so that you can close the navbar by clicking anyting on the window -->
   <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
   </div>
-
-  <!--splash-->
-  <div class = "bigpic" id = "home" style = "height:100%; min-height: 550px; background-image: url('resources/volocofire.jpg')">
-    <img class = "logo" src="resources/mk.gif">
-    <h1 class = "title">
+  <div class = "parallax" id = "home" style = "height:100%; min-height: 550px; background-image: url('resources/volocofire.jpg')">
+    <img class = "logo" src="resources/mk.gif" data-animate = "fadeIn">
+    <h1 data-animate = "fadeIn">
       MK Studios | Online
     </h1>
-    <hr class = "divider">
-    <span class = "subtitle" id = "subtitle">
+    <hr class = "divider" data-animate = "fadeIn">
+    <h2 data-animate = "fadeIn">
       Mikja's official website
-    </span>
+    </h2>
   </div>
-
-  <!--short description-->
   <div class = "bodycontainer" id = "about">
-    <div class = "bodyblock">
-      <p class = "text">
+    <div class = "bodyblock" data-animate = "fadeIn">
+      <p>
         MK Online contains all of my newest programming and art projects. As an aspiring coder, I enjoy working with Hyper Text Markup Language (HTML), Cascading Style Sheets (CSS), and Javascript (JS). One of my latest adventures is learning C++, one of the most fundamental computer languages. I hope to see many C++ games and other applications below soon. Art projects posted will include photorealistic renderings, architectural designs, and miscellaneous hand drawings.
       </p>
-      <p class = "text">
+      <p>
         This website is constantly being updated, so stay posted for lots of interesting projects.
       </p>
     </div>
   </div>
-
-  <!--projects title-->
-  <div class = "bigpic" id = "projects" style = "background-image: url(resources/programming.jpg)">
-    <h1 class = "title">
+  <div class = "parallax" id = "projects" style = "background-image: url(resources/programming.jpg)">
+    <h1>
       Projects
     </h1>
     <hr class = "divider">
-    <span class = "subtitle" id="bla">
+    <h2>
       Coding and Art
-    </span>
+    </h2>
   </div>
-
-  <!--projects-->
   <div class = "bodycontainer">
-    <!--superskin-->
-    <div class = "bodyblock">
-      <h2 class = "heading">
+    <div class = "bodyblock" data-animate = "fadeIn">
+      <h3>
         SuperSkin
-      </h2>
+      </h3>
       <hr class = "divider">
-      <p class = "text">
+      <p>
         SuperSkin is a collection of elegant faceplates for the <a class = "link" href = "https://thomasokken.com/free42">Free42</a> desktop calculator. This collection was assembled through a joint effort by Perry Thompson and MK Studios. New faceplate designs are always coming!
       </p>
-      <p class = "text">
+      <p>
         To install a SuperSkin, simply download both the image (.gif) and inner code (.layout) files. Move them into the folder containing the Free42 executable. The new themes should now appear under the "Skin" dropdown in the toolbar of the calculator.
       </p>
       <div class = "cardcontainer">
@@ -92,10 +76,10 @@
               &#xe8ff;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/bbq.gif" download>
-          		&#xe251;
+              &#xe251;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/bbq.layout" download>
-            	&#xe86f;
+              &#xe86f;
             </a>
           </div>
         </div>
@@ -104,14 +88,14 @@
             <p class = "cardtitle">
               Moonlight
             </p>
-                        <a class = "material-icons cardbutton" href="resources/superskin/moonlight.gif">
+            <a class = "material-icons cardbutton" href="resources/superskin/moonlight.gif">
               &#xe8ff;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/moonlight.gif" download>
-          		&#xe251;
+              &#xe251;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/moonlight.layout" download>
-            	&#xe86f;
+              &#xe86f;
             </a>
           </div>
         </div>
@@ -124,10 +108,10 @@
               &#xe8ff;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/mwb.gif" download>
-          		&#xe251;
+              &#xe251;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/mwb.layout" download>
-            	&#xe86f;
+              &#xe86f;
             </a>
           </div>
         </div>
@@ -140,25 +124,24 @@
               &#xe8ff;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/original.gif" download>
-          		&#xe251;
+              &#xe251;
             </a>
             <a class = "material-icons cardbutton" href="resources/superskin/original.layout" download>
-            	&#xe86f;
+              &#xe86f;
             </a>
           </div>
         </div>
       </div>
     </div>
-    <!--crystal grower-->
-    <div class = "bodyblock">
-      <h2 class = "heading">
+    <div class = "bodyblock" data-animate = "fadeIn">
+      <h3>
         Crystal Grower v3
-      </h2>
+      </h3>
       <hr class = "divider">
-      <p class = "text">
+      <p>
         Crystal Grower is a Javascript-based video game which I first built on Khan Academy. Version 3 is a complete rebuild which does not use any external libraries.
       </p>
-      <p class = "text">
+      <p>
         Remember, Crystal Grower v3 is merely a video game (don't spend too much time on it!). If you are interested in <em>real</em> crystal growing, do some research on how crystals are made and how they are used. The instructions are as follows:
       </p>
       <ul>
@@ -177,102 +160,80 @@
       </ul>
       <canvas id="mycanvas"></canvas>
     </div>
-    <!--John1site-->
-    <div class = "bodyblock">
-      <h2 class = "heading">
+    <div class = "bodyblock" data-animate = "fadeIn">
+      <h3>
         John 1 Site
-      </h2>
+      </h3>
       <hr class = "divider">
-      <p class = "text">
+      <p>
         The John 1 Site is a semi-permanent webpage primarily created to test z-index and position:sticky functions. It would be interesting to transform this website into a large database to store my memory verses. But for now, the only content is a section from chapter one of the Gospel of John.
       </p>
       <a class = "btn" href = "john1site/john1site.html">Read John1</a>
     </div>
-    <!--cimarronlibrary-->
     <div class = "bodyblock">
-      <h2 class = "heading">
+      <h3>
         Cimarron Library
-      </h2>
+      </h3>
       <hr class = "divider">
-      <p class = "text">
+      <p>
         Cimarron Library is going to be a .php- and MariaDB-based book tracking system where users can get information about books in the Cimarron library and check books in and out. Much work still needs to be done on this project, but there is already a short <a class = "link" href = "cimarronlibrary/cimarronlibrary.html">video demo</a> to raise interest in this project.
       </p>
     </div>
   </div>
-
-  <!--sister sites description-->
-  <div class = "bigpic" id = "sister" style = "height: 50%; background-image: url(resources/blueberry.jpg)">
-    <h1 class = "title">
+  <div class = "parallax" id = "sister" style = "height: 50%; background-image: url(resources/blueberry.jpg)">
+    <h1>
       Sister Sites
     </h1>
     <hr class = "divider">
-    <span class = "subtitle">
+    <h2>
       You might be interested in...
-    </span>
+    </h2>
   </div>
-
-  <!--sister sites-->
   <div class = "bodycontainer">
-    <!--bellingham leasing-->
-    <div class = "bodyblock">
-      <h2 class = "heading">
+    <div class = "bodyblock" data-animate = "fadeIn">
+      <h3>
         Sycacorp.com
-      </h2>
+      </h3>
       <hr class = "divider">
-      <p class = "text">
+      <p>
         This official home of Bellingham Leasing (also known as Sycamore Corporation) was designed and built by MK Studios in 2018. Sycacorp.com uses Bootstrap's CSS and Javascript includes.
       </p>
       <a class = "btn" href = "https://sycacorp.com/">Go Sycacorp</a>
     </div>
-    <!--syacmore corporation-->
-    <div class = "bodyblock">
-      <h2 class = "heading">
+    <div class = "bodyblock" data-animate = "fadeIn">
+      <h3>
         Sycamore Corporation
-      </h2>
+      </h3>
       <hr class = "divider">
-      <p class = "text">
+      <p>
         This is the retired Sycamore Corporation website, designed and built by MK Studios using Boostrap's awesome prebuilts.
       </p>
       <a class = "btn" href = "sycamorecorporation/index.html">See website</a>
     </div>
   </div>
-
-  <!--footer-->
   <footer class = "footer">
-    <p class="text">
+    <p data-animate = "fadeIn">
       &copy; 2019 Mikja Krych Studios
     </p>
   </footer>
-
   <!-- little sidenote message -->
   <aside id ="sidenote" onclick = "hideIt('sidenote', 5);">
     Hi there, friend. Glad you made it to my website. Please make sure to check out all the sister sites. Also don't forget to come back again because new content is being created constantly. :)
   </aside>
-
   <!-- under construction alert -->
   <div id = "alert">
     <img src="resources/cone.gif" width=100px height=100px></img>
-    <span class = "subtitle">
+    <h1>
+      Watch your step.
+    </h1>
+    <h2>
       This site is currently under construction.
-    </span>
-    <span class = "subtitle">
-      Please watch your step.
-    </span>
+    </h2>
     <a class="btn" href="javascript:hideIt('alert', 5)">
       Dismiss
     </a>
   </div>
-
   <script type="text/javascript" src="script.js"></script>
   <script type = "text/javascript" src = "cgv3.js"></script>
-  <script>
-    typer('sidenote',10000);
-    popup('alert');
-    initializeCanvas();
-    resizeCanvas();
-    document.getElementById("navtoggle").innerHTML = "<svg><polygon points = '" + cross(35) + "'></polygon></svg>";
-  </script>
-
-
 </body>
 </html>
