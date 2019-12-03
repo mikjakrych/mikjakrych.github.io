@@ -26,9 +26,7 @@
     </div>
   </nav>
   <div class = "pointfive navtoggle" onclick = "toggleNav('nav', 'navopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
-    <svg style = "width: inherit; height: inherit;">
-      <polygon id = "navtoggleX"></polygon>
-    </svg>
+    <svg id = "navtoggleX" style = "width: inherit; height: inherit;"></svg>
   </div>
   <div class = "escaper"  onclick = "toggleNav('nav', 'navopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')"></div>
   <section class = "gallery">
@@ -41,7 +39,7 @@
   </footer>
   <script type="text/javascript" src="script.js"></script>
   <script>
-    document.getElementById("navtoggleX").style.points = cross(24);
+    document.getElementById("navtoggleX").innerHTML = "<polygon points = '" + cross(24) + "'></polygon>";
   </script>
 </body>
 </html>

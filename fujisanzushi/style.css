@@ -117,6 +117,18 @@ form{
 td:first-child{
   text-align: right;
 }
+.gallery{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pic{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height:100px;
+  width:25%;
+}
 .preloader{
   position: fixed;
   top: 0;
@@ -196,15 +208,18 @@ td:first-child{
   visibility: visible;
 }
 .navtoggle{
-  position:fixed;
-  width:24px;
-  height:24px;
-  fill:rgb(133,191,90);
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  padding: 8px;
+  background-color: rgb(40,40,40);
+  fill: rgb(255,255,255);
   z-index: 1000;
-  top:19px;
-  right:19px;
+  top: 20px;
+  right: 20px;
   overflow: hidden;
-  display:block;
+  display: block;
 }
 .navtoggleopen{
   -webkit-transform: rotate(315deg);
@@ -300,7 +315,7 @@ td:first-child{
   font-size: 50px;
   color: rgb(255,255,255);
   user-select: none;
-  visibility: hidden;
+  display: none;
 }
 .carouselarrow:hover{
   color: rgb(152,148,152);
@@ -415,7 +430,7 @@ td:first-child{
     border-color: rgb(40,40,40);
   }
   .navtoggle{
-    visibility: hidden;
+    display: none;
   }
   .navstatic{
     position: static;
@@ -438,6 +453,6 @@ td:first-child{
   }
   /**CAROUSEL STUFF**/
   .carouselarrow{
-    visibility: visible;
+    display: flex;
   }
 }

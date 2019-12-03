@@ -25,8 +25,8 @@
       <a class = "pointfive navitems" href = "contact.html">Contact</a>
     </div>
   </nav>
-  <div class="pointfive navtoggle" onclick="toggleNav('nav', 'navopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
-    +
+  <div class = "pointfive navtoggle" onclick = "toggleNav('nav', 'navopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
+    <svg id = "navtoggleX" style = "width: inherit; height: inherit;"></svg>
   </div>
   <div class = "escaper"  onclick = "toggleNav('nav', 'navopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')"></div>
   <section class = "carouselbox">
@@ -176,6 +176,9 @@
     </h2>
   </footer>
   <script type="text/javascript" src="script.js"></script>
+  <script>
+    document.getElementById("navtoggleX").innerHTML = "<polygon points = '" + cross(24) + "'></polygon>";
+  </script>
   <script>
   function initMap() {
     var fujisanzushi = {lat: 48.719976, lng: -122.501868};
