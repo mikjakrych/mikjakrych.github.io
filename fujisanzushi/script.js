@@ -25,9 +25,11 @@ function cross(width){
 }
 var currentSlide;
 var carouselTimer;
+var slideDelay;
 function initializeCarousel(slide_delay){
   currentSlide = 0;
-  carouselTimer = setTimeout(nextSlide,slide_delay);
+  slideDelay = slide_delay;
+  carouselTimer = setTimeout(nextSlide,slideDelay);
 }
 function changeSlide(next_index){
   var old_button = document.getElementsByClassName("buttonactive")[0];
