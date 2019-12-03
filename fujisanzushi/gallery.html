@@ -14,7 +14,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="https://static.wixstatic.com/media/f4a7f8_eb7d47fa0c0044f5b16ccc8a7a0b9968~mv2_d_1249_1247_s_2.png/v1/crop/x_146,y_133,w_964,h_956/fill/w_145,h_144,al_c,q_80,usm_0.66_1.00_0.01/QQ%E5%9B%BE%E7%89%8720190213111456.webp"/>
   <title>Fujisan Sushi | Gallery</title>
 </head>
-<body onload = "preloader()">
+<body onload = "preloader(); gallery()" onresize="gallery()">
   <div class = "pointfive preloader"></div>
   <nav class = "pointfive flexcol-900row nav navstatic">
     <a class = "pointfive navlogo" href = "#"></a>
@@ -30,6 +30,78 @@
   </div>
   <div class = "escaper"  onclick = "toggleNav('nav', 'navopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')"></div>
   <section class = "gallery">
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/programming.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/programming.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/programming.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/programming.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/programming.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/programming.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/blueberry.jpg">
+    </div>
+    <div class = "gdiv">
+      <img class = "pic" src = "../resources/volocofire.jpg">
+    </div>
   </section>
   <hr>
   <footer>
@@ -37,7 +109,8 @@
       2019 © Fujisan Sushi Restaurant
     </h2>
   </footer>
-  <script type="text/javascript" src="script.js"></script>
+  <script type = "text/javascript" src = "script.js"></script>
+  <script type = "text/javascript" src = "gallery.js"></script>
   <script>
     document.getElementById("navtoggleX").innerHTML = "<polygon points = '" + cross(24) + "'></polygon>";
   </script>

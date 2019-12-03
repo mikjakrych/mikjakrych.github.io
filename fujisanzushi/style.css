@@ -1,5 +1,6 @@
 ::-webkit-scrollbar{
   width:12px;
+  height:12px;
 }
 ::-webkit-scrollbar-thumb{
   background-color: rgb(20,20,20);
@@ -118,16 +119,26 @@ td:first-child{
   text-align: right;
 }
 .gallery{
-  display:flex;
-  flex-direction: row;
+  display: flex;
   flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
 }
 .pic{
-  margin: 0;
-  padding: 0;
+  margin: 0px;
   border: 0;
-  height:100px;
-  width:25%;
+  height: inherit;
+  width: inherit;
+  transition: .2s all ease;
+  transform-origin: center;
+}
+.pic:hover{
+  transform: scale(1.1,1.1);
+}
+.gdiv{
+  border: 5px solid rgb(255,255,255);
+  overflow: hidden;
 }
 .preloader{
   position: fixed;
