@@ -14,7 +14,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="https://static.wixstatic.com/media/f4a7f8_eb7d47fa0c0044f5b16ccc8a7a0b9968~mv2_d_1249_1247_s_2.png/v1/crop/x_146,y_133,w_964,h_956/fill/w_145,h_144,al_c,q_80,usm_0.66_1.00_0.01/QQ%E5%9B%BE%E7%89%8720190213111456.webp"/>
   <title>Fujisan Sushi | Gallery</title>
 </head>
-<body onload = "preloader(); gallery()" onresize="gallery()">
+<body onload = "preloader(); initializeGallery(); gallery()" onresize="gallery()">
   <div class = "pointfive preloader"></div>
   <nav class = "pointfive flexcol-900row nav navstatic">
     <a class = "pointfive navlogo" href = "#"></a>
@@ -29,11 +29,11 @@
     <svg id = "navtoggleX" style = "width: inherit; height: inherit;"></svg>
   </div>
   <div class = "escaper"  onclick = "toggleNav('nav', 'navopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')"></div>
+  <hr>
   <section class = "gallery">
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_0a8641b8fc994586bcc0968675da199e~mv2_d_3264_4896_s_4_2.jpg/v1/fill/w_226,h_339,fp_0.50_0.50,q_90/f4a7f8_0a8641b8fc994586bcc0968675da199e~mv2_d_3264_4896_s_4_2.webp"></div>
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_0fdacc2ffee042b98cbefd6ff7edc4d1~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_484,h_323,fp_0.50_0.50,q_90/f4a7f8_0fdacc2ffee042b98cbefd6ff7edc4d1~mv2_d_4896_3264_s_4_2.webp"></div>
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_10ce645c20b64c25bf4c3660f8430687~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_508,h_339,fp_0.50_0.50,q_90/f4a7f8_10ce645c20b64c25bf4c3660f8430687~mv2_d_4896_3264_s_4_2.webp"></div>
-    <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_10ce645c20b64c25bf4c3660f8430687~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_662,h_442,fp_0.50_0.50,q_90/f4a7f8_10ce645c20b64c25bf4c3660f8430687~mv2_d_4896_3264_s_4_2.webp"></div>
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_13ab760b6a614ebf8f5f179ebc9938b1~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_626,h_418,fp_0.50_0.50,q_90/f4a7f8_13ab760b6a614ebf8f5f179ebc9938b1~mv2_d_4896_3264_s_4_2.webp"></div>
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_15198390c7bf413b9c49d8a3147f40f9~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_486,h_323,fp_0.50_0.50,q_90/f4a7f8_15198390c7bf413b9c49d8a3147f40f9~mv2_d_4896_3264_s_4_2.webp"></div>
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_1bda8fbbc81941239c17afebfb39a964~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_484,h_323,fp_0.50_0.50,q_90/f4a7f8_1bda8fbbc81941239c17afebfb39a964~mv2_d_4896_3264_s_4_2.webp"></div>
@@ -79,7 +79,6 @@
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_e093eb886f5943cea934763e17edf89f~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_486,h_323,fp_0.50_0.50,q_90/f4a7f8_e093eb886f5943cea934763e17edf89f~mv2_d_4896_3264_s_4_2.webp"></div>
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_e9c77698e3cb47f2b7318a3995484e2d~mv2_d_3264_4896_s_4_2.jpg/v1/fill/w_320,h_479,fp_0.50_0.50,q_90/f4a7f8_e9c77698e3cb47f2b7318a3995484e2d~mv2_d_3264_4896_s_4_2.webp"></div>
     <div class = "gdiv"><img class = "pic" src = "https://static.wixstatic.com/media/f4a7f8_ed87d6f7ba2c44bb9dc7b2a96719a112~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_508,h_339,fp_0.50_0.50,q_90/f4a7f8_ed87d6f7ba2c44bb9dc7b2a96719a112~mv2_d_4896_3264_s_4_2.webp"></div>
-
   </section>
   <hr>
   <footer>
