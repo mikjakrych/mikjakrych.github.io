@@ -153,7 +153,8 @@ window.onload = function(){
 window.onscroll = function() {
   calcParallax();
   animate();
-  popup('alert',20);
+  // we are not currently using the construction alert
+  // popup('alert',20);
 };
 window.onresize = function() {
   calcParallax();
