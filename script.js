@@ -143,20 +143,3 @@ function animate(){
     }
   }
 }
-window.onload = function(){
-  animate();
-  initializeCanvas();
-  resizeCanvas();
-  document.getElementById("navtoggle").innerHTML = "<svg><polygon points = '" + cross(35) + "'></polygon></svg>";
-  typer('sidenote',10000);
-}
-window.onscroll = function() {
-  calcParallax();
-  animate();
-  // we are not currently using the construction alert
-  // popup('alert',20);
-};
-window.onresize = function() {
-  calcParallax();
-  resizeCanvas();
-};

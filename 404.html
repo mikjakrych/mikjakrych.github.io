@@ -23,5 +23,18 @@
       Ah, something's gone wrong. Go <a class="link" href="https://mikjakrych.github.io/index.html">home</a>?
     </h2>
   </div>
+  <script type="text/javascript" src="https://mikjakrych.github.io/script.js"></script>
+  <script>
+    window.onload = function(){
+      animate();
+    }
+    window.onscroll = function() {
+      calcParallax();
+      animate();
+    };
+    window.onresize = function() {
+      calcParallax();
+    };
+  </script>
 </body>
 </html>
