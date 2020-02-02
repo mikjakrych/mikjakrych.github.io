@@ -104,6 +104,8 @@ function resizeCanvas(){
   if(pwidth <= 400){
     var factor = pwidth / 400;
     canvas.style.transform = "scale(" + factor + "," + factor + ")"
+  } else{
+    canvas.style.transform = "scale(1,1)"
   }
 }
 var parallax = document.querySelectorAll(".parallax");
