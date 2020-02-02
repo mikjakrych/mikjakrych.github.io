@@ -104,6 +104,8 @@ function resizeCanvas(){
   if(pwidth <= 400){
     var factor = pwidth / 400;
     canvas.style.transform = "scale(" + factor + "," + factor + ")"
+  } else{
+    canvas.style.transform = "scale(1,1)"
   }
 }
 var parallax = document.querySelectorAll(".parallax");
@@ -143,20 +145,3 @@ function animate(){
     }
   }
 }
-window.onload = function(){
-  animate();
-  initializeCanvas();
-  resizeCanvas();
-  document.getElementById("navtoggle").innerHTML = "<svg><polygon points = '" + cross(35) + "'></polygon></svg>";
-  typer('sidenote',10000);
-}
-window.onscroll = function() {
-  calcParallax();
-  animate();
-  // we are not currently using the construction alert
-  // popup('alert',20);
-};
-window.onresize = function() {
-  calcParallax();
-  resizeCanvas();
-};
