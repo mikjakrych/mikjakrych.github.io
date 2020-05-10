@@ -1,12 +1,12 @@
-.preloader{
+.preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1000;
-  background-color: rgb(255,255,255);
-  display:flex;
+  background-color: rgb(255, 255, 255);
+  display: flex;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
@@ -16,14 +16,16 @@
   -webkit-align-items: center;
   align-items: center;
 }
-.preloaderhidden{
+
+.preloaderhidden {
   opacity: 0;
   visibility: hidden;
 }
-.preloaderinner{
-  position:relative;
+
+.preloaderinner {
+  position: relative;
   width: 100px;
-  height:100px;
+  height: 100px;
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   -moz-transform-origin: center;
@@ -34,87 +36,97 @@
   -o-animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both;
   animation: preloaderpulse 1s cubic-bezier(0.39, 1.01, 0.74, 1.01) 0s infinite alternate both;
 }
-.preloaderring{
+
+.preloaderring {
   background: url(resources/ring.gif) center /cover no-repeat scroll;
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   -webkit-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
   -moz-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
   -o-animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
   animation: preloaderrotate 4s cubic-bezier(0.34, 1.52, 0.78, 0.77) 0s infinite normal both;
 }
-.preloadercore{
+
+.preloadercore {
   background: url(resources/core.gif) center /cover no-repeat scroll;
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 @-webkit-keyframes preloaderrotate {
-  from{
-    transform:initial;
+  from {
+    transform: initial;
   }
-  to{
-    transform:rotate(180deg);
+  to {
+    transform: rotate(180deg);
   }
 }
+
 @-moz-keyframes preloaderrotate {
-  from{
-    transform:initial;
+  from {
+    transform: initial;
   }
-  to{
-    transform:rotate(180deg);
+  to {
+    transform: rotate(180deg);
   }
 }
+
 @-o-keyframes preloaderrotate {
-  from{
-    transform:initial;
+  from {
+    transform: initial;
   }
-  to{
-    transform:rotate(180deg);
+  to {
+    transform: rotate(180deg);
   }
 }
+
 @keyframes preloaderrotate {
-  from{
-    transform:initial;
+  from {
+    transform: initial;
   }
-  to{
-    transform:rotate(180deg);
+  to {
+    transform: rotate(180deg);
   }
 }
+
 @-webkit-keyframes preloaderpulse {
-  0%{
-    transform:initial;
+  0% {
+    transform: initial;
   }
-  50{
-    transform:scale(1.2,1.2);
+  50% {
+    transform: scale(1.2, 1.2);
   }
 }
+
 @-moz-keyframes preloaderpulse {
-  from{
-    transform:initial;
+  from {
+    transform: initial;
   }
-  to{
-    transform:scale(1.2,1.2);
+  to {
+    transform: scale(1.2, 1.2);
   }
 }
+
 @-o-keyframes preloaderpulse {
-  from{
-    transform:initial;
+  from {
+    transform: initial;
   }
-  to{
-    transform:scale(1.2,1.2);
+  to {
+    transform: scale(1.2, 1.2);
   }
 }
+
 @keyframes preloaderpulse {
-  from{
-    transform:initial;
+  from {
+    transform: initial;
   }
-  to{
-    transform:scale(1.2,1.2);
+  to {
+    transform: scale(1.2, 1.2);
   }
 }
