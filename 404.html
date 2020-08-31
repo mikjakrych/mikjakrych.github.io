@@ -1,45 +1,36 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://mikjakrych.github.io/style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Nanum Pen Script' rel='stylesheet'>
   <meta charset="UTF-8">
-  <meta name="description" content="MK Studios">
-  <meta name="keywords"
-    content="mikja,krych,onine,projects,css,javascript,html,sycamore,sycacorp,perry,thompson,gallery,john1site,crystalgrower,cimarron library">
-  <meta name="author" content="Mikja Krych">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/x-icon" href="mk.gif" />
   <link rel="shortcut icon" type="image/x-icon" href="https://mikjakrych.github.io/resources/mk.gif" />
-  <title>Oops!</title>
+  <link rel="stylesheet" href="mkanimate.css">
+  <link rel="stylesheet" href="https://mikjakrych.github.io/mkanimate.css">
+  <title>404 Not Found</title>
 </head>
 
 <body>
-  <div class="parallax oops"
-    style="height:100%; min-height: 550px; background-image: url('https://mikjakrych.github.io/resources/volocofire.jpg')">
-    <img class="logo" src="https://mikjakrych.github.io/resources/mk.gif" data-animate="fadeInUp"
-      data-animate-delay=".3">
-    <h1 class="oops" data-animate="fadeIn" data-animate-delay=".5">
-      404 Page not found
-    </h1>
-    <hr data-animate="widen">
-    <h2 class="oops" data-animate="fadeIn" data-animate-delay=".8">
-      Ah, something's gone wrong. Go back <a class="link" href="https://mikjakrych.github.io">home</a>?
-    </h2>
+  <div id="preloader" data-mk-animate="fadeOut" data-mk-animate-duration=".8"></div>
+  <div style="height: 100%; display: flex; align-items: center">
+    <div id="title-wrap">
+      <span id="title">
+        404 Not Found
+      </span>
+      <span id="subtitle">
+        MK could not locate the page you're looking for. Click <a class="link"
+          href="https://mikjakrych.github.io">here</a> to return home.
+      </span>
+    </div>
   </div>
-  <script type="text/javascript" src="https://mikjakrych.github.io/script.js"></script>
+  <script src="mkanimate.js"></script>
+  <script src="https://mikjakrych.github.io/mkanimate.js"></script>
   <script>
     window.onload = function () {
       animate();
     }
-    window.onscroll = function () {
-      calcParallax();
-      animate();
-    };
-    window.onresize = function () {
-      calcParallax();
-    };
   </script>
 </body>
 

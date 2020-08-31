@@ -15,7 +15,7 @@ _/_/_/    _/   _/    _/_/_/   _/    _/      _/_/_/   _/   _/      _/        _/_/
 ***/
 
 //declare variables
-var gameArea = document.getElementById("mycanvas");
+var gameArea = document.querySelector("#cgv3");
 var rise_speed = 5;
 var fall_speed = 5;
 var obstacle_amount = 80;
@@ -28,6 +28,10 @@ var particles = [];
 var clicking;
 var updater;
 var game_state = 1; //1 = game is going; 0 = crystal exploded
+var timer;
+var background_color = "#fff";
+var highlight_color = "#53a0de";
+var font = "Open Sans";
 
 function initializeCanvas() {
 
@@ -42,24 +46,41 @@ function initializeCanvas() {
     gameArea.userSelect = "none";
     gameArea.context = gameArea.getContext("2d");
     //draw home screen graphics
-    gameArea.context.fillStyle = "rgb(219, 199, 109)";
+    gameArea.context.fillStyle = background_color;
     gameArea.context.fillRect(0, 0, gameArea.width, gameArea.height);
-    gameArea.context.fillStyle = "rgb(87, 114, 132)";
-    gameArea.context.font = "30px monospace";
+    gameArea.context.fillStyle = highlight_color;
+    gameArea.context.font = "30px '" + font + "'";
     gameArea.context.textAlign = "center";
     gameArea.context.fillText("Crystal Grower v3", gameArea.width / 2, gameArea.height / 2);
-    gameArea.context.font = "15px monospace";
+    gameArea.context.font = "15px '" + font + "'";
     gameArea.context.textAlign = "center";
     gameArea.context.fillText("Click to begin", gameArea.width / 2, gameArea.height / 2 + 25);
   }
 }
+
 function startGame() {
   //remove old eventlistener and add ones to make the crystal float
   gameArea.removeEventListener("click", startGame);
-  gameArea.addEventListener("mousedown", function () { clicking = true });
-  gameArea.addEventListener("mouseup", function () { clicking = false });
-  gameArea.addEventListener("touchstart", function () { clicking = true });
-  gameArea.addEventListener("touchend", function () { clicking = false });
+  gameArea.addEventListener("mousedown", function (e) {
+    clicking = true;
+    e.preventDefault();
+  });
+  gameArea.addEventListener("mouseup", function (e) {
+    clicking = false;
+    e.preventDefault();
+  });
+  gameArea.addEventListener("mouseout", function (e) {
+    clicking = false;
+    e.preventDefault();
+  });
+  gameArea.addEventListener("touchstart", function (e) {
+    clicking = true;
+    e.preventDefault();
+  });
+  gameArea.addEventListener("touchend", function (e) {
+    clicking = false;
+    e.preventDefault();
+  });
   //get a nice solute_color
   solute_color = "rgb(" + randomInt(80, 180) + "," + randomInt(80, 180) + "," + randomInt(80, 180) + ")";
   //make the crystal object
@@ -70,17 +91,19 @@ function startGame() {
     if (obsgen < 7) {
       obstacles.push(new droplet(i * 40 + 300, randomInt(20, 260), randomInt(30, 60), game_speed, 1, solute_color));
     } else if (obsgen < 9) {
-      obstacles.push(new droplet(i * 40 + 300, randomInt(20, 260), randomInt(30, 60), game_speed, -1, "#53A0DE"));
+      obstacles.push(new droplet(i * 40 + 300, randomInt(20, 260), randomInt(30, 60), game_speed, -1, highlight_color));
     } else {
-      obstacles.push(new dynamite(i * 40 + 300, randomInt(20, 260), 20, game_speed, "#8c5f62"));
+      obstacles.push(new dynamite(i * 40 + 300, randomInt(20, 260), 20, game_speed, highlight_color));
     }
   }
   //set interval for updating the game
   updater = setInterval(updateGame, 20);
+  //restart timer
+  timer = 0;
 }
 function updateGame() {
   //draw background
-  gameArea.context.fillStyle = "rgb(219, 199, 109)";
+  gameArea.context.fillStyle = background_color;
   gameArea.context.fillRect(0, 0, gameArea.width, gameArea.height);
   //check whether objects were hit; if not, keep drawing them
   for (var i = 0; i < obstacles.length; i++) {
@@ -104,7 +127,19 @@ function updateGame() {
     game_state = 0;
     setTimeout(endGame, 1000);
   }
+  //draw score
+  gameArea.context.fillStyle = highlight_color;
+  gameArea.context.font = "15px '" + font + "'";
+  gameArea.context.textAlign = "right";
+  gameArea.context.fillText("Value: ", 60, 20);
+  gameArea.context.fillText("Time: ", 60, 40);
+  gameArea.context.textAlign = "left";
+  gameArea.context.fillText(crystal1.value, 60, 20);
+  gameArea.context.fillText(String(timer), 60, 40);
+  //increment timer
+  timer += 10;
 }
+
 function propogateParticles(crystal) {
   //make the particles
   for (var i = 0; i < 200; i++) {
@@ -118,16 +153,14 @@ function endGame() {
   obstacles = [];
   particles = [];
   game_state = 1;
-  //reference log
-  console.log("score: " + crystal1.value);
   //display end game graphics
-  gameArea.context.fillStyle = "rgb(219, 199, 109)";
+  gameArea.context.fillStyle = background_color;
   gameArea.context.fillRect(0, 0, gameArea.width, gameArea.height);
-  gameArea.context.fillStyle = "rgb(87, 114, 132)";
-  gameArea.context.font = "30px monospace";
+  gameArea.context.fillStyle = highlight_color;
+  gameArea.context.font = "30px '" + font + "'";
   gameArea.context.textAlign = "center";
   gameArea.context.fillText("Crystal value: " + crystal1.value, gameArea.width / 2, gameArea.height / 2);
-  gameArea.context.font = "15px monospace";
+  gameArea.context.font = "15px '" + font + "'";
   gameArea.context.textAlign = "center";
   gameArea.context.fillText("Click to restart", gameArea.width / 2, gameArea.height / 2 + 25);
 
@@ -145,13 +178,13 @@ function endGame() {
 
 function timeOut() {
   //display timeout graphics
-  gameArea.context.fillStyle = "rgb(219, 199, 109)";
+  gameArea.context.fillStyle = background_color;
   gameArea.context.fillRect(0, 0, gameArea.width, gameArea.height);
-  gameArea.context.fillStyle = "rgb(87, 114, 132)";
-  gameArea.context.font = "30px monospace";
+  gameArea.context.fillStyle = highlight_color;
+  gameArea.context.font = "30px '" + font + "'";
   gameArea.context.textAlign = "center";
   gameArea.context.fillText("Timeout, buddy!", gameArea.width / 2, gameArea.height / 2);
-  gameArea.context.font = "15px monospace";
+  gameArea.context.font = "15px '" + font + "'";
   gameArea.context.textAlign = "center";
   gameArea.context.fillText("It looks like you've played", gameArea.width / 2, gameArea.height / 2 + 25);
   gameArea.context.fillText("five games already. Time to", gameArea.width / 2, gameArea.height / 2 + 40);
@@ -294,3 +327,17 @@ function getGamesFromCookie() {
   }
   return t;
 }
+// function resizeCanvas() {
+//   var canvas = document.getElementById("mycanvas");
+//   var pwidth = canvas.parentElement.innerWidth || canvas.parentElement.clientWidth;
+//   var factor = pwidth / 400;
+//   if (factor <= 1) {
+//     canvas.style.WebkitTransform = "scale(" + factor + "," + factor + ")";
+//     canvas.style.msTransform = "scale(" + factor + "," + factor + ")";
+//     canvas.style.transform = "scale(" + factor + "," + factor + ")";
+//   } else {
+//     canvas.style.WebkitTransform = "";
+//     canvas.style.msTransform = "";
+//     canvas.style.transform = "";
+//   }
+// }
