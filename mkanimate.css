@@ -58,12 +58,3 @@
         visibility: hidden;
     }
 }
-
-@keyframes widen {
-    from {
-        transform: scaleX(.5);
-    }
-    to {
-        transform: initial;
-    }
-}
