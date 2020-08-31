@@ -7,6 +7,8 @@ var distFromWall = 10;
 //make tooltip
 var tooltip = document.createElement("div");
 tooltip.setAttribute("id", "tooltip");
+tooltip.style.display = "none";
+tooltip.style.position = "fixed";
 document.body.appendChild(tooltip);
 //by default, show help is true
 showHelp = true;
