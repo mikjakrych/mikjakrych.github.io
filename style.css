@@ -20,6 +20,7 @@ html, body {
   border: 0;
   scroll-behavior: smooth;
   font-size: 16px;
+  background-color: var(--bg-blue);
 }
 
 code {
@@ -122,7 +123,7 @@ h1 {
 }
 
 .contentbox {
-  background-color: var(--bg-blue);
+  background-color: var(--bg-white);
   padding: 50px;
   margin: 30px 10%;
   line-height: 30px;
@@ -168,6 +169,15 @@ ul {
 
 section {
   margin: 80px 0;
+}
+
+section figure {
+  text-align: center;
+  font-size: .8em;
+}
+
+section figure img {
+  cursor: zoom-in;
 }
 
 #preloader {
@@ -241,7 +251,7 @@ section {
   position: absolute;
   bottom: 0;
   transform: translateY(42px);
-  background-color: var(--bg-white);
+  background-color: var(--bg-blue);
   transition: .4s ease;
   display: flex;
   justify-content: center;
@@ -275,7 +285,7 @@ section {
   text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   #header {
     text-align: center;
     display: block;
