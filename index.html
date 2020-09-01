@@ -12,25 +12,28 @@
 
 <body>
   <div id="preloader" data-mk-animate="fadeOut" data-mk-animate-duration=".8"></div>
-  <div id="nav-spacer"></div>
+  <div id="top"></div>
   <header id="header">
-    <a id="logo" href="#nav-spacer"></a>
+    <a id="logo" href="#top"></a>
     <nav id="nav-wrap">
       <ul id="nav-list">
         <li class="nav-item">
-          <a class="nav-link" href="#nav-spacer">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#programming">Programming</a>
+          <a class="nav-link" href="#top">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#programming">Programming</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#drafting">Drafting</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#art">Art</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#paperarchitecture">Paper Architecture</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#miscellaneous">Miscellaneous</a>
@@ -58,11 +61,11 @@
         About
       </h1>
       <p>
-        MK Online contains all of my newest programming and art projects. As an aspiring coder, I enjoy working with
-        Hyper Text Markup Language (HTML), Cascading Style Sheets (CSS), and Javascript (JS). One of my latest
-        adventures is learning C++, one of the most fundamental computer languages. I hope to see many C++ games and
-        other applications below soon. Art projects posted will include photorealistic renderings, architectural
-        designs, and miscellaneous hand drawings.
+        MK Online contains all of my newest programming and art projects. As a coding enthusiast, I enjoy working with
+        Hyper Text Markup Language (HTML), Cascading Style Sheets (CSS), Javascript (JS), and PHP. One of my latest
+        adventures is learning Rust, which is closely related to C++, one of the most fundamental computer languages. I
+        hope to see many C++ games and other applications below soon. Art and drafting projects posted will include
+        photorealistic renderings, architectural designs, and miscellaneous hand drawings.
       </p>
       <p>
         This website is constantly being updated, so stay posted for lots of interesting projects.
@@ -73,15 +76,19 @@
         Programming
       </h1>
       <p>
-        Old projects and new projects. Finished projects and on-going projects. Also a few code snippets to use. HTML,
-        CSS, JavaScript, PHP, mySQL. Rust and C++ coming soon.
+        Old projects and new projects. Finished projects and on-going projects. Also a few code snippets to use. Many of
+        the website special effects were inspired by elements seen elsewhere on the Internet. HTML, CSS, JavaScript,
+        PHP, mySQL. Rust and C++ coming soon.
       </p>
-      <section data-mk-animate="fadeInUp">
+      <section data-mk-animate="fadeIn">
         <h2>
           Bouncy Preloader
         </h2>
         <p>
-          CSS-based bouncy preloader. No JavaScript. CSS file <a class="link" href="bouncypreloader.css">here</a>.
+          Template bouncy preloader using pure CSS animations and no JavaScript. The CSS source file can be found <a
+            class="link" href="bouncypreloader.css">here</a>. The two images needed are the <a class="link"
+            href="resources/drafting/ring.gif">outer ring</a> and the <a class="link"
+            href="resources/drafting/core.gif">core</a>.
         </p>
         <link rel="stylesheet" href="bouncypreloader.css">
         <div class="preloader">
@@ -91,14 +98,38 @@
           </div>
         </div>
       </section>
-      <section data-mk-animate="fadeInUp">
+      <section data-mk-animate="fadeInRight">
         <h2>
           Buttons CSS snippets
         </h2>
         <link rel="stylesheet" href="buttons.css">
         <p>
-          Copy necessary CSS classes from <a class="link" href="buttons.css">the css file</a>.
+          Copy necessary CSS snippets from <a class="link" href="buttons.css">the css file</a> or link directly. Add one
+          of the following classes to <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> elements:
         </p>
+        <ul>
+          <li>
+            .slidedouble
+          </li>
+          <li>
+            .floatoutline
+          </li>
+          <li>
+            .outline
+          </li>
+          <li>
+            .shine
+          </li>
+          <li>
+            .slidearrow
+          </li>
+          <li>
+            .liftup
+          </li>
+          <li>
+            .doublebars
+          </li>
+        </ul>
         <button class="slidedouble">.slidedouble</button>
         <button class="floatoutline">.floatoutline</button>
         <button class="outline">.outline</button>
@@ -132,57 +163,84 @@
         </ul>
         <canvas id="cgv3" width="400" height="400"></canvas>
       </section>
-      <section data-mk-animate="fadeInUp">
+      <section data-mk-animate="fadeInLeft">
         <h2>
           Swishflo
         </h2>
         <p>
-          Swishflo is a button thingy that tracks where the mouse clicked. See demo website <a class="link"
-            href="../swishflo/">here</a>.
+          Swishflo is CSS/JS addon that simulates 3-dimentional depression of an element. Use the class
+          <code>swishflo</code> and link to the <a class="link"
+            href="https://mikjakrych.github.io/swishflo/swishflo.js">JavaScript library</a>. See demo website <a
+            class="link" href="../swishflo/">here</a>.
         </p>
       </section>
       <section data-mk-animate="fadeInUp">
         <h2>
           Websites
         </h2>
+        <h3>
+          CCIC
+        </h3>
         <p>
-          Website for a fiction local church under the name of CCIC. Used Bootstrap extensively. HTML, CSS, JavaScript.
+          One of the earliest websites I created, the <a class="link" href="../ccic">CCIC website</a> is a
+          Bootstrap-based site for a fictional church under the name of Christ Church of Interdependent Conservatives.
+          One feature of this project was the scrolling banner and the navigation bar.
+        </p>
+        <h3>
+          Sycamore Corporation
+        </h3>
+        <p>
+          The <a class="link" href="../sycamorecorporation">Sycamore Corporation website</a> was the first of many
+          website designs for a local property management company. This particular version sought to maintain the old
+          colors and content and used Bootstrap extensively. Soon the corporate website took on a more modern feel, but
+          still using many Bootstrap components.
         </p>
         <p>
-          Reconstruction of the official website for Sycamore Corporation using Bootstrap. See it <a class="link"
-            href="../sycamorecorporation">here</a>. HTML, CSS, JavaScript.
+          <a class="link" href="../sycatest">Version #2</a> incorporated new photos and content. One major issue was the
+          loading time due to uncompressed images.
         </p>
         <p>
-          Mondernized website for Sycamore Corporation, also using Bootstrap. See it <a class="link"
-            href="../sycatest">here</a>. HTML, CSS, JavaScript.
+          In contrast to the earlier dependency on Bootstrap, the <a class="link" href="../sycacorp">current website</a>
+          for Sycamore is programmed completely from scratch. Many of the
+          animated elements - particularly those found on the home page were inspired by the <a class="link"
+            href="https://outlook.live.com/owa/">Outlook Mail website</a>.
         </p>
+        <h3>
+          Phoenix
+        </h3>
         <p>
-          Current website for Sycamore Corporation, programmed from scratch. Some elements inspired by the <a
-            class="link" href="https://outlook.live.com/owa/">Outlook Mail website</a>. See it <a class="link"
-            href="../sycacorp">here</a>. HTML, CSS, JavaScript.
+          Phoenix is a PHP-based digital Christmas card project deployed in 2019. Features include password
+          verification,
+          newsletter format, cgv3 (see above), and an image gallery.
         </p>
+        <h3>
+          LUC
+        </h3>
         <p>
-          Phoenix (private digital family Christmas card project) includes password verification, newsletter, cgv3 (see
-          above), and image gallery. PHP, CSS, JavaScript.
+          While still under construction the <a class="link" href="../luc">official website</a> for Linus Uy
+          Consultancy, a landscaping firm, will showcase many MK features like animated nav bars, scrolling banners, and
+          a super responsive layout.
         </p>
+        <h3>
+          Fujisan Sushi
+        </h3>
         <p>
-          Linus Uy Consultancy (landscaping firm) official website. STILL UNDER CONSTRUCTION. See it <a class="link"
-            href="../luc">here</a>. HTML, CSS, JavaScript.
-        </p>
-        <p>
-          Found resizing issues in a friends website and decided to redraw from scratch. See it <a class="link"
-            href="../fujisanzushi/">here</a>. HTML, CSS, JavaScript.
+          After discovering resizing issues in a friends restaurant website, I decided to redraw the pages from scratch.
+          Although this version has not yet been deployed, it was a great improvement in terms of responsiveness.
+          Found resizing issues in a friends website and decided to redraw from scratch. See the website <a class="link"
+            href="../fujisanzushi/">here</a>.
         </p>
       </section>
-      <section data-mk-animate="fadeInUp">
+      <section data-mk-animate="fadeInRight">
         <h2>
           Tooltip API
         </h2>
         <p>
-          Generic tooltip API using pure JavaScript. By default the tooltip repeats the innerText of the element
-          highlighted, but a custom message may be specified. See the JavaScript <a class="link"
-            href="tooltip.js">here</a>. Add the attribute <code>onmouseenter="initTooltip(event)"</code> to each element
-          that needs the tooltip.
+          This generic tooltip API uses pure JavaScript to position a popup tooltip over HTML elements. By default, the
+          tooltip repeats the innerText of the element highlighted, but a custom message may be specified. Link to the
+          JavaScript library <a class="link" href="tooltip.js">here</a> and format the tooltip (<cod>#tooltip</cod>)
+          with CSS. Add the attribute <code>onmouseenter="initTooltip(event)"</code> to each element that needs the
+          tooltip. See the demo below:
         </p>
         <div onmouseenter="initTooltip(event)" style="border: 2px solid #53A0DE; margin-top: 10px; padding: 10px">
           <p onmouseenter="initTooltip(event, 'paragraph element')">
@@ -191,18 +249,18 @@
           <div style="width: 30px; height: 30px; background-color: #53A0DE;"
             onmouseenter="initTooltip(event, 'custom message')"></div>
         </div>
-        <script src="tooltip.js"></script>
       </section>
-      <section data-mk-animate="fadeInUp">
+      <section data-mk-animate="fadeInLeft">
         <h2>
           Free42 Skins
         </h2>
         <p>
-          A collection of elegant faceplates for the <a class="link" href="https://thomasokken.com/free42">Free42</a>
-          desktop calculator. More designs coming
+          The following is a small collection of elegant faceplates for the <a class="link"
+            href="https://thomasokken.com/free42">Free42</a>
+          desktop calculator. More designs coming.
         </p>
         <p>
-          To install a SuperSkin, simply download both the image (.gif) and inner code (.layout) files. Move them into
+          To install a SuperSkin, download both the image (.gif) and inner code (.layout) files. Move them into
           the folder containing the Free42 executable. The new themes should now appear under the "Skin" dropdown in the
           toolbar of the calculator.
         </p>
@@ -275,66 +333,452 @@
             </div>
           </div>
       </section>
-      <section>
+      <section data-mk-animate="fadeIn">
         <h2>
           Parallax
         </h2>
         <p>
-          Parallax effect for large <code>div</code>s with background image. Use the class <code>parallax</code> with the <a
-            class="link" href="parallax.js">JavaScript library</a> and <a class="link" href="parallax.css">CSS
-            library</a>. Call
-          <code>calcParallax()</code> to update.
+          The parallax plugin can be used for large <code>div</code> elements with a background image and provides a
+          dynamic window-like feeling. By default
+          <code>@media only screen and (max-width: 600px)</code>, the parallax effect reverts to normal background
+          attachment. Use the class <code>parallax</code> and link to the <a class="link"
+            href="parallax.js">JavaScript</a> and <a class="link" href="parallax.css">CSS</a> libraries. Call
+          <code>calcParallax()</code> on window resize and window scroll. See the demo below:
         </p>
-        <div class="parallax" style="padding-top: 100%; background-image: url('resources/volocofire.jpg')">
+        <div class="parallax"
+          style="padding-top: 100%; background-image: url('resources/FULL/drafting/volocofire.jpg')">
         </div>
         <link rel="stylesheet" href="parallax.css">
-        <script src="parallax.js"></script>
       </section>
-      <section>
+      <section data-mk-animate="fadeInUp">
         <h2>
           MK Animate
         </h2>
         <p>
-          Use the attribute <code>data-mk-animate</code> with the following values:
+          Use the <a class="link" href="mkanimate.css">CSS</a> and <a class="link" href="mkanimate.js">JavaScript</a>
+          libraries to add a dynamic feel to any webpage. Set the attribute <code>data-mk-animate</code> of elements to
+          be animated with the following values:
         </p>
         <ul>
-          <li>
+          <li data-mk-animate="fadeIn">
             fadeIn
           </li>
-          <li>
+          <li data-mk-animate="fadeInLeft">
             fadeInLeft
           </li>
-          <li>
+          <li data-mk-animate="fadeInRight">
             fadeInRight
           </li>
-          <li>
+          <li data-mk-animate="fadeInUp">
             fadeInUp
           </li>
-          <li>
+          <li data-mk-animate="fadeInOut">
             fadeOut
-          </li>
-          <li>
-            widen
           </li>
         </ul>
         <p>
-          Custom durations and delays can also be defined with attributes <code>data-mk-animate-duration</code> (default 1.2) and
-          <code>data-mk-animate-delay</code> (default 0) in seconds.
-          Uses <a class="link" href="mkanimate.css">CSS</a> and <a class="link" href="mkanimate.js">JavaScript</a>.
+          Custom durations and delays can also be defined with attributes <code>data-mk-animate-duration</code> (default
+          1.2) and <code>data-mk-animate-delay</code> (default 0) in seconds.
         </p>
         <link rel="stylesheet" href="mkanimate.css">
-        <script src="mkanimate.js"></script>
       </section>
     </div>
     <div class="contentbox" id="drafting">
       <h1>
         Drafting
       </h1>
+      <p>
+        SketchUp, AutoCAD, Raylectron, Indigo. Click images to view full size.
+      </p>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Shipping Container House
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/shipping_container_1.jpg">
+          <figcaption>
+            Raylectron renderer: front view
+          </figcaption>
+        </figure>
+        <p>
+          Imagine a home that can be moved anywhere on the globe, and plopped on the ground with barely any foundation
+          necessary. Enter the Shipping Container House, a tiny house built into a standard shipping container. While
+          this idea is currently still a concept, its possibilities are boundless.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/shipping_container_2.jpg">
+          <figcaption>
+            Raylectron renderer: interior
+          </figcaption>
+        </figure>
+        <p>
+          I drew up over a dozen arrangements for the Shipping Contaniner House in SketchUp, but only a few of the
+          designs really made much sense. One potential concern is the loss of structural support around the window and
+          door frames.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/shipping_container_3.jpg">
+          <figcaption>
+            SketchUp native renderer: floorplan
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Pipe Schematics
+        </h2>
+        <p>
+          These two hand drawings come from a drafting course I took in 2018.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/pipes_1.jpg">
+          <img src="resources/THUMB/drafting/pipes_2.jpg">
+          <figcaption>
+            pipe schematics
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Work Station 1
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/workstation_1.jpg">
+          <img src="resources/THUMB/drafting/workstation_2.jpg">
+          <figcaption>
+            Raylectron renderer: front and back
+          </figcaption>
+        </figure>
+        <p>
+          Our family often watches videos and movies at dinner time and I came up with this mobile work station to make
+          moving the desktop back and forth a little less tedious. The plan is to install an APC battery backup on the
+          work station so that the desktop can be unplugged and replugged without having to power off. Modelled in
+          SketchUp.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/workstation_3.jpg">
+          <figcaption>
+            Raylectron renderer: side plate closeup
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          VolocoFire Roadster
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/volocofire.jpg">
+          <figcaption>
+            AutoCAD native renderer: front
+          </figcaption>
+        </figure>
+        <p>
+          One of the earliest models I created, this fantastic sports car is merely a concept model at this point, as
+          evidenced by the suspicious lack of connection between wheel and chasis.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Briarwood Type 2 Unit
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/briar_1.jpg">
+          <img src="resources/THUMB/drafting/briar_3.jpg">
+          <figcaption>
+            AutoCAD native renderer: top view
+          </figcaption>
+        </figure>
+        <p>
+          AutoCAD drawing reconstructed from the floorplan of an existing unit of the Briarwood flats.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/briar_2.jpg">
+          <img src="resources/THUMB/drafting/briar_4.jpg">
+          <figcaption>
+            AutoCAD native renderer: interior
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Compact Kitchen
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/compact_kitchen.jpg">
+          <figcaption>
+            AutoCAD native renderer
+          </figcaption>
+        </figure>
+        <p>
+          Here is one possible kitchen design for Shipping Container House (see above) drawn in AutoCAD.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Harp Switch
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/harp_switch_2.jpg">
+          <img src="resources/THUMB/drafting/harp_switch_1.jpg">
+          <figcaption>
+            Reference photo and Indigo render
+          </figcaption>
+        </figure>
+        <p>
+          I modelled this quintessential railroad component in SketchUp for a friend, who is an avid model train
+          builder. He plans to make dozens of this component using his resin 3d printer.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Sponge Holder
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/sponge_holder.jpg">
+          <figcaption>
+            AutoCAD native renderer: machining sequence
+          </figcaption>
+        </figure>
+        <p>
+          Here is a sponge holder that I designed, modelled, and actually milled from cedar.
+        </p>
+      </section>
     </div>
     <div class="contentbox" id="art">
       <h1>
         Art
       </h1>
+      <p>
+        Pencil and paint hand artwork. Computer art. Click images to view full size.
+      </p>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Corn Rat
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/corn_rat.jpg">
+          <figcaption>
+            Corn Rat
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project. Pencil on bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          Duck
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/duck.jpg">
+          <figcaption>
+            Duck
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project, but used reference image from another source. Pencil on bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Gaudy Leaf Frog
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/gaudy_leaf_frog.jpg">
+          <figcaption>
+            Gaudy Leaf Frog
+          </figcaption>
+        </figure>
+        <p>
+          Reference image from Paul Yoder's <i>The Work of Thy Fingers</i> nature book. Pencil on bond paper. Highlights
+          with acrylic. Grid method for outline. Submitted to but not published on <i>Nature Friend</i>.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Belted King Fisher
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/king_fisher.jpg">
+          <figcaption>
+            Belted King Fisher
+          </figcaption>
+        </figure>
+        <p>
+          Instructions and source image for this project provided by <i>Nature Friend</i> "You Can Draw." Pencil
+          on bond paper. Highlights with acrylic. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Red Fox
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/red_fox.jpg">
+          <figcaption>
+            Red Fox
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project. Pencil on thicker bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          Twin-spotted Spiketail
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/spiketail.jpg">
+          <figcaption>
+            Twin-spotted Spiketail
+          </figcaption>
+        </figure>
+        <p>
+          Reference image courtesy of Michael Moore. Pencil on bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Tufted Titmouse
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/tufted_titmouse.jpg">
+          <figcaption>
+            Tufted Titmouse
+          </figcaption>
+        </figure>
+        <p>
+          Reference image from the cover of a <i>Nature Friend</i> periodical. Pencil on bond paper. Grid method for
+          outline. Published on <i>Nature Friend</i> as a "You Can Draw" project.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Turtle
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/turtle.jpg">
+          <figcaption>
+            Turtle
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project. Used plenty of reference images from our pond for the grasses, stones, and leaves. Pencil on
+          bond paper. Grid method for outline.
+        </p>
+      </section>
+    </div>
+    <div class="contentbox" id="paperarchitecture">
+      <h1>
+        Paper Architecture
+      </h1>
+      <p>
+        Popup cards, notebooks, etc.
+      </p>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Canyon Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/canyon.jpg">
+          <figcaption>
+            Canyon
+          </figcaption>
+        </figure>
+        <p>
+          Canyon popup card featuring a sheer dropoff and a waterfall cascading into a shady pool.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Rapunzel Castle Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/castle.jpg">
+          <figcaption>
+            Rapunzel Castle
+          </figcaption>
+        </figure>
+        <p>
+          When this design first began to take shape, the quintessential fairytale-shaped castle reminded me of the
+          legendary Rapunzel, after which this pattern is named.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Float Plane Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/float_plane.jpg">
+          <figcaption>
+            Float Plane
+          </figcaption>
+        </figure>
+        <p>
+          Although it is not visible in this image, the float plane has one wingtip protruding out of the card and
+          appearing when the card is closed. Many thanks to Linus for co-designing this popup.
+        </p>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          House Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/house.jpg">
+          <figcaption>
+            House
+          </figcaption>
+        </figure>
+        <p>
+          This design is one of my earliest popups. Despite the simplistic architecture, the house popup is one of the
+          best sellers at farmers' markets.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Livingroom 1 Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/livingroom_1.jpg">
+          <figcaption>
+            Livingroom 1
+          </figcaption>
+        </figure>
+        <p>
+          Livingroom 1 speaks of a quiet study, maybe a good storybook on a cold winter's night...
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Livingroom 2 Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/livingroom_2.jpg">
+          <figcaption>
+            Livingroom 2
+          </figcaption>
+        </figure>
+        <p>
+          Livingroom 2, also known as The Duck, is one of the more difficult patterns to cut by hand. At the same time,
+          the
+          complexity of this design makes it one of the most popular.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Mountain Dwelling Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/mountain_dwelling.jpg">
+          <figcaption>
+            Mountain Dwelling
+          </figcaption>
+        </figure>
+        <p>
+          Inspired by the beautiful hills and forests around my Washington home, the Mountain Dwelling popup card
+          emphasizes the cozy cottage among soaring pines.
+        </p>
+      </section>
     </div>
     <div class="contentbox" id="miscellaneous">
       <h1>
@@ -348,17 +792,13 @@
           Typography
         </h2>
         <p>
-          Found this elegant serif font on Font Squirrel and re-uploaded so that it could be linked to via CSS <code>@media</code>,
+          Found this elegant serif font on Font Squirrel and re-uploaded so that it could be linked to via CSS
+          <code>@media</code>,
           etc. See it <a class="link" href="../heuristica/">here</a>.
         </p>
       </section>
     </div>
   </main>
-  <!-- <div class="device-frame">
-    <div class="device-screen">
-      <iframe class="device-html" src="https://mikjakrych.github.io/luc" loading="lazy"></iframe>
-    </div>
-  </div> -->
   <div id="alert">
     <img src="resources/cone.gif" width=100px height=100px></img>
     <h1>
@@ -380,6 +820,9 @@
   </aside>
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="cgv3.js"></script>
+  <script src="tooltip.js"></script>
+  <script src="parallax.js"></script>
+  <script src="mkanimate.js"></script>
   <script>
     window.onload = function () {
       animate();
