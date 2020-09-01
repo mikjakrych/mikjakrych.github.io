@@ -1,261 +1,843 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Nanum Pen Script' rel='stylesheet'>
   <meta charset="UTF-8">
-  <meta name="description" content="MK Studios">
-  <meta name="keywords" content="mikja,krych,onine,projects,css,javascript,html,sycamore,sycacorp,perry,thompson,gallery,john1site,crystalgrower,cimarron library">
-  <meta name="author" content="Mikja Krych">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" type="image/x-icon" href="resources/mk.gif"/>
-  <title>MK Studios | Home</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://mikjakrych.github.io/resources/mk.gif" />
+  <title>MK Studios</title>
 </head>
+
 <body>
-  <div id = "preloader" data-animate = "fadeOut" data-animate-duration = ".8"></div>
-  <nav id = "navbar" class = "navdefault">
-    <a class = "navitemdefault" href = "#home">Home</a>
-    <a class = "navitemdefault" href = "#about">About</a>
-    <a class = "navitemdefault" href = "#projects">Projects</a>
-    <a class = "navitemdefault" href = "#sister">Sister Sites</a>
-  </nav>
-  <div id = "navtoggle" class="navtoggledefault" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
+  <div id="preloader" data-mk-animate="fadeOut" data-mk-animate-duration=".8"></div>
+  <div id="top"></div>
+  <header id="header">
+    <a id="logo" href="#top"></a>
+    <nav id="nav-wrap">
+      <ul id="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="#top">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#programming">Programming</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#drafting">Drafting</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#art">Art</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#paperarchitecture">Paper Architecture</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#miscellaneous">Miscellaneous</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div id="nav-toggle" onclick="toggleNav()">
+    <div id="nav-toggle-1"></div>
+    <div id="nav-toggle-2"></div>
+    <div id="nav-toggle-3"></div>
   </div>
-  <div id = "escaper" class = "escaper" onclick = "toggleNav('navbar', 'navopen', 'navitemdefault', 'navitemopen', 'navtoggle', 'navtoggleopen', 'escaper', 'escaperopen')">
-  </div>
-  <div class = "parallax" id = "home" style = "height:100%; min-height: 550px; background-image: url('resources/volocofire.jpg')">
-    <img class = "logo" src="resources/mk.gif" data-animate = "fadeInUp" data-animate-delay = ".3">
-    <h1 data-animate = "fadeInUp" data-animate-delay = ".5">
-      MK Studios | Online
-    </h1>
-    <hr data-animate = "widen">
-    <h2 data-animate = "fadeIn" data-animate-delay = ".8">
-      Mikja's official website
-    </h2>
-  </div>
-  <div class = "bodycontainer" id = "about">
-    <div class = "bodyblock" data-animate = "fadeInLeft">
+  <div id="nav-escaper" onclick="toggleNav()"></div>
+  <main>
+    <div id="title-wrap">
+      <span id="title" data-mk-animate="fadeInUp">
+        Mk Studios | Online
+      </span>
+      <span id="subtitle" data-mk-animate="fadeInUp" data-mk-animate-delay=".2">
+        Mikja's official website
+      </span>
+    </div>
+    <div class="contentbox" id="about">
+      <h1>
+        About
+      </h1>
       <p>
-        MK Online contains all of my newest programming and art projects. As an aspiring coder, I enjoy working with Hyper Text Markup Language (HTML), Cascading Style Sheets (CSS), and Javascript (JS). One of my latest adventures is learning C++, one of the most fundamental computer languages. I hope to see many C++ games and other applications below soon. Art projects posted will include photorealistic renderings, architectural designs, and miscellaneous hand drawings.
+        MK Online contains all of my newest programming and art projects. As a coding enthusiast, I enjoy working with
+        Hyper Text Markup Language (HTML), Cascading Style Sheets (CSS), Javascript (JS), and PHP. One of my latest
+        adventures is learning Rust, which is closely related to C++, one of the most fundamental computer languages. I
+        hope to see many C++ games and other applications below soon. Art and drafting projects posted will include
+        photorealistic renderings, architectural designs, and miscellaneous hand drawings.
       </p>
       <p>
         This website is constantly being updated, so stay posted for lots of interesting projects.
       </p>
     </div>
-  </div>
-  <div class = "parallax" id = "projects" style = "background-image: url(resources/programming.jpg)">
-    <h1 data-animate = "fadeIn">
-      Projects
-    </h1>
-    <hr data-animate = "widen">
-    <h2 data-animate = "fadeIn">
-      Coding and Art
-    </h2>
-  </div>
-  <div class = "bodycontainer">
-    <div class = "bodyblock">
-      <h3>
-        SuperSkin
-      </h3>
-      <hr data-animate = "widen">
-      <p data-animate = "fadeInLeft">
-        SuperSkin is a collection of elegant faceplates for the <a class = "link" href = "https://thomasokken.com/free42">Free42</a> desktop calculator. This collection was assembled through a joint effort by Perry Thompson and MK Studios. New faceplate designs are always coming!
+    <div class="contentbox" id="programming">
+      <h1>
+        Programming
+      </h1>
+      <p>
+        Old projects and new projects. Finished projects and on-going projects. Also a few code snippets to use. Many of
+        the website special effects were inspired by elements seen elsewhere on the Internet. HTML, CSS, JavaScript,
+        PHP, mySQL. Rust and C++ coming soon.
       </p>
-      <p data-animate = "fadeInRight">
-        To install a SuperSkin, simply download both the image (.gif) and inner code (.layout) files. Move them into the folder containing the Free42 executable. The new themes should now appear under the "Skin" dropdown in the toolbar of the calculator.
-      </p>
-      <div class = "cardcontainer">
-        <div class = "card" style = "background-image:url(resources/superskin/bbq.gif)" data-animate = "fadeIn">
-          <div class = "cardslicer">
-            <p class = "cardtitle">
-              BBQ
-            </p>
-            <a class = "material-icons cardbutton" href="resources/superskin/bbq.gif">
-              &#xe8ff;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/bbq.gif" download>
-              &#xe251;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/bbq.layout" download>
-              &#xe86f;
-            </a>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          Bouncy Preloader
+        </h2>
+        <p>
+          Template bouncy preloader using pure CSS animations and no JavaScript. The CSS source file can be found <a
+            class="link" href="bouncypreloader.css">here</a>. The two images needed are the <a class="link"
+            href="resources/ring.gif">outer ring</a> and the <a class="link"
+            href="resources/core.gif">core</a>.
+        </p>
+        <link rel="stylesheet" href="bouncypreloader.css">
+        <div class="preloader">
+          <div class="preloaderinner">
+            <div class="preloaderring"></div>
+            <div class="preloadercore"></div>
           </div>
         </div>
-        <div class = "card" style = "background-image:url(resources/superskin/moonlight.gif)" data-animate = "fadeIn" data-animate-delay=".2">
-          <div class = "cardslicer">
-            <p class = "cardtitle">
-              Moonlight
-            </p>
-            <a class = "material-icons cardbutton" href="resources/superskin/moonlight.gif">
-              &#xe8ff;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/moonlight.gif" download>
-              &#xe251;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/moonlight.layout" download>
-              &#xe86f;
-            </a>
-          </div>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Buttons CSS snippets
+        </h2>
+        <link rel="stylesheet" href="buttons.css">
+        <p>
+          Copy necessary CSS snippets from <a class="link" href="buttons.css">the css file</a> or link directly. Add one
+          of the following classes to <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> elements:
+        </p>
+        <ul>
+          <li>
+            .slidedouble
+          </li>
+          <li>
+            .floatoutline
+          </li>
+          <li>
+            .outline
+          </li>
+          <li>
+            .shine
+          </li>
+          <li>
+            .slidearrow
+          </li>
+          <li>
+            .liftup
+          </li>
+          <li>
+            .doublebars
+          </li>
+        </ul>
+        <button class="slidedouble">.slidedouble</button>
+        <button class="floatoutline">.floatoutline</button>
+        <button class="outline">.outline</button>
+        <button class="shine">.shine</button>
+        <button class="slidearrow">.slidearrow</button>
+        <button class="liftup">.liftup</button>
+        <button class="doublebars">.doublebars</button>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Crystal Grower v3
+        </h2>
+        <p>
+          Crystal Grower is a vanilla JavaScript video game painted on an HTML canvas. The instructions are as follows:
+        </p>
+        <ul>
+          <li>
+            Click and hold the mouse button over the game area to make the crystal seed float up.
+          </li>
+          <li>
+            Grow the crystal by catching the non-blue solution droplets. The solute material will precipitate onto the
+            crystal, increasing its value. The growth amount is proportional to the size of the solution droplet.
+          </li>
+          <li>
+            Avoid touching the blue water droplets, which dissolve the crystal, reducing its value. The shrink amount is
+            proportional to the size of the wate droplet.
+          </li>
+          <li>
+            Avoid the red dynamite blocks, which will shatter the crystal, bringing its value down to zero.
+          </li>
+        </ul>
+        <canvas id="cgv3" width="400" height="400"></canvas>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Swishflo
+        </h2>
+        <p>
+          Swishflo is CSS/JS addon that simulates 3-dimentional depression of an element. Use the class
+          <code>swishflo</code> and link to the <a class="link"
+            href="https://mikjakrych.github.io/swishflo/swishflo.js">JavaScript library</a>. See demo website <a
+            class="link" href="../swishflo/">here</a>.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Websites
+        </h2>
+        <h3>
+          CCIC
+        </h3>
+        <p>
+          One of the earliest websites I created, the <a class="link" href="../ccic">CCIC website</a> is a
+          Bootstrap-based site for a fictional church under the name of Christ Church of Interdependent Conservatives.
+          One feature of this project was the scrolling banner and the navigation bar.
+        </p>
+        <h3>
+          Sycamore Corporation
+        </h3>
+        <p>
+          The <a class="link" href="../sycamorecorporation">Sycamore Corporation website</a> was the first of many
+          website designs for a local property management company. This particular version sought to maintain the old
+          colors and content and used Bootstrap extensively. Soon the corporate website took on a more modern feel, but
+          still using many Bootstrap components.
+        </p>
+        <p>
+          <a class="link" href="../sycatest">Version #2</a> incorporated new photos and content. One major issue was the
+          loading time due to uncompressed images.
+        </p>
+        <p>
+          In contrast to the earlier dependency on Bootstrap, the <a class="link" href="../sycacorp">current website</a>
+          for Sycamore is programmed completely from scratch. Many of the
+          animated elements - particularly those found on the home page were inspired by the <a class="link"
+            href="https://outlook.live.com/owa/">Outlook Mail website</a>.
+        </p>
+        <h3>
+          Phoenix
+        </h3>
+        <p>
+          Phoenix is a PHP-based digital Christmas card project deployed in 2019. Features include password
+          verification,
+          newsletter format, cgv3 (see above), and an image gallery.
+        </p>
+        <h3>
+          LUC
+        </h3>
+        <p>
+          While still under construction the <a class="link" href="../luc">official website</a> for Linus Uy
+          Consultancy, a landscaping firm, will showcase many MK features like animated nav bars, scrolling banners, and
+          a super responsive layout.
+        </p>
+        <h3>
+          Fujisan Sushi
+        </h3>
+        <p>
+          After discovering resizing issues in a friends restaurant website, I decided to redraw the pages from scratch.
+          Although this version has not yet been deployed, it was a great improvement in terms of responsiveness.
+          Found resizing issues in a friends website and decided to redraw from scratch. See the website <a class="link"
+            href="../fujisanzushi/">here</a>.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Tooltip API
+        </h2>
+        <p>
+          This generic tooltip API uses pure JavaScript to position a popup tooltip over HTML elements. By default, the
+          tooltip repeats the innerText of the element highlighted, but a custom message may be specified. Link to the
+          JavaScript library <a class="link" href="tooltip.js">here</a> and format the tooltip (<cod>#tooltip</cod>)
+          with CSS. Add the attribute <code>onmouseenter="initTooltip(event)"</code> to each element that needs the
+          tooltip. See the demo below:
+        </p>
+        <div onmouseenter="initTooltip(event)" style="border: 2px solid #53A0DE; margin-top: 10px; padding: 10px">
+          <p onmouseenter="initTooltip(event, 'paragraph element')">
+            A paragraph element <b onmouseenter="initTooltip(event)">and a nested section</b>
+          </p>
+          <div style="width: 30px; height: 30px; background-color: #53A0DE;"
+            onmouseenter="initTooltip(event, 'custom message')"></div>
         </div>
-        <div class = "card" style = "background-image:url(resources/superskin/mwb.gif)" data-animate = "fadeIn" data-animate-delay=".4">
-          <div class = "cardslicer">
-            <p class = "cardtitle">
-              MWB
-            </p>
-            <a class = "material-icons cardbutton" href="resources/superskin/mwb.gif">
-              &#xe8ff;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/mwb.gif" download>
-              &#xe251;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/mwb.layout" download>
-              &#xe86f;
-            </a>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Free42 Skins
+        </h2>
+        <p>
+          The following is a small collection of elegant faceplates for the <a class="link"
+            href="https://thomasokken.com/free42">Free42</a>
+          desktop calculator. More designs coming.
+        </p>
+        <p>
+          To install a SuperSkin, download both the image (.gif) and inner code (.layout) files. Move them into
+          the folder containing the Free42 executable. The new themes should now appear under the "Skin" dropdown in the
+          toolbar of the calculator.
+        </p>
+        <div class="card-wrap">
+          <div class="card" style="background-image:url(resources/superskin/bbq.gif)" data-mk-animate="fadeIn">
+            <div class="card-slicer">
+              <p class="card-title">
+                BBQ
+              </p>
+              <a class="material-icons card-button" href="resources/superskin/bbq.gif">
+                &#xe8ff;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/bbq.gif" download>
+                &#xe251;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/bbq.layout" download>
+                &#xe86f;
+              </a>
+            </div>
           </div>
-        </div>
-        <div class = "card" style = "background-image:url(resources/superskin/original.gif)" data-animate = "fadeIn" data-animate-delay=".6">
-          <div class = "cardslicer">
-            <p class = "cardtitle">
-              Classic
-            </p>
-            <a class = "material-icons cardbutton" href="resources/superskin/original.gif">
-              &#xe8ff;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/original.gif" download>
-              &#xe251;
-            </a>
-            <a class = "material-icons cardbutton" href="resources/superskin/original.layout" download>
-              &#xe86f;
-            </a>
+          <div class="card" style="background-image:url(resources/superskin/moonlight.gif)" data-mk-animate="fadeIn"
+            data-mk-animate-delay=".2">
+            <div class="card-slicer">
+              <p class="card-title">
+                Moonlight
+              </p>
+              <a class="material-icons card-button" href="resources/superskin/moonlight.gif">
+                &#xe8ff;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/moonlight.gif" download>
+                &#xe251;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/moonlight.layout" download>
+                &#xe86f;
+              </a>
+            </div>
           </div>
+          <div class="card" style="background-image:url(resources/superskin/mwb.gif)" data-mk-animate="fadeIn"
+            data-mk-animate-delay=".4">
+            <div class="card-slicer">
+              <p class="card-title">
+                MWB
+              </p>
+              <a class="material-icons card-button" href="resources/superskin/mwb.gif">
+                &#xe8ff;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/mwb.gif" download>
+                &#xe251;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/mwb.layout" download>
+                &#xe86f;
+              </a>
+            </div>
+          </div>
+          <div class="card" style="background-image:url(resources/superskin/original.gif)" data-mk-animate="fadeIn"
+            data-mk-animate-delay=".6">
+            <div class="card-slicer">
+              <p class="card-title">
+                Classic
+              </p>
+              <a class="material-icons card-button" href="resources/superskin/original.gif">
+                &#xe8ff;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/original.gif" download>
+                &#xe251;
+              </a>
+              <a class="material-icons card-button" href="resources/superskin/original.layout" download>
+                &#xe86f;
+              </a>
+            </div>
+          </div>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          Parallax
+        </h2>
+        <p>
+          The parallax plugin can be used for large <code>div</code> elements with a background image and provides a
+          dynamic window-like feeling. By default
+          <code>@media only screen and (max-width: 600px)</code>, the parallax effect reverts to normal background
+          attachment. Use the class <code>parallax</code> and link to the <a class="link"
+            href="parallax.js">JavaScript</a> and <a class="link" href="parallax.css">CSS</a> libraries. Call
+          <code>calcParallax()</code> on window resize and window scroll. See the demo below:
+        </p>
+        <div class="parallax"
+          style="padding-top: 100%; background-image: url('resources/FULL/drafting/volocofire.jpg')">
         </div>
-      </div>
+        <link rel="stylesheet" href="parallax.css">
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          MK Animate
+        </h2>
+        <p>
+          Use the <a class="link" href="mkanimate.css">CSS</a> and <a class="link" href="mkanimate.js">JavaScript</a>
+          libraries to add a dynamic feel to any webpage. Set the attribute <code>data-mk-animate</code> of elements to
+          be animated with the following values:
+        </p>
+        <ul>
+          <li data-mk-animate="fadeIn">
+            fadeIn
+          </li>
+          <li data-mk-animate="fadeInLeft">
+            fadeInLeft
+          </li>
+          <li data-mk-animate="fadeInRight">
+            fadeInRight
+          </li>
+          <li data-mk-animate="fadeInUp">
+            fadeInUp
+          </li>
+          <li data-mk-animate="fadeInOut">
+            fadeOut
+          </li>
+        </ul>
+        <p>
+          Custom durations and delays can also be defined with attributes <code>data-mk-animate-duration</code> (default
+          1.2) and <code>data-mk-animate-delay</code> (default 0) in seconds.
+        </p>
+        <link rel="stylesheet" href="mkanimate.css">
+      </section>
     </div>
-    <div class = "bodyblock" data-animate = "fadeInUp">
-      <h3>
-        Crystal Grower v3
-      </h3>
-      <hr>
-      <p data-animate = "fadeInRight">
-        Crystal Grower is a Javascript-based video game which I first built on Khan Academy. Version 3 is a complete rebuild which does not use any external libraries.
-      </p>
-      <p data-animate = "fadeIn">
-        Remember, Crystal Grower v3 is merely a video game (don't spend too much time on it!). If you are interested in <em>real</em> crystal growing, do some research on how crystals are made and how they are used. The instructions are as follows:
-      </p>
-      <ul data-animate = "fadeInLeft">
-        <li>
-          Click and hold the mouse button over the game area to make the crystal seed float up. (This is more difficult on tap screen devices.)
-        </li>
-        <li>
-          Try to catch the solution droplets (they're a different color each time). The solute material will precipitate onto your crystal and make it grow larger. The amount your crystal grows depends on the size of the droplet.
-        </li>
-        <li>
-          Avoid the water droplets (always blue). These will dissolve some of your crystal away reducing the value. Once again, the amount the solvent shrinks your crystal depends on the size of the solvent drop.
-        </li>
-        <li>
-          Try all you can to avoid the blocks of dynamite. They will shatter your crystal, whose value becomes absolutely <em>zero</em>.
-        </li>
-      </ul>
-      <!-- <p data-animate = "fadeIn">
-        CGV3 is temporarily unavailable on this website.
-      </p> -->
-      <canvas id="mycanvas" data-animate = "fadeIn"></canvas>
-    </div>
-    <div class = "bodyblock" data-animate = "fadeInRight">
-      <h3>
-        John 1 Site
-      </h3>
-      <hr>
+    <div class="contentbox" id="drafting">
+      <h1>
+        Drafting
+      </h1>
       <p>
-        The John 1 Site is a semi-permanent webpage primarily created to test z-index and position:sticky functions. It would be interesting to transform this website into a large database to store my memory verses. But for now, the only content is a section from chapter one of the Gospel of John.
+        SketchUp, AutoCAD, Raylectron, Indigo. Click images to view full size.
       </p>
-      <a class = "btn" href = "john1site/john1site.html">Read John1</a>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Shipping Container House
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/shipping_container_1.jpg">
+          <figcaption>
+            Raylectron renderer: front view
+          </figcaption>
+        </figure>
+        <p>
+          Imagine a home that can be moved anywhere on the globe, and plopped on the ground with barely any foundation
+          necessary. Enter the Shipping Container House, a tiny house built into a standard shipping container. While
+          this idea is currently still a concept, its possibilities are boundless.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/shipping_container_2.jpg">
+          <figcaption>
+            Raylectron renderer: interior
+          </figcaption>
+        </figure>
+        <p>
+          I drew up over a dozen arrangements for the Shipping Contaniner House in SketchUp, but only a few of the
+          designs really made much sense. One potential concern is the loss of structural support around the window and
+          door frames.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/shipping_container_3.jpg">
+          <figcaption>
+            SketchUp native renderer: floorplan
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Pipe Schematics
+        </h2>
+        <p>
+          These two hand drawings come from a drafting course I took in 2018.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/pipes_1.jpg">
+          <img src="resources/THUMB/drafting/pipes_2.jpg">
+          <figcaption>
+            pipe schematics
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Work Station 1
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/workstation_1.jpg">
+          <img src="resources/THUMB/drafting/workstation_2.jpg">
+          <figcaption>
+            Raylectron renderer: front and back
+          </figcaption>
+        </figure>
+        <p>
+          Our family often watches videos and movies at dinner time and I came up with this mobile work station to make
+          moving the desktop back and forth a little less tedious. The plan is to install an APC battery backup on the
+          work station so that the desktop can be unplugged and replugged without having to power off. Modelled in
+          SketchUp.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/workstation_3.jpg">
+          <figcaption>
+            Raylectron renderer: side plate closeup
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          VolocoFire Roadster
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/volocofire.jpg">
+          <figcaption>
+            AutoCAD native renderer: front
+          </figcaption>
+        </figure>
+        <p>
+          One of the earliest models I created, this fantastic sports car is merely a concept model at this point, as
+          evidenced by the suspicious lack of connection between wheel and chasis.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Briarwood Type 2 Unit
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/briar_1.jpg">
+          <img src="resources/THUMB/drafting/briar_3.jpg">
+          <figcaption>
+            AutoCAD native renderer: top view
+          </figcaption>
+        </figure>
+        <p>
+          AutoCAD drawing reconstructed from the floorplan of an existing unit of the Briarwood flats.
+        </p>
+        <figure>
+          <img src="resources/THUMB/drafting/briar_2.jpg">
+          <img src="resources/THUMB/drafting/briar_4.jpg">
+          <figcaption>
+            AutoCAD native renderer: interior
+          </figcaption>
+        </figure>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Compact Kitchen
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/compact_kitchen.jpg">
+          <figcaption>
+            AutoCAD native renderer
+          </figcaption>
+        </figure>
+        <p>
+          Here is one possible kitchen design for Shipping Container House (see above) drawn in AutoCAD.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Harp Switch
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/harp_switch_2.jpg">
+          <img src="resources/THUMB/drafting/harp_switch_1.jpg">
+          <figcaption>
+            Reference photo and Indigo render
+          </figcaption>
+        </figure>
+        <p>
+          I modelled this quintessential railroad component in SketchUp for a friend, who is an avid model train
+          builder. He plans to make dozens of this component using his resin 3d printer.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Sponge Holder
+        </h2>
+        <figure>
+          <img src="resources/THUMB/drafting/sponge_holder.jpg">
+          <figcaption>
+            AutoCAD native renderer: machining sequence
+          </figcaption>
+        </figure>
+        <p>
+          Here is a sponge holder that I designed, modelled, and actually milled from cedar.
+        </p>
+      </section>
     </div>
-    <div class = "bodyblock" data-animate = "fadeInLeft">
-      <h3>
-        Cimarron Library
-      </h3>
-      <hr>
+    <div class="contentbox" id="art">
+      <h1>
+        Art
+      </h1>
       <p>
-        Cimarron Library is going to be a .php- and MariaDB-based book tracking system where users can get information about books in the Cimarron library and check books in and out. Much work still needs to be done on this project, but there is already a short <a class = "link" href = "cimarronlibrary/cimarronlibrary.html">video demo</a> to raise interest in this project.
+        Pencil and paint hand artwork. Computer art. Click images to view full size.
       </p>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Corn Rat
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/corn_rat.jpg">
+          <figcaption>
+            Corn Rat
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project. Pencil on bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          Duck
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/duck.jpg">
+          <figcaption>
+            Duck
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project, but used reference image from another source. Pencil on bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Gaudy Leaf Frog
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/gaudy_leaf_frog.jpg">
+          <figcaption>
+            Gaudy Leaf Frog
+          </figcaption>
+        </figure>
+        <p>
+          Reference image from Paul Yoder's <i>The Work of Thy Fingers</i> nature book. Pencil on bond paper. Highlights
+          with acrylic. Grid method for outline. Submitted to but not published on <i>Nature Friend</i>.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Belted King Fisher
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/king_fisher.jpg">
+          <figcaption>
+            Belted King Fisher
+          </figcaption>
+        </figure>
+        <p>
+          Instructions and source image for this project provided by <i>Nature Friend</i> "You Can Draw." Pencil
+          on bond paper. Highlights with acrylic. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Red Fox
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/red_fox.jpg">
+          <figcaption>
+            Red Fox
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project. Pencil on thicker bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          Twin-spotted Spiketail
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/spiketail.jpg">
+          <figcaption>
+            Twin-spotted Spiketail
+          </figcaption>
+        </figure>
+        <p>
+          Reference image courtesy of Michael Moore. Pencil on bond paper. Grid method for outline.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Tufted Titmouse
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/tufted_titmouse.jpg">
+          <figcaption>
+            Tufted Titmouse
+          </figcaption>
+        </figure>
+        <p>
+          Reference image from the cover of a <i>Nature Friend</i> periodical. Pencil on bond paper. Grid method for
+          outline. Published on <i>Nature Friend</i> as a "You Can Draw" project.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Turtle
+        </h2>
+        <figure>
+          <img src="resources/THUMB/art/turtle.jpg">
+          <figcaption>
+            Turtle
+          </figcaption>
+        </figure>
+        <p>
+          ArtPak project. Used plenty of reference images from our pond for the grasses, stones, and leaves. Pencil on
+          bond paper. Grid method for outline.
+        </p>
+      </section>
     </div>
-  </div>
-  <div class = "parallax" id = "sister" style = "height: 50%; background-image: url(resources/blueberry.jpg)">
-    <h1 data-animate = "fadeInUp">
-      Sister Sites
-    </h1>
-    <hr data-animate = "widen">
-    <h2 data-animate = "fadeIn" data-animate-delay = ".2">
-      You might be interested in...
-    </h2>
-  </div>
-  <div class = "bodycontainer">
-    <div class = "bodyblock" data-animate = "fadeIn">
-      <h3>
-        Sycacorp.com
-      </h3>
-      <hr>
+    <div class="contentbox" id="paperarchitecture">
+      <h1>
+        Paper Architecture
+      </h1>
       <p>
-        This official home of Bellingham Leasing (also known as Sycamore Corporation) was designed and built by MK Studios in 2018. Sycacorp.com uses Bootstrap's CSS and Javascript includes.
+        Popup cards, notebooks, etc.
       </p>
-      <a class = "btn" href = "https://sycacorp.com/">Go Sycacorp</a>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Canyon Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/canyon.jpg">
+          <figcaption>
+            Canyon
+          </figcaption>
+        </figure>
+        <p>
+          Canyon popup card featuring a sheer dropoff and a waterfall cascading into a shady pool.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Rapunzel Castle Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/castle.jpg">
+          <figcaption>
+            Rapunzel Castle
+          </figcaption>
+        </figure>
+        <p>
+          When this design first began to take shape, the quintessential fairytale-shaped castle reminded me of the
+          legendary Rapunzel, after which this pattern is named.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Float Plane Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/float_plane.jpg">
+          <figcaption>
+            Float Plane
+          </figcaption>
+        </figure>
+        <p>
+          Although it is not visible in this image, the float plane has one wingtip protruding out of the card and
+          appearing when the card is closed. Many thanks to Linus for co-designing this popup.
+        </p>
+      </section>
+      <section data-mk-animate="fadeIn">
+        <h2>
+          House Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/house.jpg">
+          <figcaption>
+            House
+          </figcaption>
+        </figure>
+        <p>
+          This design is one of my earliest popups. Despite the simplistic architecture, the house popup is one of the
+          best sellers at farmers' markets.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInLeft">
+        <h2>
+          Livingroom 1 Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/livingroom_1.jpg">
+          <figcaption>
+            Livingroom 1
+          </figcaption>
+        </figure>
+        <p>
+          Livingroom 1 speaks of a quiet study, maybe a good storybook on a cold winter's night...
+        </p>
+      </section>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Livingroom 2 Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/livingroom_2.jpg">
+          <figcaption>
+            Livingroom 2
+          </figcaption>
+        </figure>
+        <p>
+          Livingroom 2, also known as The Duck, is one of the more difficult patterns to cut by hand. At the same time,
+          the
+          complexity of this design makes it one of the most popular.
+        </p>
+      </section>
+      <section data-mk-animate="fadeInRight">
+        <h2>
+          Mountain Dwelling Popup Card
+        </h2>
+        <figure>
+          <img src="resources/THUMB/paperarchitecture/mountain_dwelling.jpg">
+          <figcaption>
+            Mountain Dwelling
+          </figcaption>
+        </figure>
+        <p>
+          Inspired by the beautiful hills and forests around my Washington home, the Mountain Dwelling popup card
+          emphasizes the cozy cottage among soaring pines.
+        </p>
+      </section>
     </div>
-    <div class = "bodyblock" data-animate = "fadeInUp">
-      <h3>
-        Sycamore Corporation
-      </h3>
-      <hr>
+    <div class="contentbox" id="miscellaneous">
+      <h1>
+        Miscellaneous
+      </h1>
       <p>
-        This is the retired Sycamore Corporation website, designed and built by MK Studios using Boostrap's awesome prebuilts.
+        Miscellaneous stuff
       </p>
-      <a class = "btn" href = "sycamorecorporation/index.html">See website</a>
+      <section data-mk-animate="fadeInUp">
+        <h2>
+          Typography
+        </h2>
+        <p>
+          Found this elegant serif font on Font Squirrel and re-uploaded so that it could be linked to via CSS
+          <code>@media</code>,
+          etc. See it <a class="link" href="../heuristica/">here</a>.
+        </p>
+      </section>
     </div>
-  </div>
-  <footer class = "footer">
-    <p data-animate = "fadeIn">
-      &copy; 2019 Mikja Krych Studios
-    </p>
-  </footer>
-  <!-- little sidenote message -->
-  <aside id ="sidenote" onclick = "hideIt('sidenote', 5);">
-    Hi there, friend. Glad you made it to my website. Please make sure to check out all the sister sites. Also don't forget to come back again because new content is being created constantly. :)
-  </aside>
-  <!-- under construction alert -->
-  <!-- <div id = "alert">
+  </main>
+  <div id="alert">
     <img src="resources/cone.gif" width=100px height=100px></img>
     <h1>
-      Watch your step.
+      Watch your step
     </h1>
     <h2>
-      This site is currently under construction.
+      This site is currently under construction
     </h2>
-    <a class="btn" href="javascript:hideIt('alert', 5)">
+    <a class="link" href="javascript:hideIt('alert', 5)">
       Dismiss
     </a>
-  </div> -->
+  </div>
+  <footer id="footer" data-mk-animate="fadeIn">
+    &copy; 2020 Mikja Krych Studios
+  </footer>
+  <aside id="sidenote" onclick="hideIt('sidenote', 5);">
+    Hi there, friend. Glad you made it to my website. Please make sure to check out all the sister sites. Also don't
+    forget to come back again because new content is being created constantly. :)
+  </aside>
   <script type="text/javascript" src="script.js"></script>
-  <script type = "text/javascript" src = "cgv3.js"></script>
+  <script type="text/javascript" src="cgv3.js"></script>
+  <script src="tooltip.js"></script>
+  <script src="parallax.js"></script>
+  <script src="mkanimate.js"></script>
   <script>
-    window.onload = function(){
+    window.onload = function () {
       animate();
       initializeCanvas();
-      resizeCanvas();
-      document.getElementById("navtoggle").innerHTML = "<svg><polygon points = '" + cross(35) + "'></polygon></svg>";
-      typer('sidenote',10000);
+      typer('sidenote', 10000);
     }
-    window.onscroll = function() {
+    window.onscroll = function () {
       calcParallax();
       animate();
-      // we are not currently using the construction alert
-      // popup('alert',20);
+      popup('alert', 20);
     };
-    window.onresize = function() {
+    window.onresize = function () {
       calcParallax();
-      resizeCanvas();
     };
   </script>
 </body>
+
 </html>

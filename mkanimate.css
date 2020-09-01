@@ -1,0 +1,60 @@
+@keyframes fadeIn {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
