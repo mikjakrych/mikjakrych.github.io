@@ -64,9 +64,9 @@ function toggleNav() {
   document.querySelector("#nav-escaper").classList.toggle("open");
   document.querySelector("#nav-toggle").classList.toggle("open");
 }
-
-var navItems = document.querySelectorAll("#nav-list .nav-link");
-var navTargets = new Array;
-for (var i = 0; i < navItems.length; i++) {
-  navTargets.push(document.querySelector(navItems[i].getAttribute("href")));
+var imagesToExpand = document.querySelectorAll("figure img");
+for (let i = 0; i < imagesToExpand.length; i++) {
+  imagesToExpand[i].addEventListener("click", function () {
+    window.open(imagesToExpand[i].getAttribute("src").replace(/THUMB/, "FULL"))
+  })
 }
